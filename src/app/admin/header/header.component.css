@@ -1,0 +1,32 @@
+.navbar {
+      text-align: center;
+      color: #e46c2b;
+      background-color:#493829; 
+      border-bottom: none;
+      box-shadow: 1px -2.5px 14px 2px #000; 
+          }
+
+  .nav { 
+      margin-right: 2%;
+  }
+
+ .nav li {
+      margin-left: 30px;
+      margin-top: 0px;
+    }    
+
+ nav ul li:hover {
+        color: #ffffff !important;
+        background-color:none !important;
+        /*border-bottom: 2px solid #fff;    /*to be less conspicuous
+        border-radius: 3px;*/
+        height: 40px;
+    }  
+
+ .Mwanzo .Mwanzo {
+        color: #ffffff !important;
+        background-color:none !important;
+        /*border-bottom: 2px solid #fff;
+        border-radius: 3px;*/
+        height: 40px;
+ }

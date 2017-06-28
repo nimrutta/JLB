@@ -1,0 +1,37 @@
+.container {
+        background-color: #fff;
+        box-shadow: 1px 6.5px 12px 1px #000;
+        padding:20px;
+
+ }
+ .mtable {
+        width: 80%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+ }
+
+ th, td {
+        
+        padding: 3px 20px; 
+ }
+
+ .rightcell {
+        
+        border-left: 1px solid #e46c2b;
+
+ }
+
+#rightcell {
+        background-color: rgba(208, 108, 43, 1);
+}
+
+ .mtable tr:nth-child(even) {
+       background-color: #fff
+ }
+
+.mtable tr:nth-child(odd) {
+       background-color: #DCDCDC;
+ }
+
+.mtable th {
+       background-color: rgba(208, 108, 43, 0.6);
+ }

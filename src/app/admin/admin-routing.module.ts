@@ -21,7 +21,7 @@ const routes: Routes = [
     {path:'makala', component:MakalaComponent},
     {path:'makala-edit', component:MakalaEditComponent},
     {path:'makala-subtopics', component:MakalaSubtopicsComponent},
-    {path:'makala-sutopics-edit', component:MakalaSubtopicsEditComponent},
+    {path:'makala-subtopics-edit', component:MakalaSubtopicsEditComponent},
     {path:'subscribers', component:SubscribersComponent},
   ]
 }
