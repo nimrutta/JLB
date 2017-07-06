@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogSomaZaidiComponent implements OnInit {
 
-  constructor() { }
+   showId = false;
+   showmyId = false;
 
   ngOnInit() {
+
+  }
+
+  toggleId() {
+    this.showId = !this.showId;
+  }
+
+  togglemyId() {
+    this.showmyId = !this.showmyId;
   }
 
 }

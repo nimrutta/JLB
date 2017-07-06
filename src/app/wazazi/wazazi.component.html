@@ -1,1 +1,35 @@
-<router-outlet></router-outlet>
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+     <h1>JLB</h1>
+     <ul class="nav navbar-nav navbar-right">   
+          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active">Mwanzo</a></li>  
+          <li><a routerLink="kuhusu-jlb" routerLinkActive="active">Kuhusu JLB</a></li>
+          <li><a href="Wasiliana nasi">Wasiliana nasi</a></li>
+        </ul>
+     <br>
+ </nav>
+
+ <!-- End of navigation section -->
+ <div class="searchsection row">
+      <div class="col-sm-6 makala">
+         <br><br><br><br>
+         <br><br><br><br>
+         <a><button class="Makalabutton" (click)= "BlogSomaZaidiComponent.toggleId()"><p>Makala</p></button></a>
+         <br><br><br>
+      </div>
+      <div class="col-sm-6 search">
+         <br><br><br><br>
+         <br><br><br><br>
+         <input type="search" class="searchbox" placeholder="Tafuta">
+         <br><br><br>
+      </div> 
+         
+ </div>
+ <div class="clear"></div>
+
+ <router-outlet
+    (activate)="BlogSomaZaidiComponent = $event"
+    (activate)="BlogSectionComponent = $event">
+ </router-outlet>
+
+ <app-footer></app-footer>

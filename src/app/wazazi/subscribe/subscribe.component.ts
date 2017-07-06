@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subscribe.component.css']
 })
 export class SubscribeComponent implements OnInit {
+  showmyId = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  togglemyId() {
+   this.showmyId = !this.showmyId;
+  }
+  
 }

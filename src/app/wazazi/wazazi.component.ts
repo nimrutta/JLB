@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-wazazi',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wazazi.component.css']
 })
 export class WazaziComponent implements OnInit {
+
+  @ViewChild('child') child ;
 
   constructor() { }
 

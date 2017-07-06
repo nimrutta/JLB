@@ -1,0 +1,72 @@
+
+
+ .container {
+        background-color: #fff;
+        box-shadow: 1px 6.5px 12px 1px #000;
+        padding-top: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+ }
+
+.container a {
+        color: ; 
+        float: right;
+        margin-left: 40px;
+        margin-right: 20px;
+        
+}
+
+.box {
+        width: 80%;
+        padding-left: 25px;
+}
+
+.oneimage {
+        height: 520px;
+        margin-top: 15px;
+        float: left; 
+        clear: both;
+        width: 95%; 
+        margin-left: 4%;
+        margin-bottom: 0.5em;
+}
+
+.jiungebutton {
+        height: 20px;
+        width: auto;
+        margin-right: 0px; 
+        float: right;
+        background: none;
+        border: none;
+ }
+
+form  {
+        width: 95%;
+}
+
+.field {
+       
+}
+
+#respond {
+        margin-top: 40px;
+         }
+
+#respond input[type= 'text'],
+#respond input[type= 'email'],
+#respond textarea {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        border-radius: 5px;
+
+        line-height: 1.4em;
+                  }
+      

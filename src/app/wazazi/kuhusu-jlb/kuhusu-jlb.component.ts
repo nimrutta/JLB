@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KuhusuJlbComponent implements OnInit {
 
-  constructor() { }
+ showId = false;
 
   ngOnInit() {
+
   }
 
+  toggleId() {
+    this.showId = !this.showId;
+  }
 }

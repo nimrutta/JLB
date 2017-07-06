@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogSectionComponent implements OnInit {
 
-  constructor() { }
+   showId = false;
 
   ngOnInit() {
+
+  }
+
+  toggleId() {
+    this.showId = !this.showId;
   }
 
 }

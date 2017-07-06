@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  showmyId = false;
+
   constructor() { }
 
   ngOnInit() {
   }
-
+  
+  togglemyId() {
+   this.showmyId = !this.showmyId;
+  }
 }
