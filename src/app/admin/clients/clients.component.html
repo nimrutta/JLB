@@ -12,18 +12,8 @@
      
       <table class="mtable" align="center">
          <tr><th width="38%"></th><th width="30%"></th><th width="27%"></th><th width="9%" ></th></tr>
-         <tr><td>Careen</td><td class="rightcell">Mwaka 1</td><td class="rightcell">0657242356</td><td class="rightcell">Paid</td>
-         <tr><td>Amani</td><td class="rightcell">Mwaka 3</td><td class="rightcell">0657242356</td><td class="rightcell">.</td>
-         <tr><td>Kutwa</td><td class="rightcell">Mwaka 5</td><td class="rightcell">0657242356</td><td class="rightcell">.</td>
-         <tr><td>Beatrice</td><td class="rightcell">Mwaka 1</td><td class="rightcell">0657242356</td><td class="rightcell">Paid</td>
-         <tr><td>Anna</td><td class="rightcell">Mwaka 2</td><td class="rightcell">0657242356</td><td class="rightcell">Paid</td>
-         <tr><td>Mage</td><td class="rightcell">Mwaka 4</td><td class="rightcell">0657242356</td><td class="rightcell">.</td>
-         <tr><td>Deus</td><td class="rightcell">Mwaka 6</td><td class="rightcell">0657242356</td><td class="rightcell">Paid</td>
-         <tr><td>David</td><td class="rightcell">Mwaka 4</td><td class="rightcell">0657242356</td><td class="rightcell">Paid</td>
-         <tr><td>.</td><td class="rightcell">.</td><td class="rightcell">.</td><td class="rightcell">.</td>
-         <tr><td>.</td><td class="rightcell">.</td><td class="rightcell">.</td><td class="rightcell">.</td>
-         <tr><td>.</td><td class="rightcell">.</td><td class="rightcell">.</td><td class="rightcell">.</td>
-      
+         <tr *ngFor="let client of clients"><td>{{client.id}}</td><td class="rightcell">{{client.name}}</td><td class="rightcell">{{client.name}}</td><td class="rightcell">{{client.email}}</td>
+     
                                         
       </table>
 

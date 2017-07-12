@@ -10,7 +10,31 @@
       <hr style="width: 80%; height: 2px; background-color:#e46c2b; 
                  margin:3px auto;">
       <table class="mtable" align="center">
-         <tr><th width="70%"></th><th width="30%" class="rightcell" id="rightcell" style="color:white;">+ Add new topic</th></tr>
+         <tr>
+
+         <th width="70%" >
+         <div *ngIf="showInputfield" >
+         
+         <input  class="addtitle"  placeholder="Enter new article's title id"  #makalaid>
+         <input  class="addtitle"  placeholder="Enter new article's title"  #makalaTitle>
+         <input  class="addtitle"  placeholder="Enter new article's title body"  #makalabody>
+         <input  class="addtitle"  placeholder="Enter new article's title teachid"  #makalateacherid>
+         <input  class="addtitle"  placeholder="Enter new article's title foodid"  #makalafoodid>
+         <button 
+         (click)= "toggleId()" 
+         (click)="add(makalaid.value, makalaTitle.value, makalabody.value, makalateacherid.value, makalafoodid.value); makalaTitle.value=''"
+         > 
+         + 
+         </button>
+         
+         </div>
+         </th>
+
+         <th width="30%" class="rightcell" id="rightcell">
+         <button (click)= "toggleId()" class="addtopicbutton">+ Add new topic</button></th>
+        
+         </tr>
+
          <tr><td>Lorem Ipsum 1</td><td class="rightcell">x Remove </td></tr>
          <tr><td>Lorem Ipsum 2 </td><td class="rightcell">x Remove</td></tr>
          <tr><td>Lorem Ipsum 3</td><td class="rightcell">x Remove</td></tr>
@@ -18,9 +42,9 @@
          <tr><td>Lorem Ipsum 5</td><td class="rightcell">x Remove</td></tr>
          <tr><td>Lorem Ipsum 6</td><td class="rightcell">x Remove</td></tr>
          <tr><td>Lorem Ipsum 7</td><td class="rightcell">x Remove</td></tr>
-         <tr><td>Lorem Ipsum 8</td><td class="rightcell">x Remove</td></tr>
-         <tr><td>.</td><td class="rightcell">.</td></tr>
-         <tr><td>. </td><td class="rightcell"> .</td></tr>                                    
+         <tr><td>Lorem Ipsum 178</td><td class="rightcell">x Remove</td></tr>
+         <tr *ngFor="let makala of makalatitles"><td>{{makala.title}}</td><td class="rightcell">x Remove</td></tr>   
+                                     
       </table>
 
       <br><br><br><br>
