@@ -1,0 +1,134 @@
+.navbar {
+      text-align: center;
+      color: #e46c2b;
+      background-color:#493829; 
+      border-bottom: none;
+      box-shadow: 1px -2.5px 14px 2px #000; 
+          }
+
+  .nav { 
+      margin-right: 2%;
+  }
+
+ .nav li {
+      margin-left: 30px;
+      margin-top: 0px;
+    }    
+
+ nav ul li:hover {
+        color: #ffffff !important;
+        background-color:none !important;
+        /*border-bottom: 2px solid #fff;    /*to be less conspicuous
+        border-radius: 3px;*/
+        height: 40px;
+    }  
+
+ .Mwanzo .Mwanzo {
+        color: #ffffff !important;
+        background-color:none !important;
+        /*border-bottom: 2px solid #fff;
+        border-radius: 3px;*/
+        height: 40px;
+ }
+
+ .searchsection {
+        width: 70%;
+        background-color:none;
+        float: right;
+        margin-right: 70px;
+ }
+
+.makala li {
+        margin: 0 20px;
+        display: inline-block;
+}
+
+.Makalabutton {
+        font-size: 15px;
+        color: #000;
+        height: 20px;
+        width: auto;
+        background: none;
+        border-top:none;
+        border-bottom: solid 2px #e46c2b;
+        border-left: solid 2px #e46c2b;
+        border-right: solid 2px #e46c2b;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 4px; 
+        border-bottom-right-radius: 4px; 
+}
+
+.searchbox { 
+       border: none;
+       border-radius: 4px;
+       background-color: #DCDCDC;
+}
+
+::-webkit-input-placeholder {
+        color: #000;
+        text-align: center;
+}
+
+.clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}
+
+ .container {
+        background-color: #fff;
+        box-shadow: 1px 6.5px 12px 1px #000;
+        padding-top: 7%;
+ }
+
+ .mtable {
+        width: 80%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+ }
+
+ th, td {
+        
+        padding: 3px 20px; 
+ }
+
+ .rightcell {
+        
+        border-left: 1px solid #e46c2b;
+
+ }
+
+ .mtable tr:nth-child(even) {
+       background-color: #fff
+ }
+
+.mtable tr:nth-child(odd) {
+       background-color: #DCDCDC;
+ }
+
+.mtable th {
+       background-color: rgba(208, 108, 43, 0.6);
+ }
+
+  footer {   
+      width: 100% ;
+      height: 43px;
+      vertical-align: middle;
+      background-color: #DCDCDC; 
+        }  
+
+  .subcsribe_button {
+      height: 35px;
+      width: 150px;
+      margin-top: 3px;
+      margin-right: 4%;
+      color: #ffffff;
+      font-size: 17px;
+      background-color: #493829;
+      border: none;
+      border-radius: 4px;
+      float: right;
+ }  
+
+ #subscribe_text {
+     line-height: 2em;
+ }
+  

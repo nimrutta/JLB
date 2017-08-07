@@ -1,0 +1,69 @@
+.area{
+  padding: 10px;
+   background-color: #fff;
+        box-shadow: 2.5px 2.5px 1.25px 5px #ddd inset;
+
+      }
+   
+.btn{
+  padding:1.3px;
+}
+  
+.Mwanzo .Mwanzo {
+        color: #ffffff !important;
+        background-color:none !important;
+        /*border-bottom: 2px solid #fff;
+        border-radius: 3px;*/
+        height: 40px;
+ }
+
+.clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}
+
+ .container {
+        background-color: #fff;
+        box-shadow: 1px 6.5px 12px 1px #000;
+        padding:80px;
+
+ }
+
+.box {
+        width: 90%;
+}
+
+.box > h3 {
+       color: #e46c2b;
+       margin-bottom: 25px;
+}
+.oneimage {
+        height: 420px;
+        float: left; 
+        width: 95%; 
+        margin-left: 4%;
+        margin-bottom: 0.5em;
+}
+
+.twoimage {
+        height: 340px;
+        float: left; 
+        width: 95%; 
+        margin-left: 4%;
+        margin-bottom: 0.5em;
+}
+
+.quote {
+        font-size: 27px;
+        font-style: italic;
+        color: #CDCDCD;
+}
+
+.somazaidi {
+        height: 20px;
+        width: auto;
+        margin-right: 0px; 
+        float: right;
+        background: none;
+        border: none;
+ }
+ 

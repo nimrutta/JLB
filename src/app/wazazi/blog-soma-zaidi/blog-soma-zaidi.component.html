@@ -1,0 +1,77 @@
+<main>
+   
+    <app-makala-contents *ngIf="showId"></app-makala-contents>
+     
+    <div class="container">
+      <div class="box">
+      <h3 style="color: #e46c2b; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat, 
+         sapien non vestibulum suscipit, justo ipsum eleifend magna, et porttitor ipsum 
+         augue sed lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+         Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
+         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
+         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
+         vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
+          lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.
+      </p>
+      
+       <div><img src="../../../../assets/images/happy mom.jpg" alt="Fruit View"
+           class="oneimage"> 
+           </div>
+      <div><p style="margin-top: 75px;">Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
+         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
+         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
+         vestibulum est, a dignissim felis. et porttitor ipsum 
+         augue sed lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+         Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
+         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
+         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
+         vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
+          lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.</p>
+      </div>
+       
+       <a href="#">Share</a> 
+       
+       <button class="jiungebutton" 
+       (click)= "togglemyId()">Jiunge na program
+       </button>
+       <app-kujiunga *ngIf="showmyId"></app-kujiunga>
+       <hr style="margin-top: 70px; ">
+
+       <!-- comments section begins -->
+
+   
+        <!-- <button (click)="toggleId()">Toggle</button> --> 
+
+  <div>
+    <div id="respond">
+
+      <h3>Tujulishe Maoni Yako</h3>
+
+      <form action="post_comment.php" method="post" id="commentform">
+       
+       <label for="comment_author" class="required field">Jina</label>
+       <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
+
+       <label for="email" class="required field">Namba ya Simu</label>
+       <input type="email" name="email" id="email" value="" tabindex="2" required="required">
+
+       <label for="comment" class="required">Ujumbe</label>
+       <textarea name="comment" id="comment" rows="10" tabindex="4" required="required"></textarea>
+
+       <!-- comment_post_ID value hard-coded as 1 -->
+       
+       <input name="submit" type="submit" value="Kusanya Maoni" />
+
+
+      </form>
+    </div>
+  </div>
+       <!-- comments section ends -->
+      
+      <br><br><br><br>
+      <br><br><br><br>
+     
+    </div>
+    </div>
+ </main>

@@ -1,0 +1,66 @@
+
+.clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}
+
+ .container {
+        background-color: #fff;
+        box-shadow: 1px 6.5px 12px 1px #000;
+        padding-top: 25px;
+        padding-left: 50px;
+        padding-right: 50px;
+        
+ }
+
+.container a {
+        color: ;
+        float: right;
+        margin-left: 40px;
+        margin-right: 20px;
+}
+ 
+ .Makala-items-bed {
+        height:auto;
+        width:20%;
+        padding: 0 10px 0 10px;
+        margin-top: 30px;
+        margin-right: 49px;
+        word-wrap: break-word;
+        background-color: #FFF;
+        border-top: 30px solid #b46c2b;
+        box-shadow: 0px 1.5px 4px 0px #000;
+        z-index: 1000;
+        float: right;
+ }
+
+.Makala-items-bed a {
+        color: #000;
+}
+
+.Makala-items-bed a:hover {
+        text-decoration-line: none;
+        color: blue;
+}
+
+#respond {
+        margin-top: 40px;
+         }
+
+#respond input[type= 'text'],
+#respond input[type= 'email'],
+#respond textarea {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -khtml-border-radius: 5px;
+        border-radius: 5px;
+
+        line-height: 1.4em;
+                  }
+      

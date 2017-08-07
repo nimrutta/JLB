@@ -1,0 +1,26 @@
+<app-header></app-header>
+<!--<app-searchsection></app-searchsection>-->
+<main>
+    <div class="container" >
+
+     <form  action="/action_page.php" >
+<br>
+<textarea class="area" [(ngModel)]="post.body" 
+ rows="15px" cols="100px" 
+ name="description"   placeholder="Your contents here...">
+
+</textarea><br>
+<div style="display: block;
+  margin-left: 40%;
+  ">
+  <input type="number" [(ngModel)]="post.id"
+  placeholder="Blogpost's ID"  name="id"    >
+  <button (click)="save()"> Post to page </button>
+</div>
+<a href="" style="position: absolute;left: 80%;">*View Earlier Posts</a>
+
+</form>
+ 
+    </div>
+ </main>
+<app-footer></app-footer>
