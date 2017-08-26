@@ -2,22 +2,23 @@
       <div id="myModal" class="modal">
 
        <div class="modal-content">
+         <button class="close" (click)="onClick($event)">&times;</button>
          <div class="modal-header">
-            <span class="close">&times;</span>
-            <h4>Jaza fomu hii kujiunga na Programu yetu, kwenye
-              Program hii utapata ushauri, ... Class aptent taciti sociosqu ad
-               litora torquent</h4>
+            <p>Jaza fomu hii kujiunga na Programu yetu, kwenye
+              Program hii utapata ushauri. Class aptent taciti sociosqu ad
+               litora torquent  ushauri. Class aptent taciti sociosqu ad
+               litora torquent</p>
          </div>
          <div class="modal-body">
            
            <form>
-            <input type="text" name="comment_author" id="comment_author" value=""  placeholder="Jina" required="required" style="display: block; margin: 10px 20px;">
-            <input type="text" name="comment_author" id="comment_author" value=""  placeholder="Umri wa mtoto" required="required" style="display: block;margin: 10px 20px;">
-            <input type="text" name="comment_author" id="comment_author" value=""  placeholder="Namba ya Whatsapp" required="required"style="display: block;margin: 10px 20px;" >
+            <input type="text" name="comment_author" class="contactfield" id="comment_author" value=""  placeholder="Jina" [(ngModel)]="client.name" required="required">
+            <input type="text" name="comment_author" class="contactfield" id="comment_author" value=""  placeholder="Umri wa mtoto" [(ngModel)]="client.id" required="required">
+            <input type="text" name="comment_author" class="contactfield" id="comment_author" value=""  placeholder="Namba ya Whatsapp" [(ngModel)]="client.email" required="required">
            </form>
          </div>
          <div class="modal-footer">
-            <h4 style="margin-right: 20%">Sawa</h4>
+            <a class="modallinks"><button class="sendbutton" (click)="add()">Tuma taharifa</button></a>
          </div>
        </div>
       </div>

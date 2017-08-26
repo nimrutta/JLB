@@ -13,8 +13,11 @@
 <div style="display: block;
   margin-left: 40%;
   ">
-  <input type="number" [(ngModel)]="post.id"
-  placeholder="Blogpost's ID"  name="id"    >
+ <!-- <input type="number" [(ngModel)]="post.id"
+  placeholder="Blogpost's ID"  name="id"    > -->
+  
+  <app-uploadimage></app-uploadimage>
+
   <button (click)="save()"> Post to page </button>
 </div>
 <a href="" style="position: absolute;left: 80%;">*View Earlier Posts</a>

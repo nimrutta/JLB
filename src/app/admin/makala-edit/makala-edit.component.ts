@@ -10,11 +10,13 @@ import { MakalatitlesService } from '../../core/makalatitles.service';
   providers: [MakalatitlesService]
 })
 export class MakalaEditComponent implements OnInit {
-
+  
   showInputfield = false;
 
   makalatitles:Makalatitles[];
-  
+  makala = new Makalatitles();
+  errorMessage: String;
+
   constructor(private makalatitlesService: MakalatitlesService) { }
 
   ngOnInit() {
@@ -25,24 +27,14 @@ export class MakalaEditComponent implements OnInit {
     this.makalatitlesService.getMakalatitles().then(makalatitles => this.makalatitles = makalatitles);
   }
 
-
   toggleId(){
     this.showInputfield = !this.showInputfield;
   }
 
-  add(id: number, title: string, body: string, teacher_id: any, food_id: any):void {
-     let makala = {
-            
-             id: id,
-             title: title,
-             body: body,
-             teacher_id: teacher_id,
-             food_id: food_id
-             }
-
+  add():void {
     
-    if (!makala.title) { return; }
-    this.makalatitlesService.create(makala) 
+    if (!this.makala.title) { return; }
+    this.makalatitlesService.create(this.makala) 
     .then(makala => {
     this.makalatitles.push(makala);
                 });

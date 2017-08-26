@@ -1,9 +1,39 @@
 <main>
+    <div class="ccontainer">
 
-    <app-makala-contents *ngIf="showId"></app-makala-contents>
+    <br>
+    <div *ngFor= "let g of giphies" class="box">  <!-- search result begins-->
+      
+           <h3>{{g.name}}</h3>
+    <div class="row" style="width:90%;">
+       <div class="col-sm-9">
+          
+           <img src="../../../../assets/images/happy mom.jpg" alt="Fruit View"
+           class="oneimage">
 
-    <div class="container">
-     <div class="box">
+       </div>
+
+       <div class="col-sm-3">
+            <p class="quote">
+               <span style="font-size:30px;">"</span> {{g.city}}
+               <span style="font-size:30px;">"</span>
+
+            </p>
+       </div>
+    </div>
+
+    <P style="width: 90%;">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sit amet,
+         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud amet ea
+          exercitation Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed consequuntur dolores aliquip ex aliqua </P><br>
+    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active">Soma Zaidi </button>
+    <div class="clear"></div>
+    <hr style="margin-top: 10px; ">    
+    
+    </div> <!--end of search result -->
+     
+
+
+    <div class="box">
      <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
        incididunt.</h3>
     <div class="row" style="width:90%;">
@@ -31,10 +61,10 @@
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">    
     
+    </div>
 
 
-
-
+    <div class="box">
          <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
        incididunt.</h3>
     <div class="row" style="width:90%;">
@@ -61,10 +91,11 @@
     <button class="somazaidi">Soma Zaidi </button>
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">  
+    </div>
+    
 
 
-
-
+    <div class="box">
       <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
        incididunt.</h3>
     <div class="row" style="width:90%;">
@@ -92,14 +123,8 @@
     <hr style="margin-top: 10px; ">  
     
     <br>
-    
-    <p>sdsgf</p>
-    <br>
-    <div *ngFor= "let g of giphies">
-        <h4> {{g.name}} </h4>  
     </div>
-
-    <p>   {{apost}}</p>
+    
 
     <!--<p> Sed ut perspiciatis unde omnis iste natus error sit 
         voluptatem accusantium doloremque laudantium, totam 
@@ -135,6 +160,5 @@
            maiores alias consequatur aut perferendis doloribus asperiores 
            repellat.
         </p> -->
- </div> 
 </div>
  </main>

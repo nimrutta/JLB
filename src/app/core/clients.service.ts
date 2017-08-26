@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Headers, Http} from '@angular/http';
+import {Headers, Http, RequestOptions} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -13,10 +13,10 @@ export class ClientsService {
   constructor(private http: Http) { }
   
   getClients(): Promise<Clients[]> {
-      return this.http.get(this.clientsUrl)
-                 .toPromise()
-                 .then(response => response.json().data as Clients[])
-                 .catch(this.handleError);
+   return this.http.get(this.clientsUrl)
+                   .toPromise()
+                   .then(response => response.json().data as Clients[])
+                   .catch(this.handleError);
   }
 
 //getClients(): void {
@@ -29,4 +29,15 @@ export class ClientsService {
      return Promise.reject(error.message || error);
   }
 
+   create(client:Clients): Promise<Clients> {
+  let headers = new Headers({ 'Content-Type': 'application/json' });
+  let options = new RequestOptions({ headers: headers });
+  
+  return this.http
+    .post(this.clientsUrl, client, options)
+    .toPromise()
+    .then(res => res.json().data as Clients)
+    .catch(this.handleError);
+    //JSON.stringify({makala})
+  }
 }

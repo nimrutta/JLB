@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Fix
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.
@@ -26,3 +27,6 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# search-bar
+>>>>>>> d1df7a10eba0b7428b72b15ff04dbb36784ab8ed

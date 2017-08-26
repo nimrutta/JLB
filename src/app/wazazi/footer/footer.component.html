@@ -1,6 +1,25 @@
 <footer>
-    <app-subscribe *ngIf="showmyId"></app-subscribe>
-    <button class="subcsribe_button" (click)= "togglemyId()">
-        <p id="subscribe_text">Subscribe</p>
-    </button>
- </footer>
+    <app-subscribe *ngIf="showmyId" (myevent)="myevent($event)" (myEvent)="myEvent($event)"></app-subscribe>
+    <app-kujiunga *ngIf="showmyod" (myevenT)="myevenT($event)"></app-kujiunga> 
+    <div class="row">
+        
+     <div class="col-sm-4">
+     </div>
+     
+     <div class="col-sm-4">
+         <div class="addressline">
+          <p>Some Address line,<br>Created by Codenet</p>
+         </div>
+     </div>
+
+     <div class="col-sm-4">
+         <button class="subcsribe_button" (click)= "togglemyId()">
+          <p id="subscribe_text">Subscribe</p>
+         </button> 
+     </div>
+     
+    </div>
+    
+    
+   
+</footer>

@@ -1,11 +1,50 @@
   .navbar {
       text-align: center;
-      color: #e46c2b;
-      background-color:#493829; 
-      border-bottom: none;
-      box-shadow: 1px -2.5px 14px 2px #000; 
+      color: #652f85;
+      font-family: helvetica;
+      background-color:#fff;  
+      padding-right: 0;         
+      border-bottom: 3px solid #ffb6c1;
+      border-radius: none !important; 
           }
 
+
+  .icon {
+      float: right;
+   }
+  
+  .clogotext {
+      height: 78px;
+      padding-top: 39px;
+      padding-left: 0;
+  }
+
+  .logotext {
+      float: left;
+      font-style: italic;
+   }
+
+   .navbar img {
+
+       height: 65px;
+       width: 65px;
+       margin-top: 13px;
+   }
+
+  .navbar h3 {
+      margin-top: 8px;
+      margin-bottom: 0; 
+  }
+
+  .menuitems{
+      background-color: #652f85;
+      width: 100%;
+      height: 30px;
+      padding-bottom: 7px;
+      padding-right: 45px !important;
+      margin-right: 0 !important;
+      margin-top: 20px;
+  }
   .nav { 
       margin-right: 2%;
   }
@@ -13,15 +52,27 @@
  .nav li {
       margin-left: 30px;
       margin-top: 0px;
-    }    
-
+      height: 20px;
+      float: right;
+    }   
+    
  nav ul li:hover {
-        color: #ffffff !important;
+        
         background-color:none !important;
         /*border-bottom: 2px solid #fff;    /*to be less conspicuous
         border-radius: 3px;*/
         height: 40px;
     }  
+
+  nav ul li a {
+        color: #fff !important;
+        padding-top: 10px;
+        height: 20px;
+  }
+
+  nav ul li a:hover {
+        color: #ffb6c1 !important;
+  }
 
  .Mwanzo .Mwanzo {
         color: #ffffff !important;
@@ -35,7 +86,8 @@
         width: 40%;
         background-color:none;
         float: right;
-        margin-right: 70px;
+        margin-right: 50px;
+        margin-top: 10px;
  }
 
 .Makalabutton {
@@ -44,10 +96,12 @@
         height: 20px;
         width: 60%;
         background: none;
+        padding-right: 0px;
+        padding-left: 7px;
         border-top: none;
-        border-bottom: solid 2px #e46c2b;
-        border-left: solid 2px #e46c2b;
-        border-right: solid 2px #e46c2b;
+        border-bottom: none 2px #e46c2b;
+        border-left: none 2px #e46c2b;
+        border-right: none 2px #e46c2b;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 4px; 
@@ -55,16 +109,57 @@
         float: right;
 }
 
-.searchbox { 
-       border: none;
-       border-radius: 4px;
-       background-color: #DCDCDC;
+
+.makala p {
+        display: inline-block;
+        margin-right: 7px;
 }
 
+.makala a  :hover {
+        color: #ffb6c1;
+        font-size: 17px;
+}
+
+.makalatitles {
+        position: relative;
+}
+
+.glyphicon-list-alt {
+        color: #ffb6c1;
+}
+
+.search {
+        padding-right: 0;
+        padding-left: 30px;
+}
+
+.searchbox { 
+       border: 1px solid  rgba(0,0,0, 0.4); 
+       border-radius: 4px;
+       border-top-right-radius: 0;
+       border-bottom-right-radius: 0;
+       background-color: none;
+       border-right: none;
+       margin-top: 0;
+}
+
+input::placeholder {
+  color: #cdcdcd;
+  /*rgba(255,182,193, 0.4); */}
+
 .Tafutabutton {
-       border: none;
-       background: none;     
+       border: 1px solid #cdcdcd;
+       border-radius: 4px;
+       border-top-left-radius: 0;
+       border-bottom-left-radius: 0;
+       background: rgba(0,0,0, 0.4); 
+       border-left: none; 
+       margin-left: -4px;   
 } 
+
+.glyphicon-search {
+        color: #fff;
+}
 
 ::-webkit-input-placeholder {
         color: #000;

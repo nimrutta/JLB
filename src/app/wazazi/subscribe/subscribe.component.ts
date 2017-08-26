@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
+import { Subscribers } from '../../subscribers';
+import { SubscribersService } from '../../core/subscribers.service';
 
 @Component({
   selector: 'app-subscribe',
@@ -6,15 +9,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subscribe.component.css']
 })
 export class SubscribeComponent implements OnInit {
-  showmyId = false;
 
-  constructor() { }
+  constructor( private subscribersService: SubscribersService ) { }
+  subscriber = new Subscribers();
+  subscribers:Subscribers[];
 
-  ngOnInit() {
+  @Output() myevent = new EventEmitter();
+  @Output() myEvent = new EventEmitter();
+
+  onClick(button){
+       this.myEvent.emit(button);
   }
 
-  togglemyId() {
-   this.showmyId = !this.showmyId;
+  onClick1(button){
+       this.myevent.emit(button);
   }
+
+
+  add():void {
+    
+    if (!this.subscriber.phone_number) { return; }
+    this.subscribersService.create(this.subscriber) 
+    .then(subscriber => {
+    this.subscribers.push(subscriber);
+                });
+  
+            }
+
+  ngOnInit() { }
   
 }

@@ -16,6 +16,7 @@ import { MakalaEditComponent } from './makala-edit/makala-edit.component';
 import { MakalaSubtopicsComponent } from './makala-subtopics/makala-subtopics.component';
 import { MakalaSubtopicsEditComponent } from './makala-subtopics-edit/makala-subtopics-edit.component';
 import { SearchsectionComponent } from './searchsection/searchsection.component';
+import { UploadimageComponent } from './uploadimage/uploadimage.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,6 @@ import { SearchsectionComponent } from './searchsection/searchsection.component'
     FormsModule,
     AdminRoutingModule
   ],
-  declarations: [AdminComponent, AndikaMakalaComponent, BlogComponent, ClientsComponent, SubscribersComponent, FooterComponent, HeaderComponent, MakalaComponent, MakalaEditComponent, MakalaSubtopicsComponent, MakalaSubtopicsEditComponent, SearchsectionComponent]
+  declarations: [AdminComponent, AndikaMakalaComponent, BlogComponent, ClientsComponent, SubscribersComponent, FooterComponent, HeaderComponent, MakalaComponent, MakalaEditComponent, MakalaSubtopicsComponent, MakalaSubtopicsEditComponent, SearchsectionComponent, UploadimageComponent]
 })
 export class AdminModule { }

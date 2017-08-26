@@ -22,7 +22,7 @@ import { BlogpostService } from '../../core/blogpost.service';
   templateUrl: './blog-section.component.html',
   styleUrls: ['./blog-section.component.css'],
 
-  providers: [ BlogpostService, SearchService ],
+  providers: [ BlogpostService ]
 })
 
 
@@ -43,21 +43,43 @@ export class BlogSectionComponent implements OnInit {
 
    // link = 'http://api.tuseme.co.tz/api/v1/search/c?api_key=bc';
    //http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q= 
-   
+   giphies: Blogpost[];
+   _subscription: any;
+   subscription: any;
+   message: string;
+
    constructor(
      private blogpostService: BlogpostService,
      private searchService: SearchService,
-     private router: Router) { }
+     private router: Router) { 
+     this.giphies = searchService.giphies;
+     this._subscription = this.searchService.fetchedPosts.subscribe((value) => {
+     this.giphies = value;
+   });
+    
+     this.message = searchService.message; 
+     this.subscription = searchService.nameChange.subscribe((value) => { 
+      this.message = value;})
+ }
    
-   giphies: Blogpost = this.searchService.giphies
+  
 
    apost: string = this.searchService.message
-
+   display(){
+     console.log(this.apost + this.giphies)
+   }
    // Push a search term into the observable stream.
    //search(term: string): void {
    //this.searchTerms.next(term);}
- 
+   
+   ngOnDestroy() {
+   //prevent memory leak when component destroyed
+    this._subscription.unsubscribe();
+  }
+
    ngOnInit(): void {
+
+    this.display();
     /*this.posts = this.searchTerms
       .debounceTime(300)        
       .distinctUntilChanged()   
