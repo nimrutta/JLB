@@ -1,80 +1,19 @@
-<main>
 
       <div class="Makala-items-bed">
-      <div style="margin-top: -20px; color:#fff;">
-      <a href="#" style="color:#fff; text-align:center;">Lorem ipsmum 1</a>
+      <div class="entry1">
+      <a href="#" style="color:#fff;">{{category.category_name}}</a>
       </div>
       <br>
-      <a href="#">Lorem ipsmum 1i</a>
+      <div *ngFor= "let m of makala">
+       <button (click)="onClick($event)" (click)="getArticle(m.id)"> {{m.title}} </button>
+       <hr>
+      </div>
+      <a href="#">Lorem ipsmumnot 1iii</a>
       <hr>
-      <a href="#">Lorem ipsmum 1ii</a>
-      <hr>
-      <a href="#">Lorem ipsmum 1iii</a>
-      <hr>
-      <a href="#">Lorem ipsmum 1iv</a>
-      <hr>
-      <a href="#">Lorem ipsmum 1v</a>
-      <hr>
-      <a href="#">Lorem ipsmum 1vi</a>
-      <hr>
+      
         
       </div>
 
     <div class="container">
         
-      
-      <h3 style="color: #e46c2b; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat, 
-         sapien non vestibulum suscipit, justo ipsum eleifend magna, et porttitor ipsum 
-         augue sed lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-         Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
-         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
-         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
-         vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
-          lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.
-      </p>
-      <img src="./resources/images/avocado.jpg" style="margin-left: 400px;">
-      <p>Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
-         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
-         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
-         vestibulum est, a dignissim felis. et porttitor ipsum 
-         augue sed lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-         Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
-         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
-         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
-         vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
-          lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.</p>
-       <a href="#">Share</a><a href="#">Jiunge na program</a>
-       <hr style="margin-top: 70px; ">
-
-       <!-- comments section begins -->
-  <div>
-    <div id="respond">
-
-      <h3>Tujulishe Maoni Yako</h3>
-
-      <form action="post_comment.php" method="post" id="commentform">
-       
-       <label for="comment_author" class="required">Jina</label>
-       <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
-
-       <label for="email" class="required">Namba ya Simu</label>
-       <input type="email" name="email" id="email" value="" tabindex="2" required="required">
-
-       <label for="comment" class="required">Ujumbe</label>
-       <textarea name="comment" id="comment" rows="10" tabindex="4" required="required"></textarea>
-
-       <!-- comment_post_ID value hard-coded as 1 -->
-       <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
-       <input name="submit" type="submit" value="Kusanya Maoni" />
-
-
-      </form>
-    </div>
-  </div>
-       <!-- comments section ends -->
-      <br><br>
-      <br><br><br><br>
-      
-    </div>
- </main>
+     

@@ -1,0 +1,19 @@
+.ccontainer {
+        background-color: #f7f7f7;
+       
+        padding:80px;
+
+ }
+
+ .box {
+        width: 100%;
+        padding:40px;
+        background-color: #fff;
+        border: 1px solid #cdcdcd;
+        margin-bottom: 20px;
+}
+
+.box > h3 {
+       color: green;
+       margin-bottom: 25px;
+}

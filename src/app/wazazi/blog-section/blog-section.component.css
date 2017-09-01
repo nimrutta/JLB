@@ -21,19 +21,23 @@
        clear: both;            /* to solve float overlapping issues */ 
 }
 
- .container {
-        background-color: #fff;
-        box-shadow: 1px 6.5px 12px 1px #000;
+ .ccontainer {
+        background-color: #f7f7f7;
+       
         padding:80px;
 
  }
 
 .box {
-        width: 90%;
+        width: 100%;
+        padding:40px;
+        background-color: #fff;
+        border: 1px solid #cdcdcd;
+        margin-bottom: 20px;
 }
 
 .box > h3 {
-       color: #e46c2b;
+       color: green;
        margin-bottom: 25px;
 }
 .oneimage {
@@ -59,6 +63,7 @@
 }
 
 .somazaidi {
+        color : green;
         height: 20px;
         width: auto;
         margin-right: 0px; 

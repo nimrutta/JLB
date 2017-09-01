@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Headers, Http} from '@angular/http';
+import {Headers, Http, RequestOptions} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -22,6 +22,18 @@ export class SubscribersService {
   private handleError (error: any): Promise<any> {
      console.error('An error occurred', error);
      return Promise.reject(error.message || error);
+  }
+
+  create(subscriber:Subscribers): Promise<Subscribers> {
+  let headers = new Headers({ 'Content-Type': 'application/json' });
+  let options = new RequestOptions({ headers: headers });
+  
+  return this.http
+    .post(this.subscribersUrl, subscriber, options)
+    .toPromise()
+    .then(res => res.json().data as Subscribers)
+    .catch(this.handleError);
+    //JSON.stringify({makala})
   }
 
 }

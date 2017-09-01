@@ -1,35 +1,45 @@
 
- <nav class="navbar navbar-inverse navbar-fixed-top">
-     <h1>JLB</h1>
-     <ul class="nav navbar-nav navbar-right">   
-          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active">Mwanzo</a></li>  
+ <nav class="navbar navbar-inverse ">
+     <div class="row logorow">
+         <div class="col-sm-5 "><img src="../../../assets/images/pp.jpg" class="icon"></div>
+         <div class="col-sm-7 clogotext"><h3 class="logotext">Jua Lishe Bora</h3></div>
+     </div>
+     <ul class="menuitems nav navbar-nav"> 
+          <li><a routerLink="shuhuda">Shuhuda</a></li>  
           <li><a routerLink="kuhusu-jlb" routerLinkActive="active">Kuhusu JLB</a></li>
-          <li><a href="Wasiliana nasi">Wasiliana nasi</a></li>
-        </ul>
+          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active">Mwanzo</a></li>  
+        
+     </ul>
      <br>
  </nav>
 
  <!-- End of navigation section -->
  <div class="searchsection row">
       <div class="col-sm-6 makala">
+         <br>
+         <a><button class="Makalabutton" (click)= "toggleId()"><p>Makala</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
          <br><br><br><br>
-         <br><br><br><br>
-         <a><button class="Makalabutton" (click)= "BlogSomaZaidiComponent.toggleId()"><p>Makala</p></button></a>
-         <br><br><br>
       </div>
-      <div class="col-sm-6 search">
+      <div class="search col-sm-6">
+         <br>
+         <input type="search" class="searchbox" name="tittle" #searchTerm  placeholder="Tafuta">
+         <button (click)="performSearch(searchTerm)" class="Tafutabutton"><i class="glyphicon glyphicon-search"></i></button>
          <br><br><br><br>
-         <br><br><br><br>
-         <input type="search" class="searchbox" placeholder="Tafuta">
-         <br><br><br>
-      </div> 
-         
+     </div> 
+         <!-- <button id="content" [@focusPanel]='state' @movePanel >Look at me animate</button> -->
  </div>
  <div class="clear"></div>
-
+ <app-makala-contents class="makalatitles" *ngIf="showId" (myEvent)="myEvent($event)"></app-makala-contents> 
+ <app-makala-navigation class="makalatitles" *ngIf="showthisId" (articleEvent)="articleEvent($event)"></app-makala-navigation>
+ <app-makala *ngIf="showArticle"></app-makala>
+ 
+ <div *ngIf="displayRouterOutlet">
  <router-outlet
     (activate)="BlogSomaZaidiComponent = $event"
-    (activate)="BlogSectionComponent = $event">
- </router-outlet>
+    (activate)="BlogSectionComponent = $event" 
+     >
 
- <app-footer></app-footer>
+ </router-outlet>
+ </div>
+
+ <app-footer ></app-footer>

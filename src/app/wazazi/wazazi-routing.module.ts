@@ -8,6 +8,9 @@ import {KuhusuJlbComponent} from './kuhusu-jlb/kuhusu-jlb.component';
 import {KujiungaComponent} from './kujiunga/kujiunga.component';
 import {MakalaContentsComponent} from './makala-contents/makala-contents.component';
 import {MakalaNavigationComponent} from './makala-navigation/makala-navigation.component';
+import { MakalaComponent } from './makala/makala.component';
+import { KutuhusuComponent } from './kutuhusu/kutuhusu.component';
+import { ShuhudaComponent } from './shuhuda/shuhuda.component';
 import {SubscribeComponent} from './subscribe/subscribe.component'
 
 const routes: Routes = [
@@ -20,6 +23,8 @@ const routes: Routes = [
      {path:'kujiunga', component:KujiungaComponent},
      {path:'makala-content', component:MakalaContentsComponent},
      {path:'makala-navigation', component:MakalaNavigationComponent},
+     {path:'makala', component:MakalaComponent},
+     {path:'shuhuda', component:ShuhudaComponent},
      {path:'subscribe', component:SubscribeComponent},
    ]}
    

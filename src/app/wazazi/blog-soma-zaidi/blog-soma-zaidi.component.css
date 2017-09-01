@@ -1,11 +1,12 @@
 
-
+ .clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}
  .container {
-        background-color: #fff;
-        box-shadow: 1px 6.5px 12px 1px #000;
-        padding-top: 25px;
-        padding-left: 50px;
-        padding-right: 50px;
+        background-color: #f7f7f7;
+       
+        padding:80px;
+
  }
 
 .container a {
@@ -17,16 +18,24 @@
 }
 
 .box {
-        width: 80%;
-        padding-left: 25px;
+        width: 100%;
+        padding:40px 40px 90px 40px;
+        background-color: #fff;
+        border: 1px solid #d4d4d4;
+        margin-bottom: 20px;
+}
+
+.box > h3 {
+       color: green;
+       margin-bottom: 25px;
 }
 
 .oneimage {
-        height: 520px;
+        height: 420px;
         margin-top: 15px;
         float: left; 
         clear: both;
-        width: 95%; 
+        width: 85%; 
         margin-left: 4%;
         margin-bottom: 0.5em;
 }
@@ -40,16 +49,38 @@
         border: none;
  }
 
+.cbox { 
+        color: #232323;
+        padding: 20px 20px 15px 20px;
+        width: 80%;
+        border: 1px solid #d4d4d4;
+        border-radius: 5px;
+        background-color: #efefef;
+}
+
+.cbox h3 {
+        margin-top: 0px;
+}
+
+.cbox hr {
+        margin: 10px 0 38px 0;
+        border-top: 1px solid #d4d4d4;
+}
+
 form  {
         width: 95%;
 }
 
 .field {
-       
+       margin-top: 20px;
+}
+
+.field label {
+        margin-top: 0px;
 }
 
 #respond {
-        margin-top: 40px;
+        margin-top: 0;
          }
 
 #respond input[type= 'text'],
@@ -69,4 +100,61 @@ form  {
 
         line-height: 1.4em;
                   }
+
+.submitbutton {
+        color: #fff;
+        background-color: rgba(101, 47, 133, 0.8);
+        border: none;
+        border-radius: 3px;
+        float: right;
+        padding: 6px 13px;
+        margin: 10px 0 0 0; 
+}
+
+.avatar {
+        height: 80px;
+        width: 80px;
+        border: 2px solid #fff;
+        border-radius: 3px;
+}
+
+.cdbox { 
+        color: #232323;
+        width: 80%;
+        border: 1px solid #d4d4d4;
+        border-radius: 5px;
+        background-color: #fff;
+        margin-top: 20px;
+}
+
+.cmt {
+        margin: 0 0;
+}
+
+.cmtavatar {
+       
+        padding: 0 12px 0 0;
+}
+
+.cmtavatarin {
+        background-color: #efefef;
+        width: auto;
+        padding: 5px 5px 10px 5px;
+        
+}
+
+.cmtavatarin p {
+        color: darkgrey;
+        margin: 3px 0 0 0;
+        font-size: 17px;
+}
+
+.cmttext {
+        color: #232323;
+        padding: 5px 0;   
+}
+
+.cmttext p {
+        font-size: 14px;
+}
       

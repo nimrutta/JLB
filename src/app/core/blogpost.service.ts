@@ -9,6 +9,7 @@ import { Blogpost } from './../blogpost';
 export class BlogpostService {
   
   private blogpostUrl = 'http://api.jualishebora.ga/api/v1/posts'
+  //http://api.jualishebora.ga/api/v1/topics  
   //http://api.tuseme.co.tz/api/v1/reports
   
   constructor(private http: Http) { }

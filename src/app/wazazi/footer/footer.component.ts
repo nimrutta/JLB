@@ -8,12 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   showmyId = false;
+  showmyod = false;
+  
 
   constructor() { }
 
   ngOnInit() {
   }
-  
+
+  myEvent($event){
+    this.showmyId = !this.showmyId;
+  }
+
+  myevent($event){
+    this.showmyId = !this.showmyId;
+    this.showmyod = !this.showmyod;
+  }
+
+   myevenT($event){
+    this.showmyod = !this.showmyod;
+  }
+
   togglemyId() {
    this.showmyId = !this.showmyId;
   }
