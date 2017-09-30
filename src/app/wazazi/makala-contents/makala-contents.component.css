@@ -4,7 +4,7 @@
  
  .Makala-items-bed {
         height:auto;
-        width: 180px;
+        width: 400px;
         padding: 10px 10px 0 10px;
         margin-top: 0px;
         margin-right:20%;
@@ -14,13 +14,20 @@
         border-bottom: 3px solid #652f85;
         box-shadow: 0px 1.5px 4px 0px #000;
         position: absolute;
-        top: -30px;
-        left:740px;
+        top: 90px;
+        left:0px;
         z-index: 1000;
         float: right;
  }
 
+.close {
+        color: rgba(0,0,0,0.8);
+        margin: 0 10px 0 0;
+        float: left;
+} 
+
 .Makala-items-bed a {
+        margin: 0 0 0 20px;
         color: #000;
 }
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Headers, Http} from '@angular/http';
+import {Headers,RequestOptions, Http, Response} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -8,7 +8,9 @@ import { Blogpost } from './../blogpost';
 @Injectable()
 export class BlogpostService {
   
+  blogpost: Blogpost[];
   private blogpostUrl = 'http://api.jualishebora.ga/api/v1/posts'
+  
   //http://api.jualishebora.ga/api/v1/topics  
   //http://api.tuseme.co.tz/api/v1/reports
   
@@ -32,6 +34,19 @@ export class BlogpostService {
                  .then(() => post)
                  .catch(this.handleError);
              }
+
+
+   create(blogpost:Blogpost): Promise<Blogpost> {
+  let headers = new Headers({ 'Content-Type': 'application/json' });
+  let options = new RequestOptions({ headers: headers });
+  
+  return this.http
+    .post(this.blogpostUrl, blogpost, options)
+    .toPromise()
+    .then(res => res.json().data as Blogpost)
+    .catch(this.handleError);
+    //JSON.stringify({makala})
+  } 
 
   private handleError (error: any): Promise<any> {
      console.error('An error occurred', error);

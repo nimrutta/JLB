@@ -5,7 +5,8 @@ import { MakalatitlesService } from '../../core/makalatitles.service'
 @Component({
   selector: 'app-makala',
   templateUrl: './makala.component.html',
-  styleUrls: ['./makala.component.css']
+  styleUrls: ['./makala.component.css'],
+ 
 })
 export class MakalaComponent implements OnInit {
 

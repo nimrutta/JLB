@@ -17,15 +17,30 @@ export class BlogComponent implements OnInit {
  
   post: any = { } 
 
+  blogpost = new Blogpost();
+  blogposts : Blogpost[];
+
   constructor(private blogpostService: BlogpostService) { }
 
 
   ngOnInit() {
+    this.blogpost.title = 'title';
+    this.blogpost.topic_id = 4;
   }
 
   
   save(): void {
     this.blogpostService.update(this.post)
   }
+
+  add():void {
+    
+    if (!this.blogpost.title) { return; }
+    this.blogpostService.create(this.blogpost) 
+    //.then(blogpost => {
+    //this.blogposts.push(blogpost);
+              //  });
+  
+            }
 
 }

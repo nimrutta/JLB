@@ -5,7 +5,7 @@
 
      <form  action="/action_page.php" >
 <br>
-<textarea class="area" [(ngModel)]="post.body" 
+<textarea class="area" [(ngModel)]="blogpost.body" 
  rows="15px" cols="100px" 
  name="description"   placeholder="Your contents here...">
 
@@ -17,10 +17,10 @@
   placeholder="Blogpost's ID"  name="id"    > -->
   
   <app-uploadimage></app-uploadimage>
-
-  <button (click)="save()"> Post to page </button>
+<!---(click)="save()"-->
+  <button  (click)="add()"> Post to page </button>
 </div>
-<a href="" style="position: absolute;left: 80%;">*View Earlier Posts</a>
+<a href="#" style="position: absolute;left: 80%;">*View Earlier Posts</a>
 
 </form>
  

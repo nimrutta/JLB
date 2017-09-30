@@ -1,6 +1,7 @@
+      <div class="Makala-items-bed" [@flyInOut]="'in'" *ngIf='display'>
+      <button class="close" (click)="ifdisplay()">&times;</button> 
 
-
-      <div class="Makala-items-bed">
+      <p>Chagua umri wa mtoto</p>
       <a (click)="onClick($event)" routerLinkActive="active"><button (click)=" getMakala(1)"> miezi0 - miezi6 </button></a>
       <hr>
       <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(2)"> miezi6 - miezi9 </button></a>
@@ -9,17 +10,11 @@
       <hr>
       <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(4)"> miezi12 - miezi15 </button></a>
       <hr>
-      <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(2)"> miezi15 - miezi18 </button></a>
-      <hr>
-      <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(4)"> miezi18 - miezi24 </button></a>
-      <hr>
       <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(1)"> miaka miwili </button></a>
       <hr>
       <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(3)"> miaka mitatu </button></a>
       <hr>
-      <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(3)"> miaka minne </button></a>
-      <hr>
-        
+      <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(3)"> miaka minne </button></a>         
       </div>
 
 

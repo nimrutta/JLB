@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CoreModule } from './core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppRoutingModule } from './app-routing.module';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import {AdminModule } from './admin/admin.module';
+
+//import { ImageUploadModule } from 'angular2-image-upload'
 
 @NgModule({
   declarations: [
@@ -16,11 +18,12 @@ import {AdminModule } from './admin/admin.module';
   imports: [
     BrowserModule,
     FormsModule,
-    NoopAnimationsModule,
     HttpModule,
     CoreModule,
     AdminModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    //ImageUploadModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,7 +26,6 @@ import { ShuhudaComponent } from './shuhuda/shuhuda.component';
 @NgModule({
   imports: [
     CommonModule,
-    
     WazaziRoutingModule,
     FormsModule
   ],
