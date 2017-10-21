@@ -8,14 +8,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
          </button> <!-- #1 -->
-         <div class="col-sm-5 "><img src="../../../assets/images/pp.jpg" class="icon"></div>
-         <div class="col-sm-7 clogotext"><h3 class="logotext">Jua Lishe Bora</h3></div>
+         <div><img src="../../../assets/images/pp.jpg" height="500" width="400" class="icon"></div>
        </div>
        <div class="collapse navbar-collapse" [ngClass]="{ 'in':isIn }"> 
        <ul class="menuitems nav navbar-nav"> 
-          <li><a routerLink="shuhuda">Shuhuda</a></li>  
-          <li><a routerLink="kuhusu-jlb" routerLinkActive="active">Kuhusu JLB</a></li>
-          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active">Mwanzo</a></li>  
+          <li><a routerLink="shuhuda" (click) = "omitsearch()">Shuhuda</a></li>  
+          <li><a routerLink="kuhusu-jlb" routerLinkActive="active" (click) = "omitsearch()">Kuhusu JLB</a></li>
+          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch()">Mwanzo</a></li>  
         
        </ul>
        </div>
@@ -26,7 +25,7 @@
  
  
  <div class="row showposts">
-     <div class="col-sm-9">
+     <div class="col-sm-9 drocol">
        <div *ngIf="displayRouterOutlet">
         <router-outlet
          (activate)="BlogSomaZaidiComponent = $event"
@@ -35,7 +34,7 @@
         </router-outlet>
        </div>
      </div>
-     <div class="col-sm-3">
+     <div class="col-sm-3 sscol" *ngIf="showsearch">
       <div class="searchsection row">
       
       <div class="search">
@@ -51,8 +50,8 @@
      
      </div>
      <app-makala-contents class="makalatitles" #showarticle (myEvent)="myEvent($event)"></app-makala-contents> 
-     <app-makala-navigation class="makalatitles" *ngIf="showthisId" (articleEvent)="articleEvent($event)"></app-makala-navigation>
      <app-makala *ngIf="showArticle"></app-makala>
+     
      </div>
  </div>
  

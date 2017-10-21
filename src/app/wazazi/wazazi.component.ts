@@ -43,6 +43,7 @@ export class WazaziComponent implements OnInit {
   displayRouterOutlet = true;
   state: string = 'inactive';
   comein = false;
+  showsearch = true;
 
   ngOnInit() { }
   
@@ -76,5 +77,13 @@ export class WazaziComponent implements OnInit {
   toggleId() {
     this.showId = !this.showId;
     //this.state = (this.state === 'inactive' ? 'active' : 'inactive');
+  }
+
+  omitsearch(){
+    this.showsearch = false;
+  }
+
+  returnsearch(){
+    this.showsearch = true;
   }
 }

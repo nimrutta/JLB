@@ -2,14 +2,11 @@
  .clear {
        clear: both;            /* to solve float overlapping issues */ 
 }
- .container {
-        background-color: #f7f7f7;
-       
-        padding:80px;
-
+ .ccontainer {
+        padding:25px 0 80px 5px;
  }
 
-.container a {
+.ccontainer a {
         color: ; 
         float: right;
         margin-left: 40px;
@@ -19,14 +16,15 @@
 
 .box {
         width: 100%;
-        padding:40px 40px 90px 40px;
+        padding:10px 40px 90px 40px;
         background-color: #fff;
         border: 1px solid #d4d4d4;
         margin-bottom: 20px;
 }
 
 .box > h3 {
-       color: green;
+       color: rgba(0, 0, 0, 0.8);
+       font-size: 20px;
        margin-bottom: 25px;
 }
 

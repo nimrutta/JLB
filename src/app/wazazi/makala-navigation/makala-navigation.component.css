@@ -2,7 +2,7 @@
        clear: both;            /* to solve float overlapping issues */ 
 }
 
- .Makala-items-bed {
+ /*.Makala-items-bed {
         height:auto;
         width: 180px;
         padding: 10px 10px 0 10px;
@@ -18,7 +18,7 @@
         left:740px;
         z-index: 1000;
         float: right;
- }
+ }*/
 
  .entry1 {
         margin-top: -35px; 
@@ -37,4 +37,8 @@
 button {
         background: none;
         border: none;
+}
+
+.articletittle {
+        margin: 0 0 0 55px;
 }

@@ -1,6 +1,6 @@
 .navdiv {
         position: relative;
-        height: 131px;
+        height: 149px;
 } 
 
 .navbar {
@@ -11,7 +11,6 @@
       height: fit-content; 
       padding-right: 0; 
       margin-bottom: 0;        
-      border-bottom: 3px solid #ffb6c1;
       border-radius: none !important; 
           }
 
@@ -20,7 +19,9 @@
   }
 
   .icon {
-      float: right;
+      height: 400px;
+      width: 300px;
+      margin: auto;
    }
   
   .clogotext {
@@ -49,11 +50,12 @@
   .menuitems{
       background-color: #652f85;
       width: 100%;
-      height: 30px;
-      padding-bottom: 7px;
-      padding-right: 45px !important;
+      height: 50px;
+      border-top: 3px solid #ffb6c1;
+      padding: 10px 25px 7px 0 !important;
       margin-right: 0 !important;
       margin-top: 20px;
+      
   }
   .nav { 
       margin-right: 2%;
@@ -65,7 +67,7 @@
 
  .nav li {
       margin-left: 30px;
-      margin-top: 0px;
+      margin-top: 10px 0 0 0;
       height: 20px;
       float: right;
     }   
@@ -75,12 +77,14 @@
         background-color:none !important;
         /*border-bottom: 2px solid #fff;    /*to be less conspicuous
         border-radius: 3px;*/
-        height: 40px;
+        height: 30px;
+        background: rgba(0,0,0, 0.4);
+        border-radius: 4px;
     }  
 
   nav ul li a {
-        color: #000 !important;
-        padding-top: 10px;
+        color: #fff !important;
+        padding-top: 4px;
         height: 20px;
   }
 
@@ -96,27 +100,36 @@
         height: 40px;
  }
   .showposts {
-        background-color: #f7f7f7;
-        margin: 0;
+        background-color: #f4f4f4;
+        margin: 0 0 0 0;
   }
+
+  .drocol {
+        padding: 0 15px 0 17px;
+  }
+
+  .sscol {
+        padding-left: 30px;
+  }
+
   .searchsection {
         width: 100%;
         background-color:none;
         float: right;
         margin-right: 0;
-        margin-left: 0;
-        margin-top: 23px;
+        margin-left: 0px;
+        margin-top: 25px;
         position: relative; 
         top: 0;
  }
 
 .Makalabutton {
         font-size: 15px;
-        color: #000;
+        color: #fff;
         height: 60px;
         width: 200px;
-        background: #cdcdcd;
-        padding-right: 0 0 0 7px;
+        background: rgba(0,0,0, 0.4);
+        padding: 7px 0 0 0;
         margin: 35px 0 0 0;
         border: none;
         border-radius: 4px;       
@@ -150,7 +163,7 @@ a > .Makalabutton  :hover {
         padding: 35px 15px;
         height: fit-content;
         width: fit-content;
-        border: 1px solid  rgba(0,0,0, 0.2);
+        box-shadow: 1px 0.5px 16px -9px #000;
 }
 
 .searchbox { 

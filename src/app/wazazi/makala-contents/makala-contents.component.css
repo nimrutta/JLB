@@ -4,17 +4,19 @@
  
  .Makala-items-bed {
         height:auto;
-        width: 400px;
+        width: 290px;
         padding: 10px 10px 0 10px;
         margin-top: 0px;
         margin-right:20%;
         word-wrap: break-word;
         background-color: #FFF;
-        border-top: 3px solid #ffb6c1;
-        border-bottom: 3px solid #652f85;
-        box-shadow: 0px 1.5px 4px 0px #000;
+        border-top: 7px solid #ffb6c1;
+        border-bottom: 7px solid #652f85;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        box-shadow: 0px 1.5px 3px 0px #000;
         position: absolute;
-        top: 90px;
+        top: 25px;
         left:0px;
         z-index: 1000;
         float: right;
@@ -24,10 +26,11 @@
         color: rgba(0,0,0,0.8);
         margin: 0 10px 0 0;
         float: left;
+        position: absolute;
 } 
 
 .Makala-items-bed a {
-        margin: 0 0 0 20px;
+        margin: 0 0 0 50px;
         color: #000;
 }
 
@@ -36,7 +39,16 @@
         color: blue;
 }
 
+hr {
+        width: 250px;
+        margin: 15px auto;
+}
+
 button {
         background: none;
         border: none;
+}
+
+.articletittle {
+        margin: 0 0 0 55px;
 }
