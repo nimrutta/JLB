@@ -3,5 +3,6 @@ export class Blogpost {
   title: string;
   body:string;
   topic_id:number;
+  image_id: number;
 }
 
