@@ -30,7 +30,7 @@ export class BlogSectionComponent implements OnInit {
 
    showId = false;
 
-   post: Blogpost = {   id:1,
+   post: any = {   id:1,
                         title:'',
                         body:'', 
                         topic_id:2 }; 
