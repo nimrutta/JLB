@@ -3,27 +3,29 @@
 <main>
     <div class="container" >
 
-     <form  action="/action_page.php" >
+     <form   >
 <br>
-<textarea class="area" [(ngModel)]="blogpost.body" 
- rows="15px" cols="100px" 
+<textarea class="area" [(ngModel)]="blogpost.body"
+ rows="15px" cols="100px"
  name="description"   placeholder="Your contents here...">
 
 </textarea><br>
 <div style="display: block;
   margin-left: 40%;
   ">
- <!-- <input type="number" [(ngModel)]="post.id"
-  placeholder="Blogpost's ID"  name="id"    > -->
-  
-  <app-uploadimage></app-uploadimage>
+
+<!-- onServerRespose listener gets image details from upload image component-->
+  <app-uploadimage
+    (onServerResponse) = "initializeImageId($event)"
+
+  ></app-uploadimage>
 <!---(click)="save()"-->
   <button  (click)="add()"> Post to page </button>
 </div>
 <a href="#" style="position: absolute;left: 80%;">*View Earlier Posts</a>
 
 </form>
- 
+
     </div>
  </main>
 <app-footer></app-footer>

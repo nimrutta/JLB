@@ -13,34 +13,37 @@ import { BlogpostService } from '../../core/blogpost.service';
 })
 
 export class BlogComponent implements OnInit {
-  
- 
-  post: any = { } 
 
-  blogpost = new Blogpost();
-  blogposts : Blogpost[];
+
+  post: any = { }
+
+  blogpost:any = {title: "title", topic_id: 4}
+
 
   constructor(private blogpostService: BlogpostService) { }
 
-
-  ngOnInit() {
-    this.blogpost.title = 'title';
-    this.blogpost.topic_id = 4;
+  /*
+  * receives data via event emmiter from upload image component and initializes image_id property
+  * */
+  initializeImageId($event){
+    this.blogpost.image_id = $event.id;
   }
 
-  
+
+  ngOnInit() {
+  }
+
+
   save(): void {
     this.blogpostService.update(this.post)
   }
 
   add():void {
-    
+
     if (!this.blogpost.title) { return; }
-    this.blogpostService.create(this.blogpost) 
-    //.then(blogpost => {
-    //this.blogposts.push(blogpost);
-              //  });
-  
+    this.blogpostService.create(this.blogpost)
+
+
             }
 
 }
