@@ -18,11 +18,13 @@ import { MakalaSubtopicsEditComponent } from './makala-subtopics-edit/makala-sub
 import { SearchsectionComponent } from './searchsection/searchsection.component';
 import { UploadimageComponent } from './uploadimage/uploadimage.component';
 
+import { ImageUploadModule } from 'angular2-image-upload'
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ImageUploadModule.forRoot(),
   ],
   declarations: [AdminComponent, AndikaMakalaComponent, BlogComponent, ClientsComponent, SubscribersComponent, FooterComponent, HeaderComponent, MakalaComponent, MakalaEditComponent, MakalaSubtopicsComponent, MakalaSubtopicsEditComponent, SearchsectionComponent, UploadimageComponent]
 })

@@ -22,30 +22,41 @@
 }
 
  .ccontainer {
-        background-color: #f7f7f7;
        
-        padding:80px;
+        padding:25px 0 0 5px;
 
  }
 
 .box {
         width: 100%;
-        padding:40px;
+        padding:0 0 40px 0px;
         background-color: #fff;
-        border: 1px solid #cdcdcd;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        border-radius: 3px;
+        box-shadow: 1px 0.5px 24px -9px #000; 
 }
 
-.box > h3 {
-       color: green;
+.box > .title {
+       color: #000;
+       font-size: 19px;
+       padding: 0 0 0 25px;
        margin-bottom: 25px;
 }
+
+.iquote {
+       margin: 0;
+}
+
+ibox {
+       width: 100%;
+}
+
 .oneimage {
-        height: 420px;
+        height: 520px;
         float: left; 
-        width: 95%; 
-        margin-left: 4%;
-        margin-bottom: 0.5em;
+        width: 100%; 
+        margin-left: 0;
+        margin-bottom: 17px;
 }
 
 .twoimage {
@@ -57,18 +68,49 @@
 }
 
 .quote {
-        font-size: 27px;
-        font-style: italic;
-        color: #CDCDCD;
+        font-size: 19px;
+        font-family: Purisa;
+        color: rgba(0, 0, 0, 0.4);;
+        height: 520px;
+        width: 30%;
+        padding: 95px 15px 0 15px;
+        position: absolute;
+        right: 15px;
+        z-index: 1000;
+}
+
+.quote:hover {
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
+}
+
+.blogtext {
+        padding: 0 0 0 20px;
+        width: 100%;
 }
 
 .somazaidi {
-        color : green;
+        color : #000;
         height: 20px;
         width: auto;
-        margin-right: 0px; 
+        margin: 0 0 5px 0; 
         float: right;
+        padding: 0 20px 0 0;
         background: none;
         border: none;
  }
  
+ .postedattime {
+        float: left;
+        margin: 0 0 0 20px;
+ }
+
+ .shareicon {
+       height: 18px;
+       width: 18px;
+       margin: 0 20px;
+       float: right;
+ }

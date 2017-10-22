@@ -1,14 +1,13 @@
 
       <div class="Makala-items-bed">
       <div class="entry1">
-      <a href="#" style="color:#fff;">{{category.category_name}}</a>
+      <a href="#" style="color:#fff;">g{{category.category_name}}</a>
       </div>
       <br>
       <div *ngFor= "let m of makala">
-       <button (click)="onClick($event)" (click)="getArticle(m.id)"> {{m.title}} </button>
+       <button class="articletittle" (click)="onClick($event)" (click)="getArticle(m.id)"> {{m.title}} </button>
        <hr>
       </div>
-      <a href="#">Lorem ipsmumnot 1iii</a>
       <hr>
       
         

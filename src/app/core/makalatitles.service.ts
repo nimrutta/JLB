@@ -18,7 +18,7 @@ export class MakalatitlesService {
   private headers = new Headers({'Content-Type': 'application/json'});
   
   private makalatitlesUrl = 'http://api.jualishebora.ga/api/v1/topics'
-  private makalacategoriesUrl = 'http://api.jualishebora.ga/api/v1/topicsByCategory'
+  private makalacategoriesUrl = 'http://api.jualishebora.ga/api/v1/topicsByCategory'  //http://api.tuseme.co.tz/api/v1/streets
   private makalaCategoryNameUrl = 'http://api.jualishebora.ga/api/v1/topicCategories'
 
   constructor(private http: Http) { }
@@ -35,6 +35,16 @@ export class MakalatitlesService {
                  .toPromise()
                  .then(this.extractData)
                  .catch(this.handleError);
+  }
+
+  getMakala(id: number): void {
+   const url = `${this.makalacategoriesUrl}/${id}`;
+    
+    this.http.get(url).subscribe((res: Response) => {
+        this.makala = res.json().data; 
+        this.fetchedArticles.next(this.makala)       
+        console.log(this.makala);
+    });
   }
 
   private extractData(res: Response) {
@@ -70,16 +80,6 @@ export class MakalatitlesService {
         this.makalatitle = searchTerm;
         this.nameChange.next(this.makalatitle);
         console.log(this.makalatitle);
-    });
-  }
-
-  getMakala(id: number): void {
-   const url = `${this.makalacategoriesUrl}/${id}`;
-    
-    this.http.get(url).subscribe((res: Response) => {
-        this.makala = res.json().data; 
-        this.fetchedArticles.next(this.makala)       
-        console.log(this.makala);
     });
   }
 

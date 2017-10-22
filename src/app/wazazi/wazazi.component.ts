@@ -1,14 +1,16 @@
 import { Component, 
          OnInit, 
-         ViewChild,
-         trigger,
+         ViewChild,} from '@angular/core'
+
+import { trigger,
          state,
          style,
          transition,
          animate,
          keyframes
-         } from '@angular/core';
+         } from '@angular/animations';
 
+import { MakalaContentsComponent } from './makala-contents/makala-contents.component';
 import { SearchService } from '../core/search.service';
 
 @Component({
@@ -16,31 +18,17 @@ import { SearchService } from '../core/search.service';
   templateUrl: './wazazi.component.html',
   styleUrls: ['./wazazi.component.css'],
   animations: [
-  trigger('focusPanel', [
-    state('inactive', style({
-      transform: 'scale(1)',
-      backgroundColor: '#eee'
-      
-    })),
-    state('active',   style({
-      transform: 'scale(1.5)',
-      backgroundColor: '#cfd8dc' 
-    })),
-
-    transition('inactive => active', animate('5000ms ease-in')),
-    transition('active => inactive', animate('5000ms ease-out'))
-  ]),
-
-  trigger('movePanel', [
-    transition('void => *', [
-      style({transform: 'translateY(-100%)'}),
-      animate(100)]),
-   
-  ])
-
- 
-  
-],
+    trigger('flyInOut', [
+      state('in', style({transform: 'translateX(0)'})),
+      transition('void => *', [
+        style({transform: 'translateX(-400%)'}),
+        animate(2000)
+      ]),
+      transition('* => void', [
+        animate(2000, style({transform: 'translateX(300%)'}))
+      ])
+    ])
+  ],
 
   providers: [ ],
 })
@@ -54,9 +42,19 @@ export class WazaziComponent implements OnInit {
   showArticle = false;
   displayRouterOutlet = true;
   state: string = 'inactive';
+  comein = false;
+  showsearch = true;
 
   ngOnInit() { }
   
+  isIn = false;   // store state
+
+  toggleState() { // click handler
+        let bool = this.isIn;
+        this.isIn = bool === false ? true : false;
+        console.log('isIn changes state')
+    }
+
   myEvent($event){
     this.showId = !this.showId;
     this.showthisId = !this.showthisId;
@@ -72,8 +70,20 @@ export class WazaziComponent implements OnInit {
       this.searchService.performSearch(searchTerm);
   }
    
+  fcomein() {
+    this.comein = !this.comein;
+  }
+
   toggleId() {
     this.showId = !this.showId;
-    this.state = (this.state === 'inactive' ? 'active' : 'inactive');
+    //this.state = (this.state === 'inactive' ? 'active' : 'inactive');
+  }
+
+  omitsearch(){
+    this.showsearch = false;
+  }
+
+  returnsearch(){
+    this.showsearch = true;
   }
 }

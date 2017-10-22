@@ -1,8 +1,15 @@
 
 
-      <div class="Makala-items-bed">
-      <a (click)="onClick($event)" routerLinkActive="active"><button (click)=" getMakala(1)"> miezi0 - miezi6 </button></a>
+      <div class="Makala-items-bed" [@flyInOut]="'in'" *ngIf='display'>
+      <button class="close" (click)="ifdisplay()">&times;</button> 
+      <a><button (click)=" getMakala(4)"> miezi0 - miezi6 </button></a>
       <hr>
+      <div  *ngIf= "display1">
+      <div *ngFor= "let m of makala">
+       <button class="articletittle" (click)="onClick($event)" (click)="getArticle(m.id)"> {{m.title}} </button>
+       <hr>
+      </div>
+      </div>
       <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(2)"> miezi6 - miezi9 </button></a>
       <hr>
       <a (click)="onClick($event)" routerLinkActive="active"><button (click)="getMakala(3)"> miezi9 - miezi12 </button></a>
