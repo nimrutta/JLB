@@ -1,6 +1,9 @@
-<footer>
-    <app-subscribe *ngIf="showmyId" (myevent)="myevent($event)" (myEvent)="myEvent($event)"></app-subscribe>
-    <app-kujiunga *ngIf="showmyod" (myevenT)="myevenT($event)"></app-kujiunga> 
+    <app-taharifa-subscription *ngIf="thanksforsubscribing" (closeModal)="closeModal($event)"></app-taharifa-subscription>
+    <app-taharifa-kujiunga *ngIf="thanksforjoiningprogram" (closeModal)="closeModal($event)"></app-taharifa-kujiunga>
+    <app-subscribe *ngIf="showmyId" (myevent)="myevent($event)" (myEvent)="myEvent($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-subscribe>
+    <app-kujiunga *ngIf="showmyod" (myevenT)="myevenT($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-kujiunga> 
+
+    <footer>
     <div class="row">
         
      <div class="col-sm-4">

@@ -12,13 +12,18 @@ export class KujiungaComponent implements OnInit {
 
   constructor( private clientsService: ClientsService ) { }
  client = new Clients();
- clients:Clients[];
+ clients = [];
 
 
   @Output() myevenT = new EventEmitter();
+  @Output() closeButtonClicked = new EventEmitter();
 
    onClick(button){
        this.myevenT.emit(button);
+  }
+
+  exitModal(button){
+       this.closeButtonClicked.emit(button);
   }
 
    add():void {
@@ -32,6 +37,8 @@ export class KujiungaComponent implements OnInit {
             }
 
   ngOnInit() {
+    this.client.password = 'password';
+    this.client.remember_token = 'token';
   }
 
 }

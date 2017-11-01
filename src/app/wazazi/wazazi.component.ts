@@ -56,14 +56,15 @@ export class WazaziComponent implements OnInit {
     }
 
   myEvent($event){
-    this.showId = !this.showId;
-    this.showthisId = !this.showthisId;
+     this.showArticle = !this.showArticle;
+    this.showthisId = false;
+    this.displayRouterOutlet = !this.displayRouterOutlet;
+    
   }
 
   articleEvent() {
-    this.showArticle = !this.showArticle;
-    this.showthisId = false;
-    this.displayRouterOutlet = !this.displayRouterOutlet;
+    this.showId = !this.showId;
+    this.showthisId = !this.showthisId;
   }
 
   performSearch(searchTerm: HTMLInputElement): void { 

@@ -22,7 +22,7 @@ import { BlogpostService } from '../../core/blogpost.service';
   templateUrl: './blog-section.component.html',
   styleUrls: ['./blog-section.component.css'],
 
-  providers: [ BlogpostService ]
+  providers: [ BlogpostService ],
 })
 
 
@@ -47,6 +47,9 @@ export class BlogSectionComponent implements OnInit {
    _subscription: any;
    subscription: any;
    message: string;
+   postlikes: number;
+   liked = false;
+   public repoUrl: string;
 
    constructor(
      private blogpostService: BlogpostService,
@@ -60,6 +63,8 @@ export class BlogSectionComponent implements OnInit {
      this.message = searchService.message; 
      this.subscription = searchService.nameChange.subscribe((value) => { 
       this.message = value;})
+
+     this.repoUrl="http://jualishebora.ga/wazazi/blog-section"   
  }
    
   
@@ -72,13 +77,23 @@ export class BlogSectionComponent implements OnInit {
    //search(term: string): void {
    //this.searchTerms.next(term);}
    
+   addLikes(){
+     if (!this.liked){
+          this.postlikes = this.postlikes + 1;
+     }
+     else{
+          this.postlikes = this.postlikes - 1;
+     }
+          this.liked = !this.liked;
+   }
+
    ngOnDestroy() {
    //prevent memory leak when component destroyed
     this._subscription.unsubscribe();
   }
 
    ngOnInit(): void {
-
+    this.postlikes = 45;
     this.display();
     /*this.posts = this.searchTerms
       .debounceTime(300)        

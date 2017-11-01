@@ -19,6 +19,7 @@ export class BlogSomaZaidiComponent implements OnInit {
    }
    showId = false;
    showmyId = false;
+   thanksforjoiningprogram = false;
 
    comment = new Comment()
    comments : Comment[]
@@ -38,6 +39,19 @@ export class BlogSomaZaidiComponent implements OnInit {
   togglemyId() {
     this.showmyId = !this.showmyId;
   }
+
+  myevenT($event){
+    this.showmyId = !this.showmyId;
+    this.thanksforjoiningprogram = !this.thanksforjoiningprogram;
+  }
+
+  closeButtonClicked($event){
+       this.showmyId = !this.showmyId;
+    }
+
+   closeModal($event){
+    this.thanksforjoiningprogram = !this.thanksforjoiningprogram;
+    }
 
    add():void {
     

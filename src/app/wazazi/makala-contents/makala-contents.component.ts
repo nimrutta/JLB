@@ -10,6 +10,7 @@ import { trigger,
 
 import { MakalatitlesService } from '../../core/makalatitles.service';
 import { Makalatitles } from '../../makalatitles';
+import { Makalacategory } from '../../makalacategory'
 
 // import fade in animation
 //import { slideInOutAnimation } from './../animation';
@@ -37,14 +38,22 @@ import { Makalatitles } from '../../makalatitles';
 })
 export class MakalaContentsComponent implements OnInit {
   makala: Makalatitles[];
+  category: Makalacategory[];
   _subscription: any;
+  subscription: any;
   display = false;
   display1 = false;
   constructor( private makalatitlesService: MakalatitlesService ) { 
      this.makala = makalatitlesService.makala;
-     this._subscription = this.makalatitlesService.fetchedArticles.subscribe((value) => {
+
+     this._subscription = this.makalatitlesService.fetchedArticles.subscribe((value) => { //ame subscribe kwa observable ya makala
      this.makala = value;
    });
+     
+     this.subscription = this.makalatitlesService.fetchedCategories.subscribe((value) => { //ame subscribe kwa observable ya makala
+     this.category = value;
+   });
+     
   }
   
 
@@ -63,9 +72,8 @@ export class MakalaContentsComponent implements OnInit {
   }
 
   getMakala(id: number): void { 
-  if (this.display1) {
+  if (!this.display1) {
   this.makalatitlesService.getMakala(id);
-  this.makalatitlesService.getMakalatitle(id);
   }
   
   this.display1 = !this.display1;
@@ -76,7 +84,7 @@ export class MakalaContentsComponent implements OnInit {
   }
 
   ngOnInit() {
-    
+    this.makalatitlesService.getMakalatitles();
   }
 
 }

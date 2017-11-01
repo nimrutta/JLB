@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WazaziRoutingModule } from './wazazi-routing.module';
 import { FormsModule } from '@angular/forms';
+import { CeiboShare } from 'ng2-social-share';
 
 
 import { SearchService } from '../core/search.service';
@@ -22,6 +23,8 @@ import { HeaderComponent } from './header/header.component';
 import { MakalaComponent } from './makala/makala.component';
 import { KutuhusuComponent } from './kutuhusu/kutuhusu.component';
 import { ShuhudaComponent } from './shuhuda/shuhuda.component';
+import { TaharifaSubscriptionComponent } from './taharifa-subscription/taharifa-subscription.component';
+import { TaharifaKujiungaComponent } from './taharifa-kujiunga/taharifa-kujiunga.component';
 
 @NgModule({
   imports: [
@@ -30,7 +33,23 @@ import { ShuhudaComponent } from './shuhuda/shuhuda.component';
     FormsModule
   ],
  
-  declarations: [WazaziComponent, BlogSectionComponent, BlogSomaZaidiComponent, KuhusuJlbComponent, KujiungaComponent, MakalaContentsComponent, MakalaNavigationComponent, SubscribeComponent, FooterComponent, HeaderComponent, MakalaComponent, KutuhusuComponent, ShuhudaComponent],
+  declarations: [WazaziComponent, 
+                 BlogSectionComponent, 
+                 BlogSomaZaidiComponent, 
+                 KuhusuJlbComponent, 
+                 KujiungaComponent, 
+                 MakalaContentsComponent, 
+                 MakalaNavigationComponent, 
+                 SubscribeComponent, 
+                 FooterComponent, 
+                 HeaderComponent, 
+                 MakalaComponent, 
+                 KutuhusuComponent, 
+                 ShuhudaComponent, 
+                 TaharifaSubscriptionComponent, 
+                 TaharifaKujiungaComponent,
+                 CeiboShare],
+                 
   providers: [ SearchService,
                SubscribersService,
                MakalatitlesService,

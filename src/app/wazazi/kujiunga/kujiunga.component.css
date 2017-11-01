@@ -4,7 +4,7 @@
 }
 
  .container {
-        background-color: #fff;
+        background-color: gray;
         box-shadow: 1px 6.5px 12px 1px #000;
         padding-top: 3%;
         padding-right: 5%;
@@ -13,7 +13,7 @@
  .modal {
         display: block;
         position: fixed;
-        z-index: 1;
+        z-index: 1000;
         left: 0;
         top: 0;
         width: 100%;
@@ -28,13 +28,23 @@
         color: rgba(0,0,0,0.8);
 }
 
+.jiungebutton {
+        color: #ffb6c1;
+        font-size: 16px;
+        height: 20px;
+        width: auto;
+        margin-right: 0px; 
+        background: none;
+        border: none;
+ }
+
 .modal-header {
-        font-size: 17px;
-        padding: 13px 16px;
-        background-color: #fff;
-        color: rgba(0,0,0,0.7);
-        border-top: 4.2px solid #ffb6c1;
+        font-size: 15px;
+        padding: 23px 40px;
+        color: #ffffff;
         border-bottom:  none;
+        border-top-left-radius: 6px;
+        border-top-right-radius:6px
         }
 
 .modallinks :hover {
@@ -53,32 +63,36 @@
         margin-right: auto;
 }
 
+input::placeholder {
+  color:  #cdcdcd;
+  }
+
 .modal-footer {
-        color: green;
+        color: #ffffff;
         font-size: 17px;
         padding: 2px 16px;
-        background-color: #fff;
-        border-bottom: 1.6px solid #652f85;
         border-top:  none;
-         margin-top: 40px;
+        margin-top: 45px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px
         }
 
 .sendbutton {
-        color: green;
-        margin-right: 8.5%;
-        margin-bottom: 9px;
+        color: #ffffff;
+        margin-right: 24px;
+        margin-bottom: 8px;
         background: none; 
         border: none;
 }
 
 .modal-content {
  position: relative;
-    background-color: #fefefe;
+    background-color: rgba(0,0,0,0.8);
     margin: auto;
     margin-top: 260px;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    width: 65%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -93,12 +107,8 @@
     border-radius: 4px;
 }
 
- input::placeholder {
-  color:  #cdcdcd;
-  }
-
  :-moz-placeholder {
-    color: #DCDCDC;
+    color: rgba(0,0,0,0.8);
  }
 
 @-webkit-keyframes animatetop {
@@ -119,7 +129,7 @@
 
 .close:hover,
 .close:focus {
-        color: black;
+        color: #ffffff;
         text-decoration: none;
         cursor: pointer;
 }

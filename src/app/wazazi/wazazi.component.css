@@ -14,6 +14,10 @@
       border-radius: none !important; 
           }
 
+.navbar-fixed-top {
+      position: relative;
+}
+
   .logorow {
       height: fit-content;
   }
@@ -89,7 +93,7 @@
   }
 
   nav ul li a:hover {
-        color: #ffb6c1 !important;
+        color: #ffffff !important;
   }
 
  .Mwanzo .Mwanzo {
@@ -160,6 +164,7 @@ a > .Makalabutton  :hover {
 
 .search {
         background-color: #fff;
+        border-radius: 4px;
         padding: 35px 15px;
         height: fit-content;
         width: fit-content;

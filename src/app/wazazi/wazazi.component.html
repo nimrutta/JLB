@@ -33,6 +33,7 @@
 
         </router-outlet>
        </div>
+       <app-makala *ngIf="showArticle"></app-makala>
      </div>
      <div class="col-sm-3 sscol" *ngIf="showsearch">
       <div class="searchsection row">
@@ -43,14 +44,13 @@
          
 
          <br>
-         <a><button class="Makalabutton" (click)="showarticle.ifdisplay()" (click)= "toggleId()"><p>Soma Makala</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
+         <a><button class="Makalabutton" (click)="showarticle.ifdisplay()"><p>Soma Makala</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
          <br>
      </div> 
          <!-- <button id="content" [@focusPanel]='state' @movePanel >Look at me animate</button> -->
      
      </div>
      <app-makala-contents class="makalatitles" #showarticle (myEvent)="myEvent($event)"></app-makala-contents> 
-     <app-makala *ngIf="showArticle"></app-makala>
      
      </div>
  </div>

@@ -1,0 +1,161 @@
+
+.clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}
+
+ .container {
+        background-color: gray;
+        box-shadow: 1px 6.5px 12px 1px #000;
+        padding-top: 3%;
+        padding-right: 5%;
+ }
+
+ .modal {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);/* fallback color */
+        background-color: rgba(0,0,0,0.4);
+ }
+ 
+.close {
+        margin: 3px 5px;
+        color: rgba(0,0,0,0.8);
+}
+
+.jiungebutton {
+        color: #ffb6c1;
+        font-size: 16px;
+        height: 20px;
+        width: auto;
+        margin-right: 0px; 
+        background: none;
+        border: none;
+ }
+
+.modal-header {
+        font-size: 15px;
+        padding: 23px 40px;
+        color: #ffffff;
+        border-bottom:  none;
+         }
+
+.modallinks :hover {
+        font-size: 17.4px;
+}
+
+.modal-body { width:100%;
+              padding: 2px 16px;
+              border:  none;
+              border-top-left-radius: 6px;
+              border-top-right-radius:6px
+        }
+
+.contactfield{  
+        width: 270px;
+        display: block;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+input::placeholder {
+  color:  #cdcdcd;
+  }
+
+.modal-footer {
+        color: #ffffff;
+        font-size: 17px;
+        padding: 2px 16px;
+        border-top:  none;
+        margin-top: 45px;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px
+        }
+
+.textcontainer {
+       text-align: center;
+       padding-right: 0;
+}
+
+.thankyoutext {
+        color: #ffffff;
+        text-align: center;
+}
+
+.textcontainer h1 {
+        margin-top: 0 !important;
+}
+
+.buttoncontainer {
+        text-align: center;
+        padding: 17px 0 0 0;
+}
+
+.Closebutton {
+        color: #ffffff;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        margin-right: 24px;
+        margin-bottom: 8px;
+        background: rgba(0,0,0,0.9);; 
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+}
+
+.modal-content {
+ position: relative;
+    background-color: rgba(0,0,0,0.8);
+    margin: auto;
+    margin-top: 260px;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+ input {
+    width: 35%;
+    padding-left: 5px;
+    border: 1px solid #652f85;
+    border-radius: 4px;
+}
+
+ :-moz-placeholder {
+    color: #cdcdcd;
+ }
+
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close {
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+        color: #ffffff;
+        text-decoration: none;
+        cursor: pointer;
+}

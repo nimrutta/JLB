@@ -9,6 +9,9 @@ export class FooterComponent implements OnInit {
 
   showmyId = false;
   showmyod = false;
+  thanksforsubscribing = false;
+  thanksforjoiningprogram = false;
+
   
 
   constructor() { }
@@ -16,8 +19,20 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  closeModal($event){
+    if (this.thanksforsubscribing) {
+      this.thanksforsubscribing = !this.thanksforsubscribing;
+    }
+
+    if(this.thanksforjoiningprogram) {
+      this.thanksforjoiningprogram = !this.thanksforjoiningprogram;
+    }
+    
+  }
+
   myEvent($event){
     this.showmyId = !this.showmyId;
+    this.thanksforsubscribing = !this.thanksforsubscribing;
   }
 
   myevent($event){
@@ -27,8 +42,18 @@ export class FooterComponent implements OnInit {
 
    myevenT($event){
     this.showmyod = !this.showmyod;
+    this.thanksforjoiningprogram = !this.thanksforjoiningprogram;
   }
 
+  closeButtonClicked($event){
+    if(this.showmyId) {
+       this.showmyId = !this.showmyId;
+    }
+
+    if(this.showmyod) {
+       this.showmyod = !this.showmyod;
+    }
+  }
   togglemyId() {
    this.showmyId = !this.showmyId;
   }

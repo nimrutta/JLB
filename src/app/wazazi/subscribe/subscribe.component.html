@@ -2,20 +2,32 @@
       
       <div id="myModal" class="modal">
        <div class="modal-content">
-         <button class="close" (click)="onClick($event)">&times;</button>
+         <button class="close" (click)="exitModal($event)">&times;</button>
          <div class="modal-header">
-            <p>Kamilisha fomu hii na kututumia taharifa zako ili
-                kupokea Makala zetu bure kupitia Whatsapp
-                au <a class="modallinks"><button class="jiungebutton" 
-                (click)="onClick1($event)">Jiunge na program
-                 </button></a> kupata mafunzo kutoka kwa mwalimu wetu</p>
+            <p>Ukijaza fomu hii na kututumia tutahakikisha haukosi masomo yetu 
+               kwa kukujulisha kupitia message ya whatsapp kila tutakapo weka somo jipya. 
+               Pia kama umevutiwa na mafunzo yetu na ungependa kushiriki kwenye
+               darasa letu<a class="modallinks"><button class="jiungebutton" 
+                (click)="onClick1($event)">Jiunge hapa
+                 </button></a></p>
                  <br><br>      
 
             <div class="clear"></div>
          </div>
          <div class="modal-body">
            
-             <form>
+             <form #subscribeform="ngForm">
+             <input type="text" name="comment_author" id="jina" 
+             class="contactfield" value=""  placeholder="Jina" 
+             required [(ngModel)]="subscriber.name" name="jina"
+             #jina="ngModel">
+             <div *ngIf="jina.errors && (jina.dirty || jina.touched)" class="alert alert-danger">
+               <div [hidden]="!jina.errors.required">
+                   Jina lako linahitajika
+               </div>
+             </div>   
+
+
              <input type="text" name="comment_author" id="comment_author" 
              class="contactfield" value=""  placeholder="Namba ya Whatsapp" 
              required="required" [(ngModel)]="subscriber.phone_number">
@@ -23,7 +35,8 @@
 
          </div>
          <div class="modal-footer">
-             <a class="modallinks"><button class="sendbutton" (click)="onClick($event)" (click)="add()">Tuma taharifa</button></a>
+             <a class="modallinks"><button class="sendbutton" (click)="onClick($event)" (click)="add()"
+                                    [disabled]="!subscribeform.form.valid">Tuma taharifa</button></a>
          </div>
 
        </div>

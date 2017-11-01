@@ -1,14 +1,68 @@
-<div class="ccontainer">
-  <div class="box">
-<h3>{{article.title}}</h3>
-<p>
-  {{article.body}}
-</p>
-<br><br><br><br>
-<br><br><br><br>
-<br><br><br><br>
-<br><br><br><br>
-<br><br><br><br>
-  </div>
-  
-</div>
+<main>
+     
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>  
+
+
+    <div class="ccontainer">
+      <div class="box">
+      <h3> {{article.title}}</h3>
+          
+           {{article.body}}
+
+      <div><p style="margin: 10px 0 23px 0;">Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
+         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
+         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
+         vestibulum est, a dignissim felis. et porttitor ipsum 
+         augue sed lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+         Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
+         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
+         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
+         vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
+          lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.</p>
+      </div>
+        <div><p style="margin: 10px 0 23px 0;">Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
+         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
+         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
+         vestibulum est, a dignissim felis. et porttitor ipsum 
+         augue sed lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+         Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
+         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
+         risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
+         vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
+          lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.</p>
+      </div>
+       <div><img src="../../../../assets/images/happy mom.jpg" alt="Fruit View"
+           class="oneimage"> 
+       </div>
+      <div class="clear"></div>
+       
+       <img src="../../../../assets/images/twitter.png" alt="Fruit View"
+           class="shareicon" ceiboShare  ="{u: repoUrl}">
+
+      <div class="fb-share-button" data-href="http://jualishebora.ga/wazazi/blog-section" 
+      data-layout="button_count" data-size="small" data-mobile-iframe="false">
+      <a class="fb-xfbml-parse-ignore" target="_blank" 
+      href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjualishebora.ga%2Fwazazi%2Fblog-section&amp;src=sdkpreparse">
+      <img src="../../../../assets/images/facebok.png" alt="Fruit View"
+           class="shareicon"></a></div>
+       
+       <button class="jiungebutton" 
+       (click)= "togglemyId()">Jiunge na program
+       </button>
+       <app-taharifa-kujiunga *ngIf="thanksforjoiningprogram" (closeModal)="closeModal($event)"></app-taharifa-kujiunga>
+       <app-kujiunga *ngIf="showmyId" (myevenT)="myevenT($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-kujiunga>
+
+      </div>
+    </div>
+       <!-- comments section begins -->
+
+   
+        <!-- <button (click)="toggleId()">Toggle</button> --> 
+    </main>

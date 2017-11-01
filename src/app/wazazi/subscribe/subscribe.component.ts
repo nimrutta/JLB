@@ -12,10 +12,12 @@ export class SubscribeComponent implements OnInit {
 
   constructor( private subscribersService: SubscribersService ) { }
   subscriber = new Subscribers();
-  subscribers:Subscribers[];
-
+  subscribers = [];  //initialises an array
+  
   @Output() myevent = new EventEmitter();
   @Output() myEvent = new EventEmitter();
+  @Output() closeButtonClicked = new EventEmitter();
+            
 
   onClick(button){
        this.myEvent.emit(button);
@@ -25,6 +27,9 @@ export class SubscribeComponent implements OnInit {
        this.myevent.emit(button);
   }
 
+  exitModal(button){
+       this.closeButtonClicked.emit(button);
+  }
 
   add():void {
     
@@ -33,9 +38,10 @@ export class SubscribeComponent implements OnInit {
     .then(subscriber => {
     this.subscribers.push(subscriber);
                 });
-  
             }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.subscriber.teacher_id = 1;
+  }
   
 }

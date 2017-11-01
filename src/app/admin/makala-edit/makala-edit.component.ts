@@ -24,7 +24,7 @@ export class MakalaEditComponent implements OnInit {
   }
 
   getMakalatitles(): void {
-    this.makalatitlesService.getMakalatitles().then(makalatitles => this.makalatitles = makalatitles);
+    //this.makalatitlesService.getMakalatitles().then(makalatitles => this.makalatitles = makalatitles);
   }
 
   toggleId(){

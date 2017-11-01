@@ -18,7 +18,7 @@ export class MakalaNavigationComponent implements OnInit {
   }
 
  makala: Makalatitles[];
- category: Makalacategory;
+ category: Makalacategory[];
    _subscription: any;
    subscription: any;
    makalatitle: string;
@@ -37,7 +37,7 @@ export class MakalaNavigationComponent implements OnInit {
       this.makalatitle = value;});
 
      this.category = makalatitlesService.category; 
-     this.subscription = makalatitlesService.fetchedCategory.subscribe((value) => { 
+     this.subscription = makalatitlesService.fetchedCategories.subscribe((value) => { 
       this.category = value;})
  }
    

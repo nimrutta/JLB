@@ -12,6 +12,8 @@ export class SubscribersService {
   
   constructor(private http: Http) { }
   
+  Subscriber 
+
   getSubscribers(): Promise<Subscribers[]> {
       return this.http.get(this.subscribersUrl)
                  .toPromise()

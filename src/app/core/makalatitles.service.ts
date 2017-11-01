@@ -12,7 +12,7 @@ import { Makalacategory } from './../makalacategory';
 export class MakalatitlesService {
   makala: Makalatitles[];
   article: Makalatitles;
-  category: Makalacategory;
+  category: Makalacategory[];
   makalatitle: string 
 
   private headers = new Headers({'Content-Type': 'application/json'});
@@ -26,18 +26,24 @@ export class MakalatitlesService {
   
   
   nameChange: Subject<string> = new Subject<string>();
-  fetchedArticles: Subject<Makalatitles[]> = new Subject<Makalatitles[]>();
+  fetchedArticles: Subject<Makalatitles[]> = new Subject<Makalatitles[]>(); //observable ya makala inarudishwa hapa,?
   fetchedArticle: Subject<Makalatitles> = new Subject<Makalatitles>();
-  fetchedCategory: Subject<Makalacategory> = new Subject<Makalacategory>();
+  fetchedCategories: Subject<Makalacategory[]> = new Subject<Makalacategory[]>(); //observable ya topic catgories
 
-  getMakalatitles(): Promise<Makalatitles[]> {
-      return this.http.get(this.makalatitlesUrl)
-                 .toPromise()
-                 .then(this.extractData)
-                 .catch(this.handleError);
+  getMakalatitles(): void {             //anarudisha array ya categories za makala life cycle ya 
+                                                           // makala contents ikianza
+      //return this.http.get(this.makalaCategoryNameUrl)
+      //           .toPromise()
+      //           .then(this.extractData)
+      //           .catch(this.handleError);
+
+      this.http.get(this.makalaCategoryNameUrl).subscribe((res: Response) => {
+        this.category = res.json().data; 
+        this. fetchedCategories.next(this.category)       
+    });
   }
 
-  getMakala(id: number): void {
+  getMakala(id: number): void {                               //huyu anaitwa uki click kundi la umri wa mtoto
    const url = `${this.makalacategoriesUrl}/${id}`;
     
     this.http.get(url).subscribe((res: Response) => {
@@ -99,7 +105,7 @@ export class MakalatitlesService {
     
     this.http.get(url).subscribe((res: Response) => {
         this.category = res.json().data; 
-        this.fetchedCategory.next(this.category)       
+        this.fetchedCategories.next(this.category)       
         console.log(this.category);
     });
   }
