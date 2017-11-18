@@ -42,13 +42,17 @@ export class MakalaContentsComponent implements OnInit {
   _subscription: any;
   subscription: any;
   display = false;
+  toggle = {};
+  isUnchanged = true;
   display1 = false;
   constructor( private makalatitlesService: MakalatitlesService ) { 
      this.makala = makalatitlesService.makala;
 
      this._subscription = this.makalatitlesService.fetchedArticles.subscribe((value) => { //ame subscribe kwa observable ya makala
      this.makala = value;
+   //this.setToNull();
    });
+
      
      this.subscription = this.makalatitlesService.fetchedCategories.subscribe((value) => { //ame subscribe kwa observable ya makala
      this.category = value;
@@ -59,7 +63,33 @@ export class MakalaContentsComponent implements OnInit {
 
   @Output() myEvent = new EventEmitter();
 
+  // setToNull() { 
+  //    var that = this;
+  //    setTimeout(function() {
+  //      that.makala = [];
+  //       console.log(that.makala + 'this code was hit')
+  // }, 2000);
+  // }
+
+  displayThisItem(i) {  //to close current age category when another one is clicked on 
+
+    for (var a = 0; a < this.category.length; a++) {
+         if (i === a) {
+          this.toggle[i] = !this.toggle[i];
+         }
+         else {
+          this.toggle[a] = false;
+         }   
+    }
+
+  }
+
+  closeAllAgeCategories() {
+    this.toggle = [];
+  }
+
   onClick(button){
+       
        this.myEvent.emit(button);
   }
 
@@ -68,15 +98,20 @@ export class MakalaContentsComponent implements OnInit {
   }
    
   ifdisplay (){
+    this.makalatitlesService.getMakalatitles();
     this.display = !this.display;
   }
 
   getMakala(id: number): void { 
-  if (!this.display1) {
-  this.makalatitlesService.getMakala(id);
-  }
-  
-  this.display1 = !this.display1;
+      this.makala = null;
+      this.makalatitlesService.getMakala(id);   //if data wasnt loaded on component's initialisation
+                                                //costs bandwidth however
+
+    //   if (!this.display1) {
+    //   this.makalatitlesService.getMakala(id);
+    //  }
+    // }
+    // this.display1 = !this.display1;
   } 
   
   getArticle(id: number):void{
@@ -85,6 +120,7 @@ export class MakalaContentsComponent implements OnInit {
 
   ngOnInit() {
     this.makalatitlesService.getMakalatitles();
+    
   }
 
 }

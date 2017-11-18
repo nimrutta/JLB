@@ -16,6 +16,7 @@ import { SearchService } from '../../core/search.service';
 
 import { Blogpost } from '../../blogpost';
 import { BlogpostService } from '../../core/blogpost.service';
+import { DatacarrierService } from '../../core/datacarrier.service'
 
 @Component({
   selector: 'app-blog-section',
@@ -43,6 +44,7 @@ export class BlogSectionComponent implements OnInit {
 
    // link = 'http://api.tuseme.co.tz/api/v1/search/c?api_key=bc';
    //http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q= 
+   blogpost: Blogpost[];
    giphies: Blogpost[];
    _subscription: any;
    subscription: any;
@@ -54,12 +56,18 @@ export class BlogSectionComponent implements OnInit {
    constructor(
      private blogpostService: BlogpostService,
      private searchService: SearchService,
+     private datacarrierService: DatacarrierService,
      private router: Router) { 
      this.giphies = searchService.giphies;
      this._subscription = this.searchService.fetchedPosts.subscribe((value) => {
      this.giphies = value;
    });
     
+     this.blogpost = blogpostService.blogpost;
+     this.subscription = this.blogpostService.fetchedBlogpost.subscribe((value) => {
+     this.blogpost = value;
+   });
+     
      this.message = searchService.message; 
      this.subscription = searchService.nameChange.subscribe((value) => { 
       this.message = value;})
@@ -92,9 +100,30 @@ export class BlogSectionComponent implements OnInit {
     this._subscription.unsubscribe();
   }
 
+  getBlogposts(): void {
+    this.blogpostService.getBlogposts().then(blogpost => this.blogpost = blogpost);
+  }
+
+  getPost(id: number): void{
+    this.blogpostService.getBlogpost(id);
+  }
+
+  passPostId(id: number): void{
+    console.log('passing post id');
+    this.datacarrierService.setData(id);
+  }
+
    ngOnInit(): void {
     this.postlikes = 45;
     this.display();
+    this.getBlogposts();
+
+    var that = this;
+        setTimeout(function() {
+           console.log('timeout method fired');
+           console.log(that.blogpost);
+           console.log('timeout method fired a');
+  }, 6000);
     /*this.posts = this.searchTerms
       .debounceTime(300)        
       .distinctUntilChanged()   
@@ -119,9 +148,9 @@ export class BlogSectionComponent implements OnInit {
      
  
 
-   getBlogpost(id): void {
-    this.blogpostService.getBlogpost(id).then(post => this.post = post);
-  }
+  //  getBlogpost(id): void {
+  //   this.blogpostService.getBlogpost(id).then(post => this.post = post);
+  // }
 
   toggleId() {
     this.showId = !this.showId;

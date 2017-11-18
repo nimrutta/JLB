@@ -14,7 +14,7 @@
        <ul class="menuitems nav navbar-nav"> 
           <li><a routerLink="shuhuda" (click) = "omitsearch()">Shuhuda</a></li>  
           <li><a routerLink="kuhusu-jlb" routerLinkActive="active" (click) = "omitsearch()">Kuhusu JLB</a></li>
-          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch()">Mwanzo</a></li>  
+          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput()">Mwanzo</a></li>  
         
        </ul>
        </div>
@@ -25,35 +25,41 @@
  
  
  <div class="row showposts">
+
+
      <div class="col-sm-9 drocol">
        <div *ngIf="displayRouterOutlet">
-        <router-outlet
-         (activate)="BlogSomaZaidiComponent = $event"
-         (activate)="BlogSectionComponent = $event">
+        <router-outlet >
+                                     <!--could be not necessary   (activate)="BlogSomaZaidiComponent = $event" 
+                                    (activate)="BlogSectionComponent = $event"-->
 
         </router-outlet>
        </div>
-       <app-makala *ngIf="showArticle"></app-makala>
+       <!--<app-makala *ngIf="showArticle"></app-makala>-->
      </div>
+
+
+     <!--search section begins-->
+
      <div class="col-sm-3 sscol" *ngIf="showsearch">
-      <div class="searchsection row">
-      
-      <div class="search">
-         <input type="search" class="searchbox" name="tittle" #searchTerm  placeholder="Tafuta">
-         <button (click)="performSearch(searchTerm)" class="Tafutabutton"><i class="glyphicon glyphicon-search"></i></button>
-         
 
-         <br>
-         <a><button class="Makalabutton" (click)="showarticle.ifdisplay()"><p>Soma Makala</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
-         <br>
-     </div> 
-         <!-- <button id="content" [@focusPanel]='state' @movePanel >Look at me animate</button> -->
-     
+        <div class="searchsection row">
+        <div class="search" >
+            <input type="search" class="searchbox" name="tittle" #searchTerm  placeholder="Tafuta" *ngIf="showSearchInput">
+            <button (click)="performSearch(searchTerm)" class="Tafutabutton" *ngIf="showSearchInput"><i class="glyphicon glyphicon-search"></i></button>
+            <br *ngIf="showSearchInput">
+
+            <button class="Rudimwanzobutton" *ngIf="!showSearchInput" routerLink="blog-section" (click) = "returnsearch(); returnSearchInput()"><i class="glyphicon glyphicon-arrow-left"></i>Rudi Mwanzo</button>
+            
+            <a><button class="Makalabutton" (click)="showarticle.ifdisplay()"><p>Mapishi ya vyakula</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
+            <br>
+        </div> 
+        </div>
+
+        <app-makala-contents class="makalatitles" #showarticle (myEvent)="myEvent($event)"></app-makala-contents> 
      </div>
-     <app-makala-contents class="makalatitles" #showarticle (myEvent)="myEvent($event)"></app-makala-contents> 
-     
-     </div>
+
+
+
  </div>
- 
-
  <app-footer ></app-footer>

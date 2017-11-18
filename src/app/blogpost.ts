@@ -4,5 +4,6 @@ export class Blogpost {
   body:string;
   topic_id:number;
   image_id: number;
+  image_url: string;
 }
 

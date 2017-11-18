@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+//import {HmrState} from  '@angularclass/hmr'; //'angular2-hmr'
 
-import { CommentService } from '../../core/comment.service'
-import { Comment } from '../../comment'
+import { BlogpostService } from '../../core/blogpost.service';
+import { Blogpost } from '../../blogpost';
+import { CommentService } from '../../core/comment.service';
+import { Comment } from '../../comment';
+import { DatacarrierService } from '../../core/datacarrier.service';
 @Component({
   selector: 'app-blog-soma-zaidi',
   templateUrl: './blog-soma-zaidi.component.html',
@@ -9,27 +13,68 @@ import { Comment } from '../../comment'
 })
 export class BlogSomaZaidiComponent implements OnInit {
    
+   Post: Blogpost[];
+   blogpost: Blogpost[];
+   subscription: any;
    _subscription: any;
+   blogId: number;
+   
 
-   constructor( private commentService: CommentService ) {
-     this.comments = commentService.comment;
+   constructor(private blogpostService: BlogpostService,
+               private commentService: CommentService,
+               public datacarrierService: DatacarrierService
+                  ) {
+     this.blogpost = blogpostService.blogpost;
+     this.subscription = this.blogpostService.fetchedBlogpost.subscribe((value) => {
+     this.blogpost = value;
+   });
+    
+    this.comments = commentService.comment;
      this._subscription = this. commentService.fetchedComments.subscribe((value) => {
      this.comments = value;
    })
+
    }
+
+  //   article: Makalatitles[];
+  // _subscription: any;
+
+  // constructor( private makalatitlesService:MakalatitlesService) { 
+  //    this.article = makalatitlesService.article;
+  //    this._subscription = this.makalatitlesService.fetchedArticle.subscribe((value) => {
+  //    this.article = value;
+  // })
+  //   }
+
+
    showId = false;
    showmyId = false;
    thanksforjoiningprogram = false;
 
+   
    comment = new Comment()
    comments : Comment[]
    coments : Comment[]
 
+
+  
   ngOnInit() {
         this.getComments();
         this.comment.teacher_id = 17;
         this.comment.food_id = 9;
         this.comment.topic_category_id = 9;
+
+        this.blogId = this.datacarrierService.getData();
+        console.log(this.blogId);
+
+        this.getaPost(this.blogId);
+        
+  //       var that = this;
+  //       setTimeout(function() {
+  //          console.log('timeout method fired');
+  //          console.log(that.blogpost);
+  //          console.log('timeout method fired a');
+  // }, 3000);
   }
 
   toggleId() {
@@ -62,6 +107,10 @@ export class BlogSomaZaidiComponent implements OnInit {
                // });
   
             }
+
+   getaPost(id: number): void {
+    this.blogpostService.getaPost(id).then(aPost => this.Post = aPost);
+  }
 
    getComments() {
      this.commentService.getComment();

@@ -25,6 +25,8 @@ import { KutuhusuComponent } from './kutuhusu/kutuhusu.component';
 import { ShuhudaComponent } from './shuhuda/shuhuda.component';
 import { TaharifaSubscriptionComponent } from './taharifa-subscription/taharifa-subscription.component';
 import { TaharifaKujiungaComponent } from './taharifa-kujiunga/taharifa-kujiunga.component';
+import { Makala1Component } from './makala1/makala1.component';
+import { BlogSomaZaidi1Component } from './blog-soma-zaidi1/blog-soma-zaidi1.component';
 
 @NgModule({
   imports: [
@@ -48,11 +50,14 @@ import { TaharifaKujiungaComponent } from './taharifa-kujiunga/taharifa-kujiunga
                  ShuhudaComponent, 
                  TaharifaSubscriptionComponent, 
                  TaharifaKujiungaComponent,
-                 CeiboShare],
+                 CeiboShare,
+                 Makala1Component,
+                 BlogSomaZaidi1Component],
                  
   providers: [ SearchService,
                SubscribersService,
                MakalatitlesService,
-               CommentService ]
+               CommentService,
+                ]
 })
 export class WazaziModule { }

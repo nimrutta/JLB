@@ -11,7 +11,7 @@ import { Makalacategory } from './../makalacategory';
 @Injectable()
 export class MakalatitlesService {
   makala: Makalatitles[];
-  article: Makalatitles;
+  article: Makalatitles[];
   category: Makalacategory[];
   makalatitle: string 
 
@@ -27,7 +27,7 @@ export class MakalatitlesService {
   
   nameChange: Subject<string> = new Subject<string>();
   fetchedArticles: Subject<Makalatitles[]> = new Subject<Makalatitles[]>(); //observable ya makala inarudishwa hapa,?
-  fetchedArticle: Subject<Makalatitles> = new Subject<Makalatitles>();
+  fetchedArticle: Subject<Makalatitles[]> = new Subject<Makalatitles[]>();
   fetchedCategories: Subject<Makalacategory[]> = new Subject<Makalacategory[]>(); //observable ya topic catgories
 
   getMakalatitles(): void {             //anarudisha array ya categories za makala life cycle ya 
@@ -50,6 +50,18 @@ export class MakalatitlesService {
         this.makala = res.json().data; 
         this.fetchedArticles.next(this.makala)       
         console.log(this.makala);
+        
+    });
+  }
+
+  getArticle(id: number): void {
+   const url = `${this.makalatitlesUrl}/${id}`;
+    
+    this.http.get(url).subscribe((res: Response) => {
+        this.article = res.json().data; 
+        this.fetchedArticle.next(this.article)  
+        console.log(id)     
+        console.log(this.article);
     });
   }
 
@@ -86,17 +98,6 @@ export class MakalatitlesService {
         this.makalatitle = searchTerm;
         this.nameChange.next(this.makalatitle);
         console.log(this.makalatitle);
-    });
-  }
-
-  getArticle(id: number): void {
-   const url = `${this.makalatitlesUrl}/${id}`;
-    
-    this.http.get(url).subscribe((res: Response) => {
-        this.article = res.json().data; 
-        this.fetchedArticle.next(this.article)  
-        console.log(id)     
-        console.log(this.article);
     });
   }
 

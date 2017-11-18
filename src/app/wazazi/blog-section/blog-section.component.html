@@ -42,9 +42,12 @@
            class="shareicon">
     <img src="../../../../assets/images/like.png" alt="Fruit View"
            class="shareicon"> 
-    </div>    <!--end of search result -->
+    </div>   
+        
+    
+    
+    <!--end of search result -->
      
-
 
     <div class="box">
      
@@ -69,7 +72,7 @@
     <p class="blogtext">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sit amet,
          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud amet ea
           exercitation Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed consequuntur dolores aliquip ex aliqua </p><br>
-    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active">Soma Zaidi </button>
+    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active" (click)= "passPostId(2335)">Soma Zaidi </button>
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">
     <p class="postedattime">6 oktoba 2017 2315</p>   
@@ -88,6 +91,63 @@
     <p class="likes">{{postlikes}}</p>
     </div>
 
+    <!--end of first post-->
+
+
+
+
+
+
+    <!--posts fetched from database-->
+    <div *ngFor= "let b of blogpost">
+     <div class="box">
+     
+    <div class="row iquote" style="width:100%;">
+       <div class="ibox">
+          
+           <img src="{{b.image_url}}" alt="Fruit View"
+           class="oneimage">
+
+       </div>
+
+       <div class="quote">
+            <p>
+               <strong><span style="font-size:30px;">"</span> {{b.title}} 
+               <span style="font-size:30px;">"</span></strong>
+
+            </p>
+       </div>
+    </div>
+
+    <p class="blogtext">{{b.body}}</p><br>
+    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active" (click)="passPostId(b.id)">Soma Zaidi </button> <!--(click)="getPost(b.id)" -->
+    <div class="clear"></div>
+    <hr style="margin-top: 10px; ">
+    <p class="postedattime">6 oktoba 2017 2315</p>   
+    <img src="../../../../assets/images/twitter.png" alt="Fruit View"
+           class="shareicon" ceiboShare  ="{u: repoUrl}">
+
+    <div class="fb-share-button" data-href="http://jualishebora.ga/wazazi/blog-section" 
+    data-layout="button_count" data-size="small" data-mobile-iframe="false">
+    <a class="fb-xfbml-parse-ignore" target="_blank" 
+    href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjualishebora.ga%2Fwazazi%2Fblog-section&amp;src=sdkpreparse">
+    <img src="../../../../assets/images/facebok.png" alt="Fruit View"
+           class="shareicon"></a></div>
+
+    
+    <button class="likesbutton" (click) = "addLikes()"><img src="../../../../assets/images/like.png" alt="Fruit View"></button>
+    <p class="likes">{{postlikes}}</p>
+    </div>
+    </div>
+    <!--end of posts fetched from database-->   
+
+
+
+
+
+
+
+
 
     <div class="box">
      
@@ -112,7 +172,7 @@
     <p class="blogtext">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sit amet,
          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud amet ea
           exercitation Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed consequuntur dolores aliquip ex aliqua </p><br>
-    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active">Soma Zaidi </button>
+    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active" (click)="getPost(1)">Soma Zaidi </button>
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">    
     <p class="postedattime">6 oktoba 2017 2315</p>   
@@ -128,6 +188,7 @@
     <p class="likes">{{postlikes}}</p>
     </div>
 
+    <!--end of post2 -->
 
     <div class="box">
      
@@ -152,7 +213,7 @@
     <p class="blogtext">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sit amet,
          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud amet ea
           exercitation Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed consequuntur dolores aliquip ex aliqua </p><br>
-    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active">Soma Zaidi </button>
+    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active" (click)="getPost(1)">Soma Zaidi </button>
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">    
     <p class="postedattime">6 oktoba 2017 2315</p>   

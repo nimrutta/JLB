@@ -9,15 +9,12 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>  
 
-
+   
     <div class="ccontainer">
+     <div *ngFor= "let b of Post"> 
       <div class="box">
-      <h3> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat, 
-         sapien non vestibulum suscipit, justo ipsum eleifend magna, et porttitor ipsum 
-         augue sed lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
-         Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
-         orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
+      <h3>{{b.title}}</h3>
+      <p>{{b.body}} Donec dui 
          risus, facilisis vel posuere eu, pulvinar a tellus. Morbi non eros sem. Donec et 
          vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
           lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.
@@ -44,7 +41,7 @@
          vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
           lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.</p>
       </div>
-       <div><img src="../../../../assets/images/happy mom.jpg" alt="Fruit View"
+       <div><img src="{{b.image_url}}" alt="Fruit View"
            class="oneimage"> 
        </div>
       <div class="clear"></div>
@@ -66,6 +63,7 @@
        <app-kujiunga *ngIf="showmyId" (myevenT)="myevenT($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-kujiunga>
 
       </div>
+     </div>
        <!-- comments section begins -->
 
    
@@ -149,4 +147,5 @@
       <br><br><br><br>
      
     </div>
+  
  </main>

@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {Headers,RequestOptions, Http, Response} from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
+import {Subject} from 'rxjs/Subject';
+
 
 import { Blogpost } from './../blogpost';
 
@@ -16,15 +18,44 @@ export class BlogpostService {
   
   constructor(private http: Http) { }
 
+  fetchedBlogpost: Subject<Blogpost[]> = new Subject<Blogpost[]>();   
+
   private headers = new Headers({'Content-Type':'application/json'});
     
-  getBlogpost(id: number): Promise<Blogpost> {
-      const url = `${this.blogpostUrl}/${id}`;
-      return this.http.get(url)
-                 .toPromise()
-                 .then(response => response.json().data as Blogpost)
-                 .catch(this.handleError);
+  // getBlogpost(id: number): Promise<Blogpost> {
+  //     const url = `${this.blogpostUrl}/${id}`;
+  //     return this.http.get(url)
+  //                .toPromise()
+  //                .then(response => response.json().data as Blogpost)
+  //                .catch(this.handleError);
+  // }
+
+  getBlogpost(id: number): void {                               //huyu anaitwa uki click post yeyote
+    const url = `${this.blogpostUrl}/${id}`;
+    
+    this.http.get(url).subscribe((res: Response) => {
+        this.blogpost = res.json().data; 
+        this.fetchedBlogpost.next(this.blogpost)       
+        console.log(this.blogpost);
+        console.log('this code hit on post' + id + 'click')
+    });
   }
+
+  getBlogposts(): Promise<Blogpost[]> {
+   return this.http.get(this.blogpostUrl)
+                   .toPromise()
+                   .then(response => response.json().data as Blogpost[])
+                   .catch(this.handleError);
+  } 
+
+  getaPost(id: number): Promise<Blogpost[]> {
+   const url = `${this.blogpostUrl}/${id}`;
+
+   return this.http.get(url)
+                   .toPromise()
+                   .then(response => response.json().data as Blogpost[])
+                   .catch(this.handleError);
+  } 
 
   update(post: Blogpost): Promise<Blogpost> {
       const url = `${this.blogpostUrl}/${post.id}`;

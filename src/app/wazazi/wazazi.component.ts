@@ -44,6 +44,7 @@ export class WazaziComponent implements OnInit {
   state: string = 'inactive';
   comein = false;
   showsearch = true;
+  showSearchInput = true;
 
   ngOnInit() { }
   
@@ -56,10 +57,15 @@ export class WazaziComponent implements OnInit {
     }
 
   myEvent($event){
-     this.showArticle = !this.showArticle;
-    this.showthisId = false;
-    this.displayRouterOutlet = !this.displayRouterOutlet;
-    
+    //this.showArticle = !this.showArticle;
+    //this.showthisId = false;
+    //this.displayRouterOutlet = !this.displayRouterOutlet;
+    this.showSearchInput = false;
+    console.log('event fired')
+  }
+
+  returnSearchInput(){
+    this.showSearchInput = true;
   }
 
   articleEvent() {
