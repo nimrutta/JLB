@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 //import {HmrState} from  '@angularclass/hmr'; //'angular2-hmr'
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { BlogpostService } from '../../core/blogpost.service';
 import { Blogpost } from '../../blogpost';
@@ -22,7 +24,9 @@ export class BlogSomaZaidiComponent implements OnInit {
 
    constructor(private blogpostService: BlogpostService,
                private commentService: CommentService,
-               public datacarrierService: DatacarrierService
+               public datacarrierService: DatacarrierService,
+               private route: ActivatedRoute,
+               private location: Location
                   ) {
      this.blogpost = blogpostService.blogpost;
      this.subscription = this.blogpostService.fetchedBlogpost.subscribe((value) => {
@@ -64,10 +68,12 @@ export class BlogSomaZaidiComponent implements OnInit {
         this.comment.food_id = 9;
         this.comment.topic_category_id = 9;
 
-        this.blogId = this.datacarrierService.getData();
-        console.log(this.blogId);
+        this.getaPostviaRouter();
 
-        this.getaPost(this.blogId);
+        // this.blogId = this.datacarrierService.getData();
+        // console.log(this.blogId);
+
+        //this.getaPost(this.blogId);
         
   //       var that = this;
   //       setTimeout(function() {
@@ -108,8 +114,18 @@ export class BlogSomaZaidiComponent implements OnInit {
   
             }
 
-   getaPost(id: number): void {
+  getaPostviaRouter() {
+    const id = +this.route.snapshot.paramMap.get('id');
     this.blogpostService.getaPost(id).then(aPost => this.Post = aPost);
+    console.log(id);
+  }
+
+  //  getaPost(id: number): void {
+  //   this.blogpostService.getaPost(id).then(aPost => this.Post = aPost);
+  // }
+
+  goBack() {
+    this.location.back();
   }
 
    getComments() {

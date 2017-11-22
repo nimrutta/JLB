@@ -4,6 +4,8 @@ import {Headers,RequestOptions, Http, Response} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import {Subject} from 'rxjs/Subject';
 
+import { Observable } from 'rxjs/Observable';
+
 
 import { Blogpost } from './../blogpost';
 
@@ -47,6 +49,11 @@ export class BlogpostService {
                    .then(response => response.json().data as Blogpost[])
                    .catch(this.handleError);
   } 
+
+  
+  // getaPostviaRouter(id: number): Observable<Blogpost> {
+  //  const url = `${this.blogpostUrl}/${id}`;
+  // } 
 
   getaPost(id: number): Promise<Blogpost[]> {
    const url = `${this.blogpostUrl}/${id}`;
