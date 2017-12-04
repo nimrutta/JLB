@@ -8,6 +8,8 @@ import { Blogpost } from '../../blogpost';
 import { CommentService } from '../../core/comment.service';
 import { Comment } from '../../comment';
 import { DatacarrierService } from '../../core/datacarrier.service';
+import { PasseventsService } from '../../core/passevents.service';
+
 @Component({
   selector: 'app-blog-soma-zaidi',
   templateUrl: './blog-soma-zaidi.component.html',
@@ -20,11 +22,13 @@ export class BlogSomaZaidiComponent implements OnInit {
    subscription: any;
    _subscription: any;
    blogId: number;
+   post_id: number;
    
 
    constructor(private blogpostService: BlogpostService,
                private commentService: CommentService,
                public datacarrierService: DatacarrierService,
+               private passeventsService: PasseventsService,
                private route: ActivatedRoute,
                private location: Location
                   ) {
@@ -54,21 +58,24 @@ export class BlogSomaZaidiComponent implements OnInit {
    showId = false;
    showmyId = false;
    thanksforjoiningprogram = false;
+   searchInputStatus = false;
+   showThankyoumessage = false;
 
    
    comment = new Comment()
    comments : Comment[]
    coments : Comment[]
 
-
   
   ngOnInit() {
-        this.getComments();
-        this.comment.teacher_id = 17;
-        this.comment.food_id = 9;
-        this.comment.topic_category_id = 9;
-
+        
         this.getaPostviaRouter();
+        this.getComments();
+        this.sortComments();
+        this.comment.post_id = this.post_id;
+        this.comment.id = 1;
+
+        this.removeSearchInput()
 
         // this.blogId = this.datacarrierService.getData();
         // console.log(this.blogId);
@@ -81,6 +88,10 @@ export class BlogSomaZaidiComponent implements OnInit {
   //          console.log(that.blogpost);
   //          console.log('timeout method fired a');
   // }, 3000);
+  }
+
+  removeSearchInput() {
+        this.passeventsService.exitblogsection(this.searchInputStatus);
   }
 
   toggleId() {
@@ -105,16 +116,31 @@ export class BlogSomaZaidiComponent implements OnInit {
     }
 
    add():void {
-    
-    if (!this.comment.title) { return; }
+    console.log('comment posted1');
+    if (!this.comment.body) { return; }
     this.commentService.create(this.comment) 
-   // .then(comment => {
-    //this.coments.push(comment);
-               // });
-  
+   .then(comment => {
+    this.coments.push(comment);
+    console.log('comment posted')
+               });
+    this.showThankyoumessage = !this.showThankyoumessage;
             }
 
+   clearCommentData() {
+   // this.comment.title = null;
+    this.comment.parent_id = null;
+    this.comment.body = null;
+    console.log('comment cleared')
+  }
+    
+   removeThankyoumessage() {
+    var that = this
+    setTimeout(function() {
+    that.showThankyoumessage = !that.showThankyoumessage; 
+    },2000);
+   }
   getaPostviaRouter() {
+    this.post_id = +this.route.snapshot.paramMap.get('id');
     const id = +this.route.snapshot.paramMap.get('id');
     this.blogpostService.getaPost(id).then(aPost => this.Post = aPost);
     console.log(id);
@@ -130,5 +156,22 @@ export class BlogSomaZaidiComponent implements OnInit {
 
    getComments() {
      this.commentService.getComment();
+   }
+
+   sortComments() {
+     var that = this;
+     setTimeout(function() {
+       that.coments = [];
+       for (var i = 0; i < that.comments.length; i++) {
+       var CMT = that.comments[i];
+       if (CMT.post_id === that.post_id) {
+           that.coments.push(CMT);
+           console.log(CMT.post_id);
+           console.log(that.post_id);
+       }
+       
+     }
+     }, 1500);
+     
    }
 }

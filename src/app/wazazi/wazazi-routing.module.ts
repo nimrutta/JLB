@@ -26,7 +26,7 @@ const routes: Routes = [
      {path:'kujiunga', component:KujiungaComponent},
      {path:'makala-content', component:MakalaContentsComponent},
      {path:'makala-navigation', component:MakalaNavigationComponent},
-     {path:'makala/:id', component:MakalaComponent},
+     {path:'makala', component:MakalaComponent},
      {path:'makala1', component:Makala1Component},
      {path:'shuhuda', component:ShuhudaComponent},
      {path:'subscribe', component:SubscribeComponent},

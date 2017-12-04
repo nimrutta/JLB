@@ -29,9 +29,10 @@
 
      <div class="col-sm-9 drocol">
        <div *ngIf="displayRouterOutlet">
-        <router-outlet >
-                                     <!--could be not necessary   (activate)="BlogSomaZaidiComponent = $event" 
-                                    (activate)="BlogSectionComponent = $event"-->
+        <router-outlet>
+          
+                                     <!-- (activate)="myEvent($event)" could be not necessary  (activate)="BlogSectionComponent = $event" (activate)="BlogSomaZaidiComponent = $event" 
+                                    -->
 
         </router-outlet>
        </div>
@@ -45,11 +46,11 @@
 
         <div class="searchsection row">
         <div class="search" >
-            <input type="search" class="searchbox" name="tittle" #searchTerm  placeholder="Tafuta" *ngIf="showSearchInput">
+            <input type="search" class="searchbox" name="tittle" #searchTerm  placeholder="Tafuta" *ngIf="showSearchInput" (keyup)="keypressed($event)">
             <button (click)="performSearch(searchTerm)" class="Tafutabutton" *ngIf="showSearchInput"><i class="glyphicon glyphicon-search"></i></button>
             <br *ngIf="showSearchInput">
 
-            <button class="Rudimwanzobutton" *ngIf="!showSearchInput" routerLink="blog-section" (click) = "returnsearch(); returnSearchInput()"><i class="glyphicon glyphicon-arrow-left"></i>Rudi Mwanzo</button>
+            <button class="Rudimwanzobutton" *ngIf="!showSearchInput"  (click) = "returnsearch(); returnSearchInput()"><i class="glyphicon glyphicon-arrow-left"></i>Rudi Mwanzo</button>
             
             <a><button class="Makalabutton" (click)="showarticle.ifdisplay()"><p>Mapishi ya vyakula</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
             <br>

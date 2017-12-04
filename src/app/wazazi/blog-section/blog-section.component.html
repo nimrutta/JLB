@@ -10,7 +10,7 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="ccontainer">
-    <div *ngFor= "let g of giphies" class="box">
+    <!--<div *ngFor= "let g of giphies" class="box">
      
     <div class="row iquote" style="width:100%;">
        <div class="ibox">
@@ -42,13 +42,56 @@
            class="shareicon">
     <img src="../../../../assets/images/like.png" alt="Fruit View"
            class="shareicon"> 
+    </div> -->
+        
+    <div *ngIf = 'showSearchResults'>
+    <div *ngFor= "let g of searchResults" class="box">
+     
+    <div class="row iquote" style="width:100%;">
+       <div class="ibox">
+          
+           <img src="../../../../assets/images/happy mom1.jpg" alt="Fruit View"
+           class="oneimage">
+
+       </div>
+
+       <div class="quote">
+            <p>
+               <strong><span style="font-size:30px;">"</span> {{g.title}}
+               <span style="font-size:30px;">"</span></strong>
+
+            </p>
+       </div>
+    </div>
+
+    <p class="blogtext">
+        {{g.body}}
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sit amet,
+         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud amet ea
+          exercitation Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed consequuntur dolores aliquip ex aliqua </p><br>
+    <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active">Soma Zaidi </button>
+    <div class="clear"></div>
+    <hr style="margin-top: 10px; ">    
+    <p class="postedattime">6 oktoba 2017 2315</p>   
+    <img src="../../../../assets/images/twitter.png" alt="Fruit View"
+           class="shareicon">
+    <img src="../../../../assets/images/facebok.png" alt="Fruit View"
+           class="shareicon">
+    <img src="../../../../assets/images/like.png" alt="Fruit View"
+           class="shareicon"> 
     </div>   
+    </div>
         
     
     
     <!--end of search result -->
-     
 
+
+
+
+
+     
+    <div *ngIf = '!showSearchResults'>
     <div class="box">
      
     <div class="row iquote" style="width:100%;">
@@ -120,7 +163,7 @@
     </div>
 
     <p class="blogtext">{{b.body}}</p><br>
-    <button class="somazaidi" routerLink="/wazazi/soma-zaidi/{{b.id}}" routerLinkActive="active" >Soma Zaidi </button> <!-- (click)="passPostId(b.id)" (click)="getPost(b.id)" -->
+    <button class="somazaidi" routerLink="/wazazi/soma-zaidi/{{b.id}}" routerLinkActive="active">Soma Zaidi </button> <!-- (click)="removeSearchInput()" (click)="onClick($event)"(click)="passPostId(b.id)" (click)="getPost(b.id)" -->
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">
     <p class="postedattime">6 oktoba 2017 2315</p>   
@@ -223,6 +266,13 @@
            class="shareicon">
     <button class="likesbutton" (click) = "addLikes()"><img src="../../../../assets/images/like.png" alt="Fruit View"></button>
     <p class="likes">{{postlikes}}</p>
+    </div>
+    </div>
+
+
+
+    <div class="box noresultsview" *ngIf = 'noResultsFound && showSearchResults'>
+      <p>Results not found</p> 
     </div>
     
 

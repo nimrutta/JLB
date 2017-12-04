@@ -77,6 +77,7 @@
       <hr>
 
       <form action="post_comment.php" method="post" id="commentform">
+       <!--
        <div class="row field">
        <div class="col-sm-3">
        <label for="comment_author" class="required field">Jina</label>
@@ -84,14 +85,14 @@
        <div class="col-sm-9">
        <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required" [(ngModel)]="comment.title">
        </div>
-       </div>
+       </div> -->
 
        <div class="row field">
        <div class="col-sm-3">
        <label for="email" class="required field">Namba ya Simu</label>
        </div>
        <div class="col-sm-9">
-       <input type="email" name="email" id="email" value="" tabindex="2" required="required" >
+       <input type="email" name="email" id="email" value="" tabindex="2" required="required" [(ngModel)]="comment.parent_id">
        </div>
        </div>
        
@@ -106,9 +107,10 @@
        </div>
        <!-- comment_post_ID value hard-coded as 1 -->
        
-       <button class="submitbutton" (click)="add()" (click)="getComments()">Kusanya Maoni</button>
+       <button class="submitbutton" (click)="add(); clearCommentData(); removeThankyoumessage()">Kusanya Maoni</button>
        <div class="clear"></div>
-
+       <div class="thankyoumessage" *ngIf = "showThankyoumessage">Asante, Maoni yako yamekusanywa</div>
+       <div class="clear"></div>
       </form>
     </div>
   </div>
@@ -129,7 +131,7 @@
     </div>
   </div>
 
-  <div class="cdbox" *ngFor= "let c of comments">
+  <div class="cdbox" *ngFor= "let c of coments">
     <div class="row cmt">
       <div class="col-sm-2 cmtavatar">
        <div class="cmtavatarin">

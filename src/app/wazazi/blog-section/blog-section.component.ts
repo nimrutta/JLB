@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 
 
@@ -16,7 +16,8 @@ import { SearchService } from '../../core/search.service';
 
 import { Blogpost } from '../../blogpost';
 import { BlogpostService } from '../../core/blogpost.service';
-import { DatacarrierService } from '../../core/datacarrier.service'
+import { DatacarrierService } from '../../core/datacarrier.service';
+import { PasseventsService } from '../../core/passevents.service';
 
 @Component({
   selector: 'app-blog-section',
@@ -32,9 +33,9 @@ export class BlogSectionComponent implements OnInit {
    showId = false;
 
    post: any = {   id:1,
-                        title:'',
-                        body:'', 
-                        topic_id:2 }; 
+                   title:'',
+                   body:'', 
+                   topic_id:2 }; 
 
    posts: Observable<Trypost[]>;
    private searchTerms = new Subject<string>();
@@ -44,24 +45,53 @@ export class BlogSectionComponent implements OnInit {
 
    // link = 'http://api.tuseme.co.tz/api/v1/search/c?api_key=bc';
    //http://api.giphy.com/v1/gifs/search?api_key=dc6zaTOxFJmzC&q= 
-   blogpost: Blogpost[];
+   noResultsFound = false;
+   showSearchResults = false;
+   searchResults: Blogpost[];
+   blogpost: Blogpost[] ;
    giphies: Blogpost[];
    _subscription: any;
    subscription: any;
+   subscription1: any;
+   _subscription1: any;
    message: string;
    postlikes: number;
    liked = false;
+   searchInputStatus = true;
    public repoUrl: string;
 
    constructor(
      private blogpostService: BlogpostService,
      private searchService: SearchService,
      private datacarrierService: DatacarrierService,
+     private passeventsService: PasseventsService,
      private router: Router) { 
+     this.searchResults = [];
+
+     this.showSearchResults = searchService.showSearchResults;
+     this.subscription = this.searchService.searchResultsStatus.subscribe((value) => {
+     this.showSearchResults = value;
+     });
+     
+
+     this.searchResults = searchService.searchResults;
+     this._subscription1 = this.searchService.fetchedPosts1.subscribe((value) => {
+     this.searchResults = value;
+     if (this.searchResults.length === 0) {
+       this.noResultsFound = true;
+     }
+     else {
+       this.noResultsFound = false;
+     }
+     console.log(this.searchResults.length);
+   });
+
+
      this.giphies = searchService.giphies;
      this._subscription = this.searchService.fetchedPosts.subscribe((value) => {
      this.giphies = value;
    });
+
     
      this.blogpost = blogpostService.blogpost;
      this.subscription = this.blogpostService.fetchedBlogpost.subscribe((value) => {
@@ -70,12 +100,12 @@ export class BlogSectionComponent implements OnInit {
      
      this.message = searchService.message; 
      this.subscription = searchService.nameChange.subscribe((value) => { 
-      this.message = value;})
+     this.message = value;})
 
      this.repoUrl="http://jualishebora.ga/wazazi/blog-section"   
  }
    
-  
+   @Output() myEvent = new EventEmitter();
 
    apost: string = this.searchService.message
    display(){
@@ -86,7 +116,7 @@ export class BlogSectionComponent implements OnInit {
    //this.searchTerms.next(term);}
    
    addLikes(){
-     if (!this.liked){
+     if (!this.liked) {
           this.postlikes = this.postlikes + 1;
      }
      else{
@@ -95,13 +125,21 @@ export class BlogSectionComponent implements OnInit {
           this.liked = !this.liked;
    }
 
-   ngOnDestroy() {
+  ngOnDestroy() {
    //prevent memory leak when component destroyed
     this._subscription.unsubscribe();
   }
 
   getBlogposts(): void {
     this.blogpostService.getBlogposts().then(blogpost => this.blogpost = blogpost);
+  }
+
+  onClick(button) { 
+       this.myEvent.emit(button);
+  }
+    
+  returnSearchInput() {
+        this.passeventsService.exitblogsection(this.searchInputStatus);
   }
 
   getPost(id: number): void{
@@ -124,6 +162,8 @@ export class BlogSectionComponent implements OnInit {
            console.log(that.blogpost);
            console.log('timeout method fired a');
   }, 6000);
+
+    this.returnSearchInput();
     /*this.posts = this.searchTerms
       .debounceTime(300)        
       .distinctUntilChanged()   
