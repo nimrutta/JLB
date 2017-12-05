@@ -52,7 +52,8 @@ import { BlogSomaZaidi1Component } from './blog-soma-zaidi1/blog-soma-zaidi1.com
                  TaharifaKujiungaComponent,
                  CeiboShare,
                  Makala1Component,
-                 BlogSomaZaidi1Component],
+                 BlogSomaZaidi1Component,
+                 CeiboShare],
                  
   providers: [ SearchService,
                SubscribersService,

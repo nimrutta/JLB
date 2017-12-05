@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { CeiboShare } from 'ng2-social-share';
 
 
 import { Observable } from 'rxjs/Observable';
@@ -18,6 +19,7 @@ import { Blogpost } from '../../blogpost';
 import { BlogpostService } from '../../core/blogpost.service';
 import { DatacarrierService } from '../../core/datacarrier.service';
 import { PasseventsService } from '../../core/passevents.service';
+import { TwitterParams } from '../../twitterParams';
 
 @Component({
   selector: 'app-blog-section',
@@ -58,7 +60,8 @@ export class BlogSectionComponent implements OnInit {
    postlikes: number;
    liked = false;
    searchInputStatus = true;
-   public repoUrl: string;
+   public repoUrl ="http://jualishebora.ga/wazazi" ;
+   
 
    constructor(
      private blogpostService: BlogpostService,
@@ -101,8 +104,7 @@ export class BlogSectionComponent implements OnInit {
      this.message = searchService.message; 
      this.subscription = searchService.nameChange.subscribe((value) => { 
      this.message = value;})
-
-     this.repoUrl="http://jualishebora.ga/wazazi/blog-section"   
+ 
  }
    
    @Output() myEvent = new EventEmitter();
