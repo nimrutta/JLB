@@ -21,22 +21,27 @@
              class="contactfield" value=""  placeholder="Jina" 
              required [(ngModel)]="subscriber.name" name="jina"
              #jina="ngModel">
-             <div *ngIf="jina.errors && (jina.dirty || jina.touched)" class="alert alert-danger">
-               <div [hidden]="!jina.errors.required">
-                   Jina lako linahitajika
+             <div *ngIf="(jina.errors && (jina.dirty || jina.touched)) || (isInputdataMissing && jina.errors)" class="alert alert-danger" class="inputErrormessage">
+               <div [hidden]="!jina.errors.required" >
+                   Tafadhari jaza Jina lako
                </div>
              </div>   
 
 
-             <input type="text" name="comment_author" id="comment_author" 
+             <input type="text" name="comment_author" id="phone" 
              class="contactfield" value=""  placeholder="Namba ya Whatsapp" 
-             required="required" [(ngModel)]="subscriber.phone_number">
+             required [(ngModel)]="subscriber.phone_number" #phone="ngModel">
+             <div *ngIf="(phone.errors && (phone.dirty || phone.touched))|| (isInputdataMissing && phone.errors)" class="alert alert-danger" class="inputErrormessage">
+               <div [hidden]="!phone.errors.required" >
+                   Tafadhari jaza namba yako ya simu
+               </div>
+             </div>   
              </form>
 
          </div>
          <div class="modal-footer">
-             <a class="modallinks"><button class="sendbutton" (click)="onClick($event)" (click)="add()"
-                                    [disabled]="!subscribeform.form.valid">Tuma taharifa</button></a>
+             <a class="modallinks"><button class="sendbutton" (click)="onClick($event)" (click)="add()" 
+                                    [disabled]="!subscribeform.form.valid"><button (click)="alertUser()" class="sendbutton"> Tuma taharifa</button> </button></a>
          </div>
 
        </div>

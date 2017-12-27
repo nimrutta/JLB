@@ -9,6 +9,12 @@
         font-family:Verdana, Geneva, Tahoma, sans-serif
  }
 
+ .mtable-checked {
+        width: 80%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom:  100px;
+ }
+
  th, td {
         
         padding: 3px 20px; 
@@ -20,14 +26,14 @@
 
  }
 
- .mtable tr:nth-child(even) {
+ .mtable tr:nth-child(even), .mtable-checked tr:nth-child(even) {
        background-color: #fff
  }
 
-.mtable tr:nth-child(odd) {
+.mtable tr:nth-child(odd), .mtable-checked tr:nth-child(odd) {
        background-color: #DCDCDC;
  }
 
-.mtable th {
+.mtable th, .mtable-checked th {
        background-color: rgba(208, 108, 43, 0.6);
  }

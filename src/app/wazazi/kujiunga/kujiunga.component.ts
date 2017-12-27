@@ -9,6 +9,7 @@ import { ClientsService } from '../../core/clients.service';
   styleUrls: ['./kujiunga.component.css']
 })
 export class KujiungaComponent implements OnInit {
+  isInputdataMissing = false;
 
   constructor( private clientsService: ClientsService ) { }
  client = new Clients();
@@ -35,6 +36,12 @@ export class KujiungaComponent implements OnInit {
                 });
   
             }
+
+  alertUser(state){
+
+       this.isInputdataMissing = true;
+
+  }   
 
   ngOnInit() {
     this.client.password = 'password';

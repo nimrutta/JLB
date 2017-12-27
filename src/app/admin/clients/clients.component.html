@@ -2,6 +2,21 @@
 <!--<app-searchsection></app-searchsection>-->
 <main>
     <div class="container">
+    
+     <div class="row" style="width: 92%;" align="center">
+          <div class="col-sm-5"><h4 style="color:black;">Jina</h4></div>
+          <div class="col-sm-2"><h4 style="color:black;">Umri wa mtoto</h4></div>
+          <div class="col-sm-4"><h4 style="color:black;">Mawasiliano</h4></div>
+          <div class="col-sm-1"><h4 style="color:black;">Malipo</h4></div>
+      </div>
+
+     <table class="mtable-checked" align="center">
+         <tr><th width="38%"></th><th width="30%"></th><th width="27%"></th><th width="9%" ></th></tr>
+         
+         <tr *ngFor="let client of newclients; let i = index"><td>{{client.id}}</td><td class="rightcell">{{client.name}}</td><td class="rightcell">{{client.name}}</td><td class="rightcell">{{client.email}}</td><td><button (click) = "registerClient(i)">Checked</button></td></tr>                                        
+     </table>  
+         
+      
       
      <div class="row" style="width: 92%;" align="center">
           <div class="col-sm-5"><h4 style="color:black;">Jina</h4></div>
@@ -16,6 +31,9 @@
      
                                         
       </table>
+
+
+      
 
       <br><br><br><br>
       

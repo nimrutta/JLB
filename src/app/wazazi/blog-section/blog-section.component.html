@@ -138,7 +138,7 @@
 
     <!--posts fetched from database-->
     <div *ngFor= "let b of blogpost">
-     <div class="box">
+     <div class="box" id="{{b.id}}">
      
     <div class="row iquote" style="width:100%;">
        <div class="ibox">
@@ -165,7 +165,7 @@
     <img src="../../../../assets/images/twitter.png" alt="Fruit View"
            class="shareicon" ceiboShare [twitter] ="{u: repoUrl}">
     <img src="../../../../assets/images/facebok.png" alt="Fruit View"
-           class="shareicon" ceiboShare  [facebook] ="{u: repoUrl}">
+           (click) = "specifyUrl(b.id)" class="shareicon" ceiboShare  [facebook] ="{u: repoUrl}">
 
     
     <button class="likesbutton" (click) = "addLikes()"><img src="../../../../assets/images/like.png" alt="Fruit View"></button>

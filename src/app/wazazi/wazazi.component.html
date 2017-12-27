@@ -14,8 +14,7 @@
        <ul class="menuitems nav navbar-nav"> 
           <li><a routerLink="shuhuda" (click) = "omitsearch()">Shuhuda</a></li>  
           <li><a routerLink="kuhusu-jlb" routerLinkActive="active" (click) = "omitsearch()">Kuhusu JLB</a></li>
-          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput()">Mwanzo</a></li>  
-        
+          <li><a routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput()" class="Mwanzo" >Mwanzo</a></li>  
        </ul>
        </div>
  </nav>
@@ -50,7 +49,7 @@
             <button (click)="performSearch(searchTerm)" class="Tafutabutton" *ngIf="showSearchInput"><i class="glyphicon glyphicon-search"></i></button>
             <br *ngIf="showSearchInput">
 
-            <button class="Rudimwanzobutton" *ngIf="!showSearchInput"  (click) = "returnsearch(); returnSearchInput()"><i class="glyphicon glyphicon-arrow-left"></i>Rudi Mwanzo</button>
+            <button class="Rudimwanzobutton" *ngIf="!showSearchInput"  (click) = "rudiMwanzo()"><i class="glyphicon glyphicon-arrow-left"></i>Rudi Mwanzo</button>
             
             <a><button class="Makalabutton" (click)="showarticle.ifdisplay()"><p>Mapishi ya vyakula</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
             <br>

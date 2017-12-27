@@ -121,6 +121,12 @@ input::placeholder {
     to {top: 0; opacity: 1}
 }
 
+.inputErrormessage {
+     color: orangered;
+     background: none;
+     margin: 0 0 0 233px;
+}
+
 .close {
         float: right;
         font-size: 28px;

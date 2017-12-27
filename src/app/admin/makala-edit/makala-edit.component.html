@@ -12,7 +12,7 @@
       <table class="mtable" align="center">
          <tr>
 
-         <th width="70%" >
+         <th width="40%" >
          <div *ngIf="showInputfield" >
          
          <input  class="addtitle"  placeholder="Enter new article's title id" [(ngModel)]="makala.id" >
@@ -30,20 +30,14 @@
          </div>
          </th>
 
-         <th width="30%" class="rightcell" id="rightcell">
+         <th width="60%" class="rightcell" id="rightcell">
          <button (click)= "toggleId()" class="addtopicbutton">+ Add new topic</button></th>
         
          </tr>
 
-         <tr><td>Lorem Ipsum 1</td><td class="rightcell">x Remove </td></tr>
-         <tr><td>Lorem Ipsum 2 </td><td class="rightcell">x Remove</td></tr>
-         <tr><td>Lorem Ipsum 3</td><td class="rightcell">x Remove</td></tr>
-         <tr><td><a routerLink="/admin/makala-subtopics" routerLinkActive="active" style="color:#000;">Lorem Ipsum 4</a></td><td class="rightcell">x Remove</td></tr>
-         <tr><td>Lorem Ipsum 5</td><td class="rightcell">x Remove</td></tr>
-         <tr><td>Lorem Ipsum 6</td><td class="rightcell">x Remove</td></tr>
-         <tr><td>Lorem Ipsum 7</td><td class="rightcell">x Remove</td></tr>
-         <tr><td>Lorem Ipsum 178</td><td class="rightcell">x Remove</td></tr>
-         <tr *ngFor="let makala of makalatitles"><td>{{makala.title}}</td><td class="rightcell">x Remove</td></tr>   
+         <!-- <tr><td>Lorem Ipsum 1</td><td class="rightcell"> <button>x Remove</button> <input placeholder="New topic category" *ngIf = 'toRename' [(ngModel)]="category.category_name"> <button (click) = "callToRename()">{{renameData}}</button> <button (click) = "sendUpdate()" *ngIf = 'toRename'>Update</button> </td></tr>     toRename &&  (click) = "callToRename()"-->
+         
+         <tr *ngFor="let ctgry of makalacategories; let i = index"><td>{{ctgry.category_name}}</td><td class="rightcell"><button (click) = "deleteCategory(ctgry.id)">x Remove</button> <input placeholder="New topic category" *ngIf = "dsply[i]" [(ngModel)]="category.category_name"> <button (click) = "displayThisItem(i)">{{renameData[i]}}</button> <button (click) = "sendUpdate(ctgry.id, i)" *ngIf = 'dsply[i]'>Update</button></td></tr>   
                                      
       </table>
 

@@ -60,7 +60,9 @@ export class BlogSectionComponent implements OnInit {
    postlikes: number;
    liked = false;
    searchInputStatus = true;
-   public repoUrl ="http://jualishebora.ga/wazazi" ;
+   name = 'Andela';
+   
+   public repoUrl = "http://jualishebora.ga/wazazi/blog-section" ;
    
 
    constructor(
@@ -110,6 +112,14 @@ export class BlogSectionComponent implements OnInit {
    @Output() myEvent = new EventEmitter();
 
    apost: string = this.searchService.message
+
+   specifyUrl(id) {
+     this.repoUrl = this.repoUrl;
+    //  this.repoUrl = `${this.repoUrl}${id}`;
+    //  console.log(this.repoUrl);
+    //  console.log('url specified ' + id);
+   }
+
    display(){
      console.log(this.apost + this.giphies)
    }
@@ -154,6 +164,7 @@ export class BlogSectionComponent implements OnInit {
   }
 
    ngOnInit(): void {
+     console.log(this.name);
     this.postlikes = 45;
     this.display();
     this.getBlogposts();

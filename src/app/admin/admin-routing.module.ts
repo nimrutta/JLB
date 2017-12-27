@@ -10,6 +10,7 @@ import {MakalaEditComponent} from './makala-edit/makala-edit.component';
 import {MakalaSubtopicsComponent} from './makala-subtopics/makala-subtopics.component';
 import {MakalaSubtopicsEditComponent} from './makala-subtopics-edit/makala-subtopics-edit.component';
 import {SubscribersComponent} from './subscribers/subscribers.component';
+import {ShuhudaComponent} from './shuhuda/shuhuda.component'
 
 const routes: Routes = [
   {path:'admin',component:AdminComponent,
@@ -23,6 +24,8 @@ const routes: Routes = [
     {path:'makala-subtopics', component:MakalaSubtopicsComponent},
     {path:'makala-subtopics-edit', component:MakalaSubtopicsEditComponent},
     {path:'subscribers', component:SubscribersComponent},
+    {path:'shuhuda', component:ShuhudaComponent},
+  
   ]
 }
 ];

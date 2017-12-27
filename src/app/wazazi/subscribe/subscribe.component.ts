@@ -10,6 +10,8 @@ import { SubscribersService } from '../../core/subscribers.service';
 })
 export class SubscribeComponent implements OnInit {
 
+  isInputdataMissing = false;
+
   constructor( private subscribersService: SubscribersService ) { }
   subscriber = new Subscribers();
   subscribers = [];  //initialises an array
@@ -39,6 +41,12 @@ export class SubscribeComponent implements OnInit {
     this.subscribers.push(subscriber);
                 });
             }
+
+  alertUser(state){
+
+       this.isInputdataMissing = true;
+
+  }         
 
   ngOnInit() { 
     this.subscriber.teacher_id = 1;

@@ -13,14 +13,36 @@
          </div>
          <div class="modal-body">
            
-           <form>
-            <input type="text" name="comment_author" class="contactfield" id="comment_author" value=""  placeholder="Jina" [(ngModel)]="client.name" required="required">
-            <input type="text" name="comment_author" class="contactfield" id="comment_author" value=""  placeholder="Umri wa mtoto" [(ngModel)]="client.id" required="required">
-            <input type="text" name="comment_author" class="contactfield" id="comment_author" value=""  placeholder="Namba ya Whatsapp" [(ngModel)]="client.email" required="required">
+           <form #kujiungaform="ngForm">
+            <input type="text" name="comment_author" class="contactfield" id="jina" value=""  placeholder="Jina" required [(ngModel)]="client.name" #jina="ngModel">
+             <div *ngIf="(jina.errors && (jina.dirty || jina.touched)) || (isInputdataMissing && jina.errors)" class="alert alert-danger" class="inputErrormessage">
+               <div [hidden]="!jina.errors.required" >
+                   Tafadhari jaza Jina lako
+               </div>
+             </div>  
+
+            <input type="text" name="comment_author" class="contactfield" id="umri" value=""  placeholder="Umri wa mtoto" [(ngModel)]="client.id" required="required" #umri="ngModel">
+             <div *ngIf="(umri.errors && (umri.dirty || umri.touched))|| (isInputdataMissing && umri.errors)" class="alert alert-danger" class="inputErrormessage">
+               <div [hidden]="!umri.errors.required" >
+                   Tafadhari jaza umri wa mtoto
+               </div>
+             </div>  
+            
+           <input type="text" name="comment_author" id="phone" 
+             class="contactfield" value=""  placeholder="Namba ya Whatsapp" 
+             required [(ngModel)]="client.email" #phone="ngModel">
+             <div *ngIf="(phone.errors && (phone.dirty || phone.touched))|| (isInputdataMissing && phone.errors)" class="alert alert-danger" class="inputErrormessage">
+               <div [hidden]="!phone.errors.required" >
+                   Tafadhari jaza namba yako ya simu
+               </div>
+             </div>  
            </form>
+
+
          </div>
-         <div class="modal-footer">
-            <a class="modallinks"><button class="sendbutton" (click)="onClick($event)" (click)="add()">Tuma taharifa</button></a>
+        <div class="modal-footer">
+             <a class="modallinks"><button class="sendbutton" (click)="onClick($event)" (click)="add()" 
+                                    [disabled]="!kujiungaform.form.valid"><button (click)="alertUser()" class="sendbutton"> Tuma taharifa</button> </button></a>
          </div>
        </div>
       </div>

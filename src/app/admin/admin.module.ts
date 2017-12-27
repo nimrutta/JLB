@@ -18,7 +18,9 @@ import { MakalaSubtopicsEditComponent } from './makala-subtopics-edit/makala-sub
 import { SearchsectionComponent } from './searchsection/searchsection.component';
 import { UploadimageComponent } from './uploadimage/uploadimage.component';
 
-import { ImageUploadModule } from 'angular2-image-upload'
+import { ImageUploadModule } from 'angular2-image-upload';
+import { ShuhudaComponent } from './shuhuda/shuhuda.component'
+
 @NgModule({
   imports: [
     CommonModule,
@@ -26,6 +28,6 @@ import { ImageUploadModule } from 'angular2-image-upload'
     AdminRoutingModule,
     ImageUploadModule.forRoot(),
   ],
-  declarations: [AdminComponent, AndikaMakalaComponent, BlogComponent, ClientsComponent, SubscribersComponent, FooterComponent, HeaderComponent, MakalaComponent, MakalaEditComponent, MakalaSubtopicsComponent, MakalaSubtopicsEditComponent, SearchsectionComponent, UploadimageComponent]
+  declarations: [AdminComponent, AndikaMakalaComponent, BlogComponent, ClientsComponent, SubscribersComponent, FooterComponent, HeaderComponent, MakalaComponent, MakalaEditComponent, MakalaSubtopicsComponent, MakalaSubtopicsEditComponent, SearchsectionComponent, UploadimageComponent, ShuhudaComponent]
 })
 export class AdminModule { }

@@ -131,9 +131,13 @@ export class WazaziComponent implements OnInit {
 
   returnSearchInput(){
     this.showSearchInput = true;
-    this.location.back();
   }
 
+  rudiMwanzo() {
+     this.showsearch = true;
+     this.showSearchInput = true;
+     this.location.back();
+  }
   articleEvent() {
     this.showId = !this.showId;
     this.showthisId = !this.showthisId;

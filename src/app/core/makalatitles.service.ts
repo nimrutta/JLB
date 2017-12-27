@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
 import {Headers,RequestOptions, Http, Response} from '@angular/http';
+import { HttpHeaders } from '@angular/common/http';
 
 import 'rxjs/add/operator/toPromise';
 import {Subject} from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map'
+
 
 
 import { Makalatitles } from './../makalatitles';
@@ -14,12 +18,14 @@ export class MakalatitlesService {
   article: Makalatitles[];
   category: Makalacategory[];
   makalatitle: string 
+  
 
   private headers = new Headers({'Content-Type': 'application/json'});
   
   private makalatitlesUrl = 'http://api.jualishebora.ga/api/v1/topics'
   private makalacategoriesUrl = 'http://api.jualishebora.ga/api/v1/topicsByCategory'  //http://api.tuseme.co.tz/api/v1/streets
   private makalaCategoryNameUrl = 'http://api.jualishebora.ga/api/v1/topicCategories'
+  private updateUrl   = 'http://api.jualishebora.ga/api/v1/topicCategories'
 
   constructor(private http: Http) { }
   
@@ -111,12 +117,47 @@ export class MakalatitlesService {
     });
   }
 
+  updateTopicCategory(category:Makalacategory, id): Promise<Makalacategory> {
+        console.log(category.category_name);
+        console.log(category.id);
+        const url = `${this.updateUrl}/${id}`;
+        console.log(url);
+
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+       
+        return this.http
+               .put(url, category, options)
+               .toPromise()
+               .then(res => res.json().data as Makalacategory)
+               .catch(this.handleError);
+               
+  }
+
+  deleteCategory(id) {
+       console.log('delete category in service called');
+       let headers = new Headers({ 'Content-Type': 'application/json' });
+       let options = new RequestOptions({ headers: headers });
+       const url = `${this.makalaCategoryNameUrl}/${id}`;
+       return this.http.delete(url, options)//.pipe().catch(this.handleError);
+  }
+
+  getMakalaCategories(): Promise<Makalacategory[]> {
+        return this.http
+               .get(this.makalaCategoryNameUrl)
+               .toPromise()
+               .then(res => res.json().data as Makalacategory[])
+               .catch(this.handleError);
+  }
+
+  //http://api.jualishebora.ga/api/v1/topicCategories/1
+
   //gectMakala(id: number): Promise<Makalatitles[]> {
   //const url = `${this.makalacategoriesUrl}/${id}`;
- // return this.http.get(url)
-//.toPromise()
-   // .then(response => response.json().data as Makalatitles[]).catch(this.handleError);
-   // this.fetchedArticles.next(this.makala)
+  // return this.http.get(url)
+  //.toPromise()
+  // .then(response => response.json().data as Makalatitles[]).catch(this.handleError);
+  // this.fetchedArticles.next(this.makala)
     
 //}
 
