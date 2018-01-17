@@ -139,3 +139,14 @@ input::placeholder {
         text-decoration: none;
         cursor: pointer;
 }
+@media all and (max-width: 800px){
+         .modal-header {
+        font-size: 50%;
+        padding: 6% 4% 4% 4%;
+}
+        
+.contactfield{  
+        width: 60%;
+        height: 7%;
+}
+}

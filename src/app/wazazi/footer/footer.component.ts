@@ -54,6 +54,7 @@ export class FooterComponent implements OnInit {
        this.showmyod = !this.showmyod;
     }
   }
+  
   togglemyId() {
    this.showmyId = !this.showmyId;
   }

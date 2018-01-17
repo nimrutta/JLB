@@ -1,7 +1,7 @@
  .container {
         background-color: #f7f7f7;
        
-        padding:15px 80px 0px 80px;
+        padding: 5% 4% 12% 4%;
  }
 
  .box {
@@ -85,8 +85,8 @@ figure:hover figcaption {
  .team {
        display: inline-block;
        position: relative;
-       width: 160px;
-       height: 160px;
+       width: 60%;
+       height: 60%;
        border-radius: 50%;
        overflow: hidden;
  }
@@ -98,7 +98,7 @@ figure:hover figcaption {
  }
 
  .contacts {
-        height: 350px;
+        height: 100%;
         width: 100%;
         background-image: url(../../../assets/images/texturdbg4.jpg);
         background-repeat: repeat;
@@ -144,9 +144,117 @@ figure:hover figcaption {
        width: 90px;
        float: right;
        margin-top: 60px;
-       margin-right: 290px;
+       margin-right: 9%;
  }
 
  .clear {
        clear: both;            /* to solve float overlapping issues */ 
 }
+ 
+
+ @media all and (max-width: 800px){
+   .container {
+        padding: 14% 4% 12% 4%;
+ } 
+    .box {
+        width: 100%;
+        float: none;
+         margin: 0px;
+        padding:2%;
+}
+       .logo img { 
+        height:70%;
+        width: 50%;
+        margin-top: 5%;
+        border-radius: 50%;
+ }
+      p{
+        font-size: 90%;
+      }
+       .logo p {
+        font-size: 120%;
+ }
+       .team {
+       display: inline-block;
+       position: relative;
+       
+       border-radius: 50%;
+       overflow: hidden;
+ }
+
+ .team img {
+       width: 40%;
+       height: auto;
+       margin: 0 0 0 9px;
+ }
+       .meetteam p {
+        font-size: 100%;
+        margin: 10% 0% 0% 0%;
+        
+ }
+      figcaption {
+            font-size: 75%;
+      }
+       .fruits {
+       height: 40%;
+       width: 20%;
+       float: right;
+       margin-top:0%;
+       position: relative;
+       margin-right: 0%;
+ }
+      
+ #kid {
+       float:center;
+       height:3%;
+       width:2%;
+       margin-right:3%;
+       opacity: 0;
+ }
+       .socioicon {
+        height: 7%;
+        width: 7%;
+        display: block;
+        margin-top: 7%;
+ }
+       .contacts p { 
+       
+        font-size: 100%;        
+       
+ }
+ /*
+
+    
+        .oneimage {
+        height: auto;
+        width: 100%; 
+       margin:0px;
+}  
+.twoimage {
+        height: auto;
+        width: 100%; 
+        margin:0px;
+}
+.quote {
+        font-size: 14px;
+       
+}
+.box > h3 {
+     
+       font-size: 17px;
+}
+p{
+        font-size:12px;
+}
+.somazaidi{
+        font-size:12px;
+}
+.ccontainer {
+    
+       
+        padding:40px;
+
+ }*/
+
+
+ }

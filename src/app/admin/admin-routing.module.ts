@@ -15,7 +15,7 @@ import {ShuhudaComponent} from './shuhuda/shuhuda.component'
 const routes: Routes = [
   {path:'admin',component:AdminComponent,
   children:[
-    {path:'', redirectTo:'andika-makala',pathMatch:'full'},
+    {path:'', redirectTo:'makala',pathMatch:'full'},
     {path:'andika-makala', component:AndikaMakalaComponent},
     {path:'andika-blog', component:BlogComponent},
     {path:'clients', component:ClientsComponent},

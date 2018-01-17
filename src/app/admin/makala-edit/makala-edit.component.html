@@ -30,20 +30,43 @@
          </div>
          </th>
 
-         <th width="60%" class="rightcell" id="rightcell">
-         <button (click)= "toggleId()" class="addtopicbutton">+ Add new topic</button></th>
-        
+         <th width="50%" class="rightcell" id="rightcell">
+         <button (click)= "toggleId()" class="addtopicbutton">+ Add new topic</button>
+        </th>
+         <th width="10%" id="rightcell2"></th>
          </tr>
+                 <!-- <tr *ngFor="let ctgry of makalacategories; let i = index"><td>{{ctgry.category_name}}</td><td class="rightcell"><button (click) = "deleteCategory(ctgry.id)">x Remove</button> <input placeholder="New topic category" *ngIf = "dsply[i]" [(ngModel)]="category.category_name"> <button (click) = "displayThisItem(i)">{{renameData[i]}}</button> <button (click) = "sendUpdate(ctgry.id, i)" *ngIf = 'dsply[i]'>Update</button></td><td> <i class="glyphicon glyphicon-menu-down"></i> </td>
+                  </tr> -->  
 
-         <!-- <tr><td>Lorem Ipsum 1</td><td class="rightcell"> <button>x Remove</button> <input placeholder="New topic category" *ngIf = 'toRename' [(ngModel)]="category.category_name"> <button (click) = "callToRename()">{{renameData}}</button> <button (click) = "sendUpdate()" *ngIf = 'toRename'>Update</button> </td></tr>     toRename &&  (click) = "callToRename()"-->
-         
-         <tr *ngFor="let ctgry of makalacategories; let i = index"><td>{{ctgry.category_name}}</td><td class="rightcell"><button (click) = "deleteCategory(ctgry.id)">x Remove</button> <input placeholder="New topic category" *ngIf = "dsply[i]" [(ngModel)]="category.category_name"> <button (click) = "displayThisItem(i)">{{renameData[i]}}</button> <button (click) = "sendUpdate(ctgry.id, i)" *ngIf = 'dsply[i]'>Update</button></td></tr>   
-                                     
       </table>
+      
+      <div *ngFor="let ctgry of makalacategories; let i = index" class="mtable" >
+         <div class="row" >
+         
+         <div class="col-sm-4 categoryname">{{ctgry.category_name}}</div><div class="rightcell col-sm-7"><button (click) = "deleteCategory(ctgry.id)">x Remove</button> <input placeholder="New topic category" *ngIf = "dsply[i]" [(ngModel)]="category.category_name"> <button (click) = "displayThisItem(i)">{{renameData[i]}}</button> <button (click) = "sendUpdate(ctgry.id, i)" *ngIf = 'dsply[i]'>Update</button></div><div class="col-sm-1"><i class="glyphicon glyphicon-menu-down"></i></div>  
+         
+         </div>                           
+      </div>
+      
+
+        <!-- <div  *ngIf= "toggle[i]">  -->          <!-- for each specific article's title-->
+         <!-- <div *ngFor= "let m of makala">
+            
+              <button class="articletittle" 
+              (click)="getArticle(m.id)" (click)="ifdisplay (); closeAllAgeCategories()" 
+              (click)="onClick($event)">
+              <a routerLink="makala"> {{m.title}} </a>        
+              </button>
+            
+            <hr>
+          </div>
+         </div> -->
 
       <br><br><br><br>
       
     </div>
  </main>
 
+   <br><br><br><br>
+ 
 <app-footer></app-footer>

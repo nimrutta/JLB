@@ -1,32 +1,26 @@
-.navdiv {
-        position: relative;
-        height: 149px;
-} 
-
-.navbar {
+  /*.navbar {
       text-align: center;
       color: #652f85;
       font-family: helvetica;
-      background-color:#fff; 
-      height: fit-content; 
-      padding-right: 0; 
-      margin-bottom: 0;        
+      background-color:#fff;  
+      padding-right: 0;         
+      border-bottom: 3px solid #ffb6c1;
       border-radius: none !important; 
           }
 
-.navbar-fixed-top {
-      position: relative;
-}
 
-  .logorow {
-      height: fit-content;
-  }
+  .nav li {
+      margin-left: 30px;
+      margin-top: 10px;
+  }        
 
   .icon {
-      height: 400px;
-      width: 300px;
-      margin: auto;
+      float: right;
+      
    }
+ .icon-bar{
+         background-color: grey;
+ }
   
   .clogotext {
       height: 78px;
@@ -54,24 +48,19 @@
   .menuitems{
       background-color: #652f85;
       width: 100%;
-      height: 50px;
-      border-top: 3px solid #ffb6c1;
-      padding: 10px 25px 7px 0 !important;
+      height: 30px;
+      padding-bottom: 7px;
+      padding-right: 45px !important;
       margin-right: 0 !important;
       margin-top: 20px;
-      
   }
   .nav { 
       margin-right: 2%;
   }
 
- .icon-bar {
-      background: grey;
- }
-
  .nav li {
       margin-left: 30px;
-      margin-top: 10px 0 0 0;
+      margin-top: 0px;
       height: 20px;
       float: right;
     }   
@@ -80,72 +69,63 @@
         
         background-color:none !important;
         /*border-bottom: 2px solid #fff;    /*to be less conspicuous
-        border-radius: 3px;*/
-        height: 30px;
-        background: rgba(0,0,0, 0.4);
-        border-radius: 4px;
+        border-radius: 3px;*//*
+        height: 40px;
     }  
 
   nav ul li a {
         color: #fff !important;
-        padding-top: 4px;
+        padding-top: 10px;
         height: 20px;
   }
 
   nav ul li a:hover {
-        color: #ffffff !important;
+        color: #ffb6c1 !important;
   }
 
  .Mwanzo .Mwanzo {
         color: #ffffff !important;
         background-color:none !important;
         /*border-bottom: 2px solid #fff;
-        border-radius: 3px;*/
+        border-radius: 3px;*//*
         height: 40px;
  }
-  .showposts {
-        background-color: #f4f4f4;
-        margin: 0 0 0 0;
-  }
-
-  .drocol {
-        padding: 0 15px 0 17px;
-  }
-
-  .sscol {
-        padding-left: 30px;
-  }
 
   .searchsection {
         width: 100%;
         background-color:none;
         float: right;
-        margin-right: 0;
-        margin-left: 0px;
-        margin-top: 25px;
-        position: relative; 
-        top: 0;
+        margin-right: 50px;
+        margin-top: 10px;
  }
 
 .Makalabutton {
         font-size: 15px;
-        color: #fff;
-        height: 60px;
-        width: 200px;
-        background: rgba(0,0,0, 0.4);
-        padding: 7px 0 0 0;
-        margin: 35px 0 0 0;
-        border: none;
-        border-radius: 4px;       
+        color: #000;
+        height: 20px;
+        width: 60%;
+        background: none;
+        padding-right: 0px;
+        padding-left: 7px;
+        border-top: none;
+        border-bottom: none 2px #e46c2b;
+        border-left: none 2px #e46c2b;
+        border-right: none 2px #e46c2b;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 4px; 
+        border-bottom-right-radius: 4px; 
+        float: right;
 }
 
-.Makalabutton p {
+
+.makala p {
         display: inline-block;
         margin-right: 7px;
 }
 
-a > .Makalabutton  :hover {
-        color: #fff;
+.makala a  :hover {
+        color: #ffb6c1;
         font-size: 17px;
 }
 
@@ -154,21 +134,12 @@ a > .Makalabutton  :hover {
 }
 
 .glyphicon-list-alt {
-        color: #fff;
-}
-
-.makala {
-        padding-left: 0;
-        padding-right: 0;
+        color: #ffb6c1;
 }
 
 .search {
-        background-color: #fff;
-        border-radius: 4px;
-        padding: 35px 15px;
-        height: fit-content;
-        width: fit-content;
-        box-shadow: 1px 0.5px 16px -9px #000;
+        padding-right: 0;
+        padding-left: 30px;
 }
 
 .searchbox { 
@@ -181,28 +152,12 @@ a > .Makalabutton  :hover {
        margin-top: 0;
 }
 
-.Rudimwanzobutton {
-        font-size: 15px;
-        color: #fff;
-        height: 40px;
-        width: 200px;
-        background: rgba(0,0,0, 0.7);
-        padding: 7px 0 0 0;
-        margin: 35px 0 0 0;
-        border: none;
-        border-radius: 4px;  
-}
-
-.glyphicon-arrow-left {
-        margin-right: 15px;
-}
-
 input::placeholder {
   color: #cdcdcd;
-  /*rgba(255,182,193, 0.4); */}
+  /*rgba(255,182,193, 0.4); *//*}
 
 .Tafutabutton {
-       border: 1px solid rgba(0,0,0, 0.3);
+       border: 1px solid #cdcdcd;
        border-radius: 4px;
        border-top-left-radius: 0;
        border-bottom-left-radius: 0;
@@ -221,5 +176,296 @@ input::placeholder {
 }
 
 .clear {
-       clear: both;            /* to solve float overlapping issues */ 
+       clear: both;            /* to solve float overlapping issues */ /*
+}/*
+/*
+ @media all and (max-width: 800px){
+         .Makalabutton {
+      width:100%;
+      margin:0!important; 
+    
+}
+
+  .searchsection {
+          width:50%;
+      float:right;
+      margin-right: 0px;
+ }
+.Tafutabutton {
+       border: 1px solid #cdcdcd;
+       border-radius: 4px;
+       border-top-left-radius: 0;
+       border-bottom-left-radius: 0;
+       border-left: none; 
+       margin-left: -4px;   
+}
+.searchbox { 
+       border: 1px solid  rgba(0,0,0, 0.4); 
+       border-radius: 4px;
+       border-top-right-radius: 0;
+       border-bottom-right-radius: 0;
+       border-right: none;
+       margin-top: 0;
+}
+ }
+/*  SECTIONS  *//*
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  *//*
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  *//*
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 *//*
+}
+
+/*  GRID OF THREE  *//*
+.span_3_of_3 {
+	width: 100%;
+}
+.span_2_of_3 {
+	width: 66.1%;
+}
+.span_1_of_3 {
+	width: 32.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS *//*
+
+@media only screen and (max-width: 480px) {
+	.col { margin: 1% 0 1% 0%;}
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}*/
+/*baskl*/
+
+nav {
+  padding-top: 7px;
+}
+
+.logorow{
+        background-color: white;
+}
+.nav.navbar-nav.navbar-right li{
+  color: white;
+  text-transform: uppercase;
+}
+
+.collapse.navbar-collapse {
+  background-color: #652f85;
+}
+
+.brand {
+  padding-top: 0px;
+  padding-left: 10px;
+  margin-bottom: 6px;
+  color: #ffffff !important;
+}
+.container ul li:hover {
+  color: #ffffff !important;
+  background-color: inherit!important;
+  /*border-bottom: 2px solid burlywood;*/
+  border-radius: 3px;
+}
+
+.nav li {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.dropdown{
+cursor: pointer;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important;
+    border-bottom-right-radius:15px;
+     border-top-right-radius:15px; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+  border-color:#ccc;
+  border-bottom-left-radius: 15px;
+   border-top-left-radius:15px;
+    
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+   
+}
+/*css for mobile application*/
+
+@media (max-width: 625px){
+  .bella{
+    width:45%
+  }
+  .brand img {
+    width: 45px;
+    left: 20px;
+    height: 40px;
+    position: relative;
+    margin-left: 35%;
+    margin-top:0px;
+  }
+  .navbar {
+    background-color:#652f85;
+    border: #652f85;
+    height: 70px;
+     border-bottom: 3px solid #ffb6c1;
+  }
+  .nav li{
+    font-size: 9px;
+  }
+   .navbar-toggle{
+    margin-right: 8px;
+    margin-top: 8px;
+ 
+  }
+  .logotext {
+      float: left;
+      font-style: italic;
+      font-size: 16px;
+   }
+.icon {
+      float: right;
+      
+   }
+    .img {
+   margin-top: 0;
+   position: relative;
+  }
+  .navbar-header{
+    height: 35px;
+    background-color:#652f85 ;
+  }
+  .row{
+       background-color: white;
+  }
+      nav{
+        padding-top: 0px;
+      }
+}
+/*css for tablets*/
+@media (min-width:400px)  {
+  
+  .brand img {
+    width: 60px;
+    position: relative;
+    margin-left: 35%;
+    height: 55px;
+    margin-top:0px;
+  }
+  .navbar {
+    background-color: #652f85;
+    border: #652f85;
+    letter-spacing: 4px;
+    height: 80px;
+     border-bottom: 3px solid #ffb6c1;
+    
+  }
+  .nav li{
+    font-size: 11px;
+
+  }
+  .navbar-toggle{
+    margin-right: 15px;
+    margin-top: 8px;
+ 
+  }
+  
+  .logotext {
+      float: left;
+      font-style: italic;
+      font-size: 19px;
+   }
+     .icon {
+      float: right;
+      
+   }
+    .img {
+   margin-top: 0;
+   position: relative;
+  }
+  .navbar-header{
+    height: 35px;
+    background-color:#652f85 ;
+    
+  }
+  .row{
+       background-color: white;
+  }
+      nav{
+        padding-top: 0px;
+      }
+      
+}
+
+  /*css for desktop application*/
+@media only screen and (min-width: 768px) {
+  .stylish-input-group{
+    opacity: 0;
+  }
+  .brand img {
+    width: 65px;
+    height: 65px;
+    margin-top: 0px;
+    position: relative;
+    margin-left: 35%;
+    
+
+  }
+  button{
+    opacity: 0;
+  }
+ 
+  .navbar {
+    background-color:white;
+    letter-spacing: 4px;
+    height: 90px;
+     border-bottom: 3px solid #ffb6c1;
+
+  }
+
+  .nav li a{
+    margin-right: 16px;
+    font-size: 15px;
+    padding:0;
+  }
+
+  .img {
+   margin-top: 0;
+   position: relative;
+  }
+
+ .clogotext {
+      height: 78px;
+      padding-top: 39px;
+      padding-left: 0;
+  }
+
+  .logotext {
+      float: left;
+      font-style: italic;
+   }
+     .icon {
+      float: right;
+      
+   }
 }

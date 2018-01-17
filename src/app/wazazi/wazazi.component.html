@@ -1,65 +1,144 @@
 
- <div class="navdiv">
-     <nav class="navbar navbar-inverse navbar-fixed-top">
-       <div class="row logorow">
-         <button type="button" class="navbar-toggle collapsed" (click)="toggleState()">
+ <!--bella
+<nav class="navbar navbar-fixed-top">
+     <div class="row logorow container">
+          <div class="navbar-header">
+                <button type="button" 
+                        class="navbar-toggle collapsed"
+                        (click)="toggleState()">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-         </button> <!-- #1 -->
-         <div><img src="../../../assets/images/pp.jpg" height="500" width="400" class="icon"></div>
-       </div>
-       <div class="collapse navbar-collapse" [ngClass]="{ 'in':isIn }"> 
-       <ul class="menuitems nav navbar-nav"> 
-          <li><a routerLink="shuhuda" (click) = "omitsearch()">Shuhuda</a></li>  
-          <li><a routerLink="kuhusu-jlb" routerLinkActive="active" (click) = "omitsearch()">Kuhusu JLB</a></li>
-          <li><a routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput()" class="Mwanzo" >Mwanzo</a></li>  
-       </ul>
-       </div>
- </nav>
- </div>
- 
- <!-- End of navigation section -->
- 
- 
- <div class="row showposts">
-
-
-     <div class="col-sm-9 drocol">
-       <div *ngIf="displayRouterOutlet">
-        <router-outlet>
-          
-                                     <!-- (activate)="myEvent($event)" could be not necessary  (activate)="BlogSectionComponent = $event" (activate)="BlogSomaZaidiComponent = $event" 
-                                    -->
-
-        </router-outlet>
-       </div>
-       <!--<app-makala *ngIf="showArticle"></app-makala>-->
+            </button>
+         <div class="col-sm-5 navbar-brand"><img src="../../../assets/images/pp.jpg" class="icon"></div>
+         <div class="col-sm-7 clogotext navbar-brand"><h3 class="logotext">Jua Lishe Bora</h3></div>
      </div>
-
-
-     <!--search section begins-->
-
-     <div class="col-sm-3 sscol" *ngIf="showsearch">
-
-        <div class="searchsection row">
-        <div class="search" >
-            <input type="search" class="searchbox" name="tittle" #searchTerm  placeholder="Tafuta" *ngIf="showSearchInput" (keyup)="keypressed($event)">
-            <button (click)="performSearch(searchTerm)" class="Tafutabutton" *ngIf="showSearchInput"><i class="glyphicon glyphicon-search"></i></button>
-            <br *ngIf="showSearchInput">
-
-            <button class="Rudimwanzobutton" *ngIf="!showSearchInput"  (click) = "rudiMwanzo()"><i class="glyphicon glyphicon-arrow-left"></i>Rudi Mwanzo</button>
-            
-            <a><button class="Makalabutton" (click)="showarticle.ifdisplay()"><p>Mapishi ya vyakula</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
-            <br>
-        </div> 
         </div>
+     <div class="collapse navbar-collapse"
+              [ngClass]="{ 'in': isIn }">
+     <ul class="menuitems nav navbar-nav"> 
+          <li><a routerLink="shuhuda">Shuhuda</a></li>  
+          <li><a routerLink="kuhusu-jlb" routerLinkActive="active">Kuhusu JLB</a></li>
+          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active">Mwanzo</a></li>  
+     </ul>
+    </div>
+ </nav>  //-->
 
-        <app-makala-contents class="makalatitles" #showarticle (myEvent)="myEvent($event)"></app-makala-contents> 
-     </div>
+<!--bella
+ <!-- End of navigation section -->
+ <!-- core/navbar.component.html -->
 
+ <!--bella
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+                <button type="button" 
+                        class="navbar-toggle collapsed"
+                        (click)="toggleState()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Project Manager</a>
+        </div>
+         <div class="collapse navbar-collapse"
+              [ngClass]="{ 'in': isIn }">
+                <ul class="menuitems nav navbar-nav"> 
+          <li><a routerLink="shuhuda">Shuhuda</a></li>  
+          <li><a routerLink="kuhusu-jlb" routerLinkActive="active">Kuhusu JLB</a></li>
+          <li><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active">Mwanzo</a></li>  
+     </ul>
+        </div>
+    </div>
+</nav>
+ //-->
+ <header id="header" xmlns="http://www.w3.org/1999/html">
+    <app-subscribe *ngIf="showmyId" (myevent)="myevent($event)" (myEvent)="myEvent($event)"></app-subscribe>
+    <app-kujiunga *ngIf="showmyod" (myevenT)="myevenT($event)"></app-kujiunga> 
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class=""> 
+       <div class="row">
+    <div class="col-sm-5 col-xs-5 col-md-5">
+      <a class="brand"><img src="../../../assets/images/pp.jpg" class="icon"></a>
+    </div>
+    <div class="col-sm-7 col-xs-7 col-md-7">
+      <h3 class="logotext">Jua LIshe Bora</h3>
+            <div style="background-color:#652f85;" class=""> 
+        <button type="button" class="navbar-toggle collapsed" (click)="toggleState()" style="background-color: inherit">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button></div>
+        
+    </div>
+      
+  </div>
 
+    </div> 
+<div style="background-color:#652f85;"class="row">
+    <div class="col-xs-2 col-md-5 col-ms-5">
+     <div style="margin:4px;"class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Tafuta" >
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+    </div>
+   
+        
+           <div class="col-xs-10 col-ms-7 col-md-7">
+    <div class="collapse navbar-collapse" [ngClass]="{ 'in': isIn }">
+        
+         <ul class="menuitems nav navbar-nav navbar-right"> 
+          <li (click)="toggleState()"><a class="Mwanzo" routerLink="blog-section" routerLinkActive="active">Mwanzo</a></li>  
+          <li (click)="toggleState()"><a routerLink="kuhusu-jlb" routerLinkActive="active">Kuhusu JLB</a></li>
+           <li (click)="toggleState()"><a routerLink="shuhuda">Shuhuda</a></li>  
+        
+           	<li (click)="toggleState()">	<button type="button" class="subcsribe_button btn btn-demo"(click)= "togglemyId()" >
+			 <p id="subscribe_text">Soma Makala</p>
+        </button> 
+        </li>
+     </ul>   
+      </div>
+    </div>
 
+    </div>    
+  </nav>
+</header>
+<br><br>
+ 
+<!--slsj
+ <div class="searchsection row">
+      <div class="col-sm-6 makala">
+         <br>
+         <a><button class="Makalabutton" (click)= "toggleId()"><p>Makala</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
+       <br>
+      </div>
+      <div class="search col-sm-6">
+         <br>
+         <input type="search" class="searchbox" name="tittle" #searchTerm  placeholder="Tafuta">
+         <button (click)="performSearch(searchTerm)" class="Tafutabutton"><i class="glyphicon glyphicon-search"></i></button>
+         <br><br><br><br>
+     </div> 
+         <!-- <button id="content" [@focusPanel]='state' @movePanel >Look at me animate</button> 
+ </div> -->
+ <div class="clear"></div>
+ <app-makala-contents class="makalatitles" *ngIf="showId" (myEvent)="myEvent($event)"></app-makala-contents> 
+ <app-makala-navigation class="makalatitles" *ngIf="showthisId" (articleEvent)="articleEvent($event)"></app-makala-navigation>
+ <app-makala *ngIf="showArticle"></app-makala>
+ 
+ <div *ngIf="displayRouterOutlet">
+ <router-outlet
+    (activate)="BlogSomaZaidiComponent = $event"
+    (activate)="BlogSectionComponent = $event" 
+     >
+
+ </router-outlet>
  </div>
+
  <app-footer ></app-footer>

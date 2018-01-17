@@ -68,29 +68,22 @@ ibox {
         border-top-left-radius: 4px;
 }
 
-.twoimage {
-        height: 340px;
-        float: left; 
-        width: 95%; 
-        margin-left: 4%;
-        margin-bottom: 0.5em;
-}
-
 .quote {
         font-size: 19px;
         font-family: Purisa;
-        color: rgba(0, 0, 0, 0.4);;
-        height: 520px;
+        color: rgba(255, 255, 255, 0.6);;
+        background-color: rgba(0, 0, 0, 0.5);
+        height:520px;
         width: 30%;
-        padding: 95px 15px 0 15px;
+        padding:0;
         position: absolute;
-        right: 15px;
+        right: 0%;
         z-index: 1000;
 }
 
 .quote:hover {
         color: rgba(255, 255, 255, 1);
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.2);
         border-top-right-radius: 4px;
         -webkit-transition: all 1s ease;
         -moz-transition: all 1s ease;
@@ -150,3 +143,49 @@ ibox {
        margin: 0 20px;
        float: right;
  }
+
+ @media all and (max-width: 800px){
+  
+        .oneimage {
+        height: auto;
+        width: 100%; 
+        margin:0px;
+}  
+
+.twoimage {
+        height: auto;
+        width: 100%; 
+        margin:0px;
+}
+
+.quote {
+        font-size: 14px;
+        width: 30%; 
+        margin:0px;
+        overflow: hidden;
+        height: 37.1%;
+        
+}
+
+.box > h3 {
+     
+       font-size: 17px;
+}
+
+p{
+        font-size:12px;
+}
+
+.somazaidi{
+        font-size:12px;
+}
+
+.ccontainer {
+    
+       
+        padding-top:20%;
+
+ }
+
+ }
+ 

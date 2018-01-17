@@ -39,7 +39,7 @@
  }
 
 .modal-header {
-        font-size: 15px;
+        font-size: 90%;
         padding: 23px 40px;
         color: #ffffff;
         border-bottom:  none;
@@ -138,4 +138,15 @@ input::placeholder {
         color: #ffffff;
         text-decoration: none;
         cursor: pointer;
+}
+@media all and (max-width: 800px){
+        .modal-header {
+        font-size: 50%;
+        padding: 6% 4% 4% 4%;
+}
+        
+.contactfield{  
+        width: 60%;
+        height: 7%;
+}
 }
