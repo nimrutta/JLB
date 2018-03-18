@@ -1,39 +1,39 @@
  <!-- Modal  (click)="onClick1($event)" -->
       
-      <div id="myModal" class="modal uk-modal-dialog">
+      <div id="myModal" class="modal">
        <div class="modal-content">
          <button class="close" (click)="exitModal($event)">&times;</button>
          <div class="modal-header">
             <p>Ukijaza fomu hii na kututumia tutahakikisha haukosi masomo yetu 
                kwa kukujulisha kupitia message ya whatsapp kila tutakapo weka somo jipya. 
                Pia kama umevutiwa na mafunzo yetu na ungependa kushiriki kwenye
-               darasa letu<a class="modallinks"><button style="font-size:110%;"class="jiungebutton" 
+               darasa letu<a class="modallinks"><button class="jiungebutton" 
                 (click)="onClick1($event)">Jiunge hapa
                  </button></a></p>
-                 <br><br>      
+                 <br>      
 
             <div class="clear"></div>
          </div>
          <div class="modal-body">
            
              <form #subscribeform="ngForm">
-             <input type="text" name="comment_author"style="font-size:60%;" id="jina" 
+             <input type="text" name="comment_author" id="jina" 
              class="contactfield" value=""  placeholder="Jina" 
              required [(ngModel)]="subscriber.name" name="jina"
              #jina="ngModel">
              <div *ngIf="(jina.errors && (jina.dirty || jina.touched)) || (isInputdataMissing && jina.errors)" class="alert alert-danger" class="inputErrormessage">
-               <div style="font-size:50%;" [hidden]="!jina.errors.required" >
-                   Tafadhali jaza Jina lako
+               <div [hidden]="!jina.errors.required" >
+                   Tafadhari jaza Jina lako
                </div>
              </div>   
 
 
-             <input type="text" name="comment_author" style="font-size:60%;"id="phone" 
+             <input type="text" name="comment_author" id="phone" 
              class="contactfield" value=""  placeholder="Namba ya Whatsapp" 
              required [(ngModel)]="subscriber.phone_number" #phone="ngModel">
              <div *ngIf="(phone.errors && (phone.dirty || phone.touched))|| (isInputdataMissing && phone.errors)" class="alert alert-danger" class="inputErrormessage">
-               <div style="font-size:50%;"[hidden]="!phone.errors.required" >
-                   Tafadhali jaza namba yako ya simu
+               <div [hidden]="!phone.errors.required" >
+                   Tafadhari jaza namba yako ya simu
                </div>
              </div>   
              </form>
@@ -41,7 +41,7 @@
          </div>
          <div class="modal-footer">
              <a class="modallinks"><button class="sendbutton" (click)="onClick($event)" (click)="add()" 
-                                    [disabled]="!subscribeform.form.valid"><button style="font-size:70%;" (click)="alertUser()" class="sendbutton"> Tuma taharifa</button> </button></a>
+                                    [disabled]="!subscribeform.form.valid"><button (click)="alertUser()" class="sendbutton"> Tuma taharifa</button> </button></a>
          </div>
 
        </div>

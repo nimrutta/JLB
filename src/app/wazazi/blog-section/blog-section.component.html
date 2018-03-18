@@ -48,14 +48,14 @@
     <div *ngFor= "let g of searchResults" class="box">
      
     <div class="row iquote" style="width:100%;">
-       <div class="col-ms-8 col-xs-8 col-md-8 ibox">
+       <div class="ibox">
           
            <img src="../../../../assets/images/happy mom1.jpg" alt="Fruit View"
            class="oneimage">
 
        </div>
 
-       <div class="col-ms-4 col-xs-4 col-md-4 ">
+       <div class="quote">
             <p>
                <strong><span style="font-size:30px;">"</span> {{g.title}}
                <span style="font-size:30px;">"</span></strong>
@@ -72,13 +72,14 @@
     <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active">Soma Zaidi </button>
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">    
-    <p class="postedattime">6 oktoba 2017 2315</p>   
+    <p class="postedattime">6 oktoba 2017 2315</p>
+    <div class="postedattime_ss">6 oktoba '17</div>     
     <img src="../../../../assets/images/twitter.png" alt="Fruit View"
-           class="shareicon">
+           class="shareicon socialmedia">
     <img src="../../../../assets/images/facebok.png" alt="Fruit View"
-           class="shareicon">
-    <img src="../../../../assets/images/like.png" alt="Fruit View"
-           class="shareicon"> 
+           class="shareicon socialmedia">
+    <button class="likesbutton" (click) = "addLikes()"><img src="../../../../assets/images/like.png" alt="Fruit View"></button>
+    <p class="likes">{{postlikes}}</p>
     </div>   
     </div>
         
@@ -100,32 +101,33 @@
            <img src="../../../../assets/images/happy mom.jpg" alt="Fruit View"
            class="oneimage">
 
-       </div>
+       
 
        <div class="quote">
             <p>
-               <strong><span style="font-size:30px;">"</span> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+               <strong><span>"</span> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nulla pariatur  
-               <span style="font-size:30px;">"</span></strong>
+               <span>"</span></strong>
 
             </p>
        </div>
+       </div>
     </div>
 
-    <p class="blogtext">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.sit amet,
-         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud amet ea
-          exercitation Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed consequuntur dolores aliquip ex aliqua </p><br>
+    <p class="blogtext">Ut enim ad minim veniam, ex ea commodo consequat.sit amet,
+         consectetur adipiscing elit, sed do eiusmod tempor incididunt </p><br>
     <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active" (click)= "passPostId(2335)">Soma Zaidi </button>
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">
-    <p class="postedattime">6 oktoba 2017 2315</p>   
+    <p class="postedattime">6 oktoba 2017 2315</p>
+    <div class="postedattime_ss">6 oktoba '17</div>   
     <img src="../../../../assets/images/twitter.png" alt="Fruit View"
-           class="shareicon" ceiboShare [twitter] ="{u: repoUrl}">
+           class="shareicon socialmedia" ceiboShare [twitter] ="{u: repoUrl}">
     <img src="../../../../assets/images/facebok.png" alt="Fruit View"
-           class="shareicon" ceiboShare  [facebook] ="{u: repoUrl}">
+           class="shareicon socialmedia" ceiboShare  [facebook] ="{u: repoUrl}">
 
     
-    <button class="likesbutton" (click) = "addLikes()"><img src="../../../../assets/images/like.png" alt="Fruit View"></button>
+    <button class="likesbutton" (click) = "addLikes()"><img src="../../../../assets/images/like.png" alt="Fruit View" class="socialmedia"></button>
     <p class="likes">{{postlikes}}</p>
     </div>
 
@@ -146,14 +148,14 @@
            <img src="{{b.image_url}}" alt="Fruit View"
            class="oneimage">
 
-       </div>
-
        <div class="quote">
             <p>
-               <strong><span style="font-size:30px;">"</span> {{b.title}} 
-               <span style="font-size:30px;">"</span></strong>
+               <strong><span>"</span> {{b.title}} 
+               <span>"</span></strong>
 
             </p>
+       </div>
+       <div class="clear"></div>
        </div>
     </div>
 
@@ -161,11 +163,12 @@
     <button class="somazaidi" routerLink="/wazazi/soma-zaidi/{{b.id}}" routerLinkActive="active">Soma Zaidi </button> <!-- (click)="removeSearchInput()" (click)="onClick($event)"(click)="passPostId(b.id)" (click)="getPost(b.id)" -->
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">
-    <p class="postedattime">6 oktoba 2017 2315</p>   
+    <p class="postedattime">6 oktoba 2017 2315</p>
+    <div class="postedattime_ss">6 oktoba '17</div>    
     <img src="../../../../assets/images/twitter.png" alt="Fruit View"
-           class="shareicon" ceiboShare [twitter] ="{u: repoUrl}">
+           class="shareicon socialmedia" ceiboShare [twitter] ="{u: repoUrl}">
     <img src="../../../../assets/images/facebok.png" alt="Fruit View"
-           (click) = "specifyUrl(b.id)" class="shareicon" ceiboShare  [facebook] ="{u: repoUrl}">
+           (click) = "specifyUrl(b.id)" class="shareicon socialmedia" ceiboShare  [facebook] ="{u: repoUrl}">
 
     
     <button class="likesbutton" (click) = "addLikes()"><img src="../../../../assets/images/like.png" alt="Fruit View"></button>
@@ -182,7 +185,7 @@
 
 
 
-    <div class="box">
+   <!-- <div class="box">
      
     <div class="row iquote" style="width:100%;">
        <div class="ibox">
@@ -221,7 +224,7 @@
     <p class="likes">{{postlikes}}</p>
     </div>
 
-    <!--end of post2 -->
+   
 
     <div class="box">
      
@@ -256,8 +259,8 @@
            class="shareicon" ceiboShare  [facebook] ="{u: repoUrl}">
     <button class="likesbutton" (click) = "addLikes()"><img src="../../../../assets/images/like.png" alt="Fruit View"></button>
     <p class="likes">{{postlikes}}</p>
-    </div>
-    </div>
+    </div> -->
+    </div> 
 
 
 

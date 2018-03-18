@@ -24,13 +24,13 @@ import { Subject } from 'rxjs/Subject';
   styleUrls: ['./wazazi.component.css'],
   animations: [
     trigger('flyInOut', [
-      state('in', style({transform: 'translateX(0)'})),
+      state('in', style({transform: 'translateY(124px)'})),
       transition('void => *', [
-        style({transform: 'translateX(-400%)'}),
-        animate(2000)
+        style({transform: 'translateY(-100px)'}),
+        animate(1000)
       ]),
       transition('* => void', [
-        animate(2000, style({transform: 'translateX(300%)'}))
+        animate(1000, style({transform: 'translateY(-300px)'}))
       ])
     ])
   ],

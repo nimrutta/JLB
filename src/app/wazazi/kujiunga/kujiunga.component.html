@@ -14,26 +14,26 @@
          <div class="modal-body">
            
            <form #kujiungaform="ngForm">
-            <input type="text" name="comment_author" style="font-size:60%;"class="contactfield" id="jina" value=""  placeholder="Jina" required [(ngModel)]="client.name" #jina="ngModel">
+            <input type="text" name="comment_author" class="contactfield" id="jina" value=""  placeholder="Jina" required [(ngModel)]="client.name" #jina="ngModel">
              <div *ngIf="(jina.errors && (jina.dirty || jina.touched)) || (isInputdataMissing && jina.errors)" class="alert alert-danger" class="inputErrormessage">
-               <div style="font-size:50%;"[hidden]="!jina.errors.required" >
-                   Tafadhali jaza Jina lako
+               <div [hidden]="!jina.errors.required" >
+                   Tafadhari jaza Jina lako
                </div>
              </div>  
 
-            <input type="text" name="comment_author" style="font-size:60%;"class="contactfield" id="umri" value=""  placeholder="Umri wa mtoto" [(ngModel)]="client.id" required="required" #umri="ngModel">
+            <input type="text" name="comment_author" class="contactfield" id="umri" value=""  placeholder="Umri wa mtoto" [(ngModel)]="client.id" required="required" #umri="ngModel">
              <div *ngIf="(umri.errors && (umri.dirty || umri.touched))|| (isInputdataMissing && umri.errors)" class="alert alert-danger" class="inputErrormessage">
-               <div style="font-size:50%;"[hidden]="!umri.errors.required" >
-                   Tafadhali jaza umri wa mtoto
+               <div [hidden]="!umri.errors.required" >
+                   Tafadhari jaza umri wa mtoto
                </div>
              </div>  
             
-           <input type="text" name="comment_author" id="phone" style="font-size:60%;"
+           <input type="text" name="comment_author" id="phone" 
              class="contactfield" value=""  placeholder="Namba ya Whatsapp" 
              required [(ngModel)]="client.email" #phone="ngModel">
              <div *ngIf="(phone.errors && (phone.dirty || phone.touched))|| (isInputdataMissing && phone.errors)" class="alert alert-danger" class="inputErrormessage">
-               <div style="font-size:50%;text-align:center;"[hidden]="!phone.errors.required" >
-                   Tafadhali jaza namba yako ya simu
+               <div [hidden]="!phone.errors.required" >
+                   Tafadhari jaza namba yako ya simu
                </div>
              </div>  
            </form>
@@ -42,7 +42,7 @@
          </div>
         <div class="modal-footer">
              <a class="modallinks"><button class="sendbutton" (click)="onClick($event)" (click)="add()" 
-                                    [disabled]="!kujiungaform.form.valid"><button style="font-size:70%;" (click)="alertUser()" class="sendbutton"> Tuma taharifa</button> </button></a>
+                                    [disabled]="!kujiungaform.form.valid"><button (click)="alertUser()" class="sendbutton"> Tuma taharifa</button> </button></a>
          </div>
        </div>
       </div>

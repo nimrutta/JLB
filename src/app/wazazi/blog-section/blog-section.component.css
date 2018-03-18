@@ -52,10 +52,12 @@
 
 .iquote {
        margin: 0;
+       
 }
 
 ibox {
        width: 100%;
+       height: 520px;
 }
 
 .oneimage {
@@ -73,12 +75,26 @@ ibox {
         font-family: Purisa;
         color: rgba(255, 255, 255, 0.6);;
         background-color: rgba(0, 0, 0, 0.5);
-        height:520px;
+        height: 520px;
         width: 30%;
         padding:0;
-        position: absolute;
-        right: 0%;
+        position: relative;
+        left: 70%;
         z-index: 1000;
+}
+
+/*position: absolute;
+        right: 15px;
+        z-index: 1000;*/
+
+.quote p {
+        position: absolute;
+        top: 20%;
+        padding: 0 15px;
+}        
+
+.quote p span {
+        font-size: 30px;
 }
 
 .quote:hover {
@@ -111,6 +127,7 @@ ibox {
         float: left;
         margin: 0 0 0 20px;
  }
+
 
  .likes {
         color: #907660;
@@ -145,15 +162,22 @@ ibox {
  }
 
  @media all and (max-width: 800px){
-  
-        .oneimage {
-        height: auto;
+iqoute {
+        height: 300px;
+}
+
+.ibox {
+        height: 300px;
+}
+
+.oneimage {
+        height: 300px;
         width: 100%; 
         margin:0px;
 }  
 
 .twoimage {
-        height: auto;
+        height: 300px;
         width: 100%; 
         margin:0px;
 }
@@ -162,9 +186,7 @@ ibox {
         font-size: 14px;
         width: 30%; 
         margin:0px;
-        overflow: hidden;
-        height: 37.1%;
-        
+        height: 100%;
 }
 
 .box > h3 {
@@ -187,5 +209,93 @@ p{
 
  }
 
+.postedattime_SS {
+        color: rgba(90,76,60,0.8);
+        margin: 0 0 0 10px;
+        display: inline-block !important;
  }
+
+ }
+
+@media all and (min-width: 767px){
+.postedattime_ss {
+        display: none;
+ }
+
+}
+
+@media all and (max-width: 767px){
+.ccontainer {
+        padding-top:45px;
+ }
+
+.box {
+        padding-bottom: 15px;
+}
+
+.ibox {
+        height: 200px;
+}
+
+.oneimage {
+        height: 100%;
+        width: 100%; 
+        margin:0px;
+} 
+
+.quote {
+        height: 100%;
+        width: 40%;
+        left: 60%;
+}
+
+.quote p {
+        position: absolute;
+        top: 0;
+        padding: 25px 7px 0 7px;
+        font-size: 10px;
+        height: 100%;
+}        
+
+.quote p strong {
+        height: 70%;
+        overflow: hidden;
+}        
+
+
+.quote p span {
+        font-size: 17px;
+}
+
+.blogtext {
+        margin-top: 7px;
+}
+
+.postedattime {
+        display: none;
+ }
+
+.postedattime_ss {
+        font-size: 12px;
+        color: rgba(90,76,60,0.8);
+        margin: 0 0 0 10px;
+        display: inline-block !important;
+        width: 80px;
+ }
+
+.socialmedia {
+        width: 14px;
+        height: 14px;
+}
+
+.likesbutton img {
+        width: 14px;
+        height: 14px;
+ }
+
+.likes {
+        font-size: 11px;
+}
+
+}
  

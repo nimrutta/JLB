@@ -49,7 +49,48 @@ button {
         border: none;
 }
 
+.glyphicon-triangle-right {
+       
+        color:  #FBC02D;
+}
+
 .articletittle {
         margin: 0 0 0 65px;
         text-align: left;
+}
+
+@media all and (max-width: 767px){
+.Makala-items-bed {
+        border-top: none;
+        width: 320px;
+        position: absolute;
+        top: 0;     
+         }
+
+.close {
+        
+        position: relative;
+} 
+
+hr {
+        width: 250px;
+        margin: 0 auto;
+}
+
+.Makala-items-bed a {
+        margin: 0 0 0 10px;
+}
+
+button {
+        font-size: 13px;
+}
+
+a button {
+        color: #FBC02D;
+}
+
+.articletittle {
+        margin-bottom: 15px;
+}
+
 }

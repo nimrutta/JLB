@@ -47,24 +47,23 @@
       <div class="clear"></div>
        
        <img src="../../../../assets/images/twitter.png" alt="Fruit View"
-           class="shareicon" ceiboShare  ="{u: repoUrl}">
+           class="shareicon socialmedia" ceiboShare  ="{u: repoUrl}">
 
       <div class="fb-share-button" data-href="http://jualishebora.ga/wazazi/blog-section" 
       data-layout="button_count" data-size="small" data-mobile-iframe="false">
       <a class="fb-xfbml-parse-ignore" target="_blank" 
       href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjualishebora.ga%2Fwazazi%2Fblog-section&amp;src=sdkpreparse">
       <img src="../../../../assets/images/facebok.png" alt="Fruit View"
-           class="shareicon"></a></div>
+           class="shareicon socialmedia"></a></div>
        
        <button class="jiungebutton" 
        (click)= "togglemyId()">Jiunge na program
        </button>
        <app-taharifa-kujiunga *ngIf="thanksforjoiningprogram" (closeModal)="closeModal($event)"></app-taharifa-kujiunga>
        <app-kujiunga *ngIf="showmyId" (myevenT)="myevenT($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-kujiunga>
-
+       
       </div>
      </div>
-     <button (click)="goBack()">go back</button>
        <!-- comments section begins -->
 
    

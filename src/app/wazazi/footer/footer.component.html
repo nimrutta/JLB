@@ -1,19 +1,21 @@
-<footer  id="sticky" >
-    <app-subscribe *ngIf="showmyId" (myevent)="myevent($event)" (myEvent)="myEvent($event)"></app-subscribe>
-    <app-kujiunga *ngIf="showmyod" (myevenT)="myevenT($event)"></app-kujiunga> 
+    <app-taharifa-subscription *ngIf="thanksforsubscribing" (closeModal)="closeModal($event)"></app-taharifa-subscription>
+    <app-taharifa-kujiunga *ngIf="thanksforjoiningprogram" (closeModal)="closeModal($event)"></app-taharifa-kujiunga>
+    <app-subscribe *ngIf="showmyId" (myevent)="myevent($event)" (myEvent)="myEvent($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-subscribe>
+    <app-kujiunga *ngIf="showmyod" (myevenT)="myevenT($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-kujiunga> 
+
+    <footer>
     <div class="row">
         
-     <div class="col-sm-4 col-xs-4 col-md-4">
-           <div class="addressline">
-          <h4>Some Address line,<br>Created by Codenet</h4>
-         </div>
+     <div class="col-sm-4 hidden-xs">
      </div>
      
-     <div class="col-sm-4 col-xs-4 col-md-4">
-         
+     <div class="col-sm-4 col-xs-6">
+         <div class="addressline">
+          <p>Some Address line,<br>Created by Codenet</p>
+         </div>
      </div>
 
-     <div class="col-sm-4 col-xs-4 col-md-4">
+     <div class="col-sm-4 col-xs-6">
          <button class="subcsribe_button" (click)= "togglemyId()">
           <p id="subscribe_text">Subscribe</p>
          </button> 
@@ -24,4 +26,3 @@
     
    
 </footer>
-

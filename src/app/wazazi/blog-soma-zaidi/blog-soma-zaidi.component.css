@@ -173,4 +173,62 @@ form  {
 .cmttext p {
         font-size: 14px;
 }
-      
+    
+
+@media all and (max-width: 767px){
+.box {
+        padding:10px 20px 90px 20px;
+}
+
+.box p {
+        font-size: 13px;
+        text-align: justify;
+        }
+
+.oneimage {
+        height: 250px;
+        margin-top: 15px;
+        float: left; 
+        clear: both;
+        width: 100%; 
+        margin-left: 0;
+        margin-bottom: 15px;
+}
+
+.ccontainer a {
+        float: left;
+        margin: 0 5px;
+}
+
+.shareicon {
+        float: left;
+        margin: 0 15px;
+}
+
+.socialmedia {
+        width: 14px;
+        height: 14px;
+}
+
+.cbox { 
+        width: 100%;
+}
+
+.cdbox { 
+        width: 100%;
+}
+
+.cmtavatarin {
+        padding-bottom: 5px;
+}
+
+.cmtavatar {
+        padding-right: 0;
+}
+
+.cmttext p {
+        font-size: 13px;
+        padding: 0 7px;
+        text-align: justify;
+}
+}
