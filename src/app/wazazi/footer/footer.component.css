@@ -7,6 +7,11 @@
      
         }  
 
+  .footercontainer {
+      width: 100%;
+      margin: 0 0;
+  }
+
   .subcsribe_button {
       height: 35px;
       width: 150px;

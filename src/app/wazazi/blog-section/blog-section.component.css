@@ -109,6 +109,7 @@ ibox {
 .blogtext {
         padding: 0 0 0 20px;
         width: 100%;
+        overflow-wrap: break-word;
 }
 
 .somazaidi {
@@ -269,6 +270,7 @@ p{
 
 .blogtext {
         margin-top: 7px;
+        overflow-wrap: break-word;
 }
 
 .postedattime {

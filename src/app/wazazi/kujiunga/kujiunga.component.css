@@ -157,12 +157,12 @@ input::placeholder {
         .modal-content {
         position: relative;
         background-color: rgba(0,0,0,0.8);
-        margin: 0 0 0 35px;
+        margin: 0 0 0 15%;
         padding: 0;
         border: 1px solid #888;
-        width: 65%;
+        width: 70%;
         position: absolute;
-        bottom: 70px;
+        bottom: 40px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
         -webkit-animation-name: animatetop;
         -webkit-animation-duration: 0.4s;
@@ -187,6 +187,10 @@ input::placeholder {
         width: 90%;
 }
 
+.inputErrormessage {
+        margin-left: 15px;
+}
+
 input::placeholder {
         font-size: 13px;
   }
@@ -202,7 +206,4 @@ input::placeholder {
         border-bottom-right-radius: 6px
         }
 
-.inputErrormessage {
-        margin-left: 45px;
-}
 }
