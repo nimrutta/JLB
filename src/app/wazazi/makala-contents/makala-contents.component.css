@@ -62,9 +62,12 @@ button {
 @media all and (max-width: 767px){
 .Makala-items-bed {
         border-top: none;
-        width: 320px;
+        width: 100%;
         position: absolute;
-        top: 0;     
+        top: 0;
+        left: 0;   
+        right: 0;
+        margin-right: 0;  
          }
 
 .close {

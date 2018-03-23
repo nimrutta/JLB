@@ -34,7 +34,7 @@
           <li><a routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput()" class="Mwanzo" >Mwanzo</a></li>  
           <button (click)="showarticle.ifdisplay()"> Soma Makala </button>
         </ul>
-        <app-makala-contents class="makalatitles" #showarticle (myEvent)="myEvent($event)"></app-makala-contents>
+        <app-makala-contents #showarticle (myEvent)="myEvent($event)"></app-makala-contents>
        </div>    
  </nav>
  </div>
