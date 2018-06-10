@@ -1,0 +1,32 @@
+<div class="Makala-items-bed" [@flyInOut]="'in'" *ngIf='display'>
+     <button class="close" (click)="ifdisplay(); closeAllAgeCategories()">&times;</button>
+      <div *ngFor= "let c of category; let i = index">       <!--for each age category -->
+         <a>
+          <button (click)="getMakala(c.id)" (click)="displayThisItem(i)">{{c.category_name}} </button> 
+          <hr>
+         </a>
+
+    <!--<div id = "{{c.id}}" [hidden]="!toggle[i]">   routerLink="makala" routerLinkActive="active"-->
+         <div  *ngIf= "toggle[i]" class="articletitles">            <!--for each specific article's title-->
+          <div *ngFor= "let m of makala">
+            
+              <button class="articletittle" 
+              (click)="getArticle(m.id)" (click)="ifdisplay (); closeAllAgeCategories()" 
+              (click)="onClick($event)">
+              <!--<i class="glyphicon glyphicon-triangle-right"></i>--><a routerLink="makala"> {{m.title}} </a>        
+              </button>
+            
+            
+          </div>
+         </div>
+    <!--</div> -->
+
+      </div>
+      
+</div>
+
+
+
+
+      
+

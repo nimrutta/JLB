@@ -1,0 +1,40 @@
+ .container {
+        background-color: #fff;
+        box-shadow: 1px 6.5px 12px 1px #000;
+        width: 100%;
+        padding:20px;
+
+ }
+ .mtable {
+        width: 80%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+ }
+
+ .mtable-checked {
+        width: 80%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin-bottom:  100px;
+ }
+
+ th, td {
+        
+        padding: 3px 20px; 
+ }
+
+ .rightcell {
+        
+        border-left: 1px solid #e46c2b;
+
+ }
+
+ .mtable tr:nth-child(even), .mtable-checked tr:nth-child(even) {
+       background-color: #fff
+ }
+
+.mtable tr:nth-child(odd), .mtable-checked tr:nth-child(odd) {
+       background-color: #DCDCDC;
+ }
+
+.mtable th, .mtable-checked th {
+       background-color: rgba(208, 108, 43, 0.6);
+ }

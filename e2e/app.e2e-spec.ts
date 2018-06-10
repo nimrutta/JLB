@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { JLBPage } from './app.po';
 
-describe('jlbv1 App', () => {
-  let page: AppPage;
+describe('jlb App', () => {
+  let page: JLBPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new JLBPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Welcome to jlb!');
   });
 });

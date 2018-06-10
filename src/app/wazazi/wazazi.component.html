@@ -1,0 +1,161 @@
+
+ <div class="navdiv">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="slideFT">
+      <div class="row menurow">
+          <div class="col-sm-2 logorow">
+         
+              <div class="brand"><img src="../../../assets/images/pp.jpg" height="500" width="400" class="icon"></div>
+          </div>
+         
+          <div class="ssnavbar ">   <!-- for small screen menu -->
+           
+            <!--<button class="Rudimwanzobutton_ss" *ngIf="!showSearchInput"  (click) = "rudiMwanzo()"><i class="glyphicon glyphicon-arrow-left"></i></button> -->
+            <img src="../../../assets/images/back-arrow.png"  class="back-arrow" *ngIf="!showSearchInput"  (click) = "rudiMwanzo()" (click)="closeDrawer()">
+            <!-- <input class="search_input" placeholder="Tafuta" *ngIf="showSearchInput" (keyup)="keypressed($event)"> -->
+            <button type="button" class="navbar-toggle collapsed HM" (click)="toggleState()">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+            </button> <!-- #1 -->
+            <div class="clear"></div>
+          </div> 
+
+          <div class="col-sm-10 menuitems2">
+                <ul>
+                    <div class="collapse navbar-collapse"> 
+                        <li><a routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput()" class="Mwanzo" >Mwanzo</a></li>
+                        <li><a routerLink="bidhaa" routerLinkActive="active" (click) = "omitsearch()">Bidhaa</a></li>
+                        <li><a routerLink="kuhusu-jlb" routerLinkActive="active" (click) = "omitsearch()">Kuhusu JLB</a></li>
+                        <li><a routerLink="shuhuda" (click) = "omitsearch()">Shuhuda</a></li>  
+                      
+                      
+                        
+                   </div>
+                </ul>
+          </div>
+         
+      </div>
+      
+     
+       <ul class="main_menu menuitems nav navbar-nav"> 
+      
+        </ul>
+       </div>
+      
+       <div class="ssmenu" *ngIf="isIn" [@flyInOut]="'in'"> 
+        <ul class="menuitem_SS  navbar-nav"> 
+          <li><i class="glyphicon glyphicon-home"></i><a routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput(); toggleState()" class="Mwanzo" >Mwanzo</a></li>  
+          <li><i><img src="./../../../assets/images/pacifier.png"></i><a routerLink="bidhaa" routerLinkActive="active" (click) = "omitsearch(); toggleState()">Bidhaa</a></li>
+          <li><i><img src="./../../../assets/images/group.png"></i><a routerLink="kuhusu-jlb" routerLinkActive="active" (click) = "omitsearch(); toggleState()">Kuhusu JLB</a></li> 
+          <li><i><img src="./../../../assets/images/rating.png"></i><a routerLink="shuhuda" (click) = "omitsearch(); toggleState()">Shuhuda</a></li> 
+          <hr>
+          <li><i><img src="./../../../assets/images/article.png"></i><a (click)="showMakalaTitles()">Soma Makala</a></li>
+                   <!-- <button class="somamakalabtn_ss" (click)="showarticle.ifdisplay()"> Soma Makala </button>-->
+         
+         
+
+          
+            <div *ngIf="showmakalaTitles">
+             <div *ngFor= "let c of category; let i = index">       <!--for each age category -->
+                <a>
+                 <li class="ss_makalatitle" (click)="getMakala(c.id)" (click)="displayThisItem(i)">{{c.category_name}} </li> 
+                
+                </a>
+       
+                <div  *ngIf= "toggle[i]">           
+                 <div *ngFor= "let m of makala" class="ss_makalaitems">
+                   
+                     <button class="ss_makalaitem" 
+                     (click)="getArticle(m.id)" (click)="closeAllAgeCategories()" 
+                      (click)="toggleState()">
+                     <a routerLink="makala"> {{m.title}} </a>        
+                     </button>
+                   
+                 </div>
+                </div> 
+             </div>
+            </div>
+             
+     
+
+
+          <p class="sidemenu-badge">JUA LISHE BORA</p>        
+        </ul>
+        <app-makala-contents #showarticle (myEvent)="myEvent($event)"></app-makala-contents>
+       </div>    
+ </nav>
+ </div>
+ 
+ <!-- End of navigation section -->
+ 
+ 
+ <div class="row showposts">
+  <div class="row ss_search_row"><div class="col-xs-4"><button (click)= "showSearchbox()" class="ss"><i class="glyphicon glyphicon-search ss-search" *ngIf="showsearch"  ></i></button></div> <div class="col-xs-8 column2"><input type="search" class="ss-searchbox" name="tittle" #searchTerm  placeholder="Tafuta" *ngIf="showsearch && searchboxSS" (keyup)="keypressed($event)"></div></div>
+  
+     <div class="col-sm-9 drocol">
+       <div *ngIf="displayRouterOutlet">
+        <router-outlet>
+          
+                                     <!-- (activate)="myEvent($event)" could be not necessary  (activate)="BlogSectionComponent = $event" (activate)="BlogSomaZaidiComponent = $event" 
+                                    -->
+
+        </router-outlet>
+       </div>
+       <!--<app-makala *ngIf="showArticle"></app-makala>-->
+     </div>
+
+
+     <!--search section begins-->
+
+     <div class="col-sm-3 sscol" *ngIf="showsearch">
+
+        <div class="searchsection row">
+        <div class="search" >
+            <input type="search" class="searchbox" name="tittle" #searchTerm  placeholder="Tafuta" *ngIf="showSearchInput" (keyup)="keypressed($event)">
+            <button (click)="performSearch(searchTerm)" class="Tafutabutton" *ngIf="showSearchInput"><i class="glyphicon glyphicon-search"></i></button>
+            <br *ngIf="showSearchInput">
+            <hr>
+
+            <button class="Rudimwanzobutton" *ngIf="!showSearchInput"  (click) = "rudiMwanzo()"><i class="glyphicon glyphicon-arrow-left"></i>Rudi Mwanzo</button>
+            
+            <a><button class="Makalabutton" (click)="showarticle.ifdisplay()"><p>Mapishi ya vyakula</p><i class="glyphicon glyphicon-list-alt"></i></button></a>
+            <p class="makalamaelekezo">Bonyeza kitufe hiki kupata makala zenye maelekezo ya uandaaji wa vyakula vya watoto wa umri mbalimbali</p>
+            <br>
+            <hr>
+            <h4 class="bidhaasectiontitle">Bidhaa Mpya</h4>
+             <div class="row anitem">
+                 <div class="col-sm-4">
+                   <img src="./../../../assets/images/CFT.jpeg" class="itemimage">
+                 </div>
+
+                 <div class="col-sm-8">
+                   <p class="itemdescription">
+                     Kifaa cha kumlishia mtoto
+                   </p> 
+                   <p class="itemprice">Tsh 7000</p> 
+                 </div>
+             </div>
+
+             <div class="row anitem">
+                <div class="col-sm-4">
+                    <img src="./../../../assets/images/CFT1.jpeg" class="itemimage">
+                </div>
+
+                <div class="col-sm-8">
+                  <p class="itemdescription">
+                    Dishi la chakula cha mtoto
+                  </p> 
+                  <p class="itemprice">Tsh 7000</p> 
+                </div>
+            </div>
+        </div>
+        </div> 
+        </div>
+
+        <app-makala-contents class="makalatitles" #showarticle (myEvent)="myEvent($event)"></app-makala-contents> 
+     
+
+ </div>
+ <app-footer ></app-footer>

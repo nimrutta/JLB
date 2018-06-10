@@ -1,0 +1,323 @@
+ .container {
+       font-family: montserrat-regular;
+       line-height: 1.7;
+        background-color: #f4f3ef;
+        margin-left: 8%;
+       
+        width: 1100px;
+        padding: 25px 4% 12% 4%;
+ }
+
+ .box {
+        width: 100%;
+        padding:0 15px 40px 15px;
+        background-color: #fff;
+        
+        border-bottom: none;
+        
+}
+
+ .selfdescription {
+       height: 750px;
+       padding-left: 0;
+       background-image: url("../../../assets/images/happy mother-kid.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+       z-index: -2;
+ }
+
+ .cover {
+       height: 100%;
+       width: 100%;
+       padding: 30px 0 0 0;
+       background-color: rgba(0, 0, 0,0.7);
+       z-index: -1;
+ }
+
+ .logo img { 
+        height: 150px;
+        width: 150px;
+        margin-top: 30px;
+        border-radius: 50%;
+ }
+
+ .logo p {
+        color: #C73289;
+        font-size: 21px;
+        font-family: kgshakeitoff;
+ }
+
+ .description  {
+       color: #fff;
+       font-size: 15px;
+       text-align: justify;
+       padding: 0 60px 0 15px;
+       margin: 0 0;
+ }
+
+ .description p {
+      line-height: 2em;
+}
+
+ .hrule {
+
+        margin: 30px 0;
+ }
+
+ .meetteam {
+        text-align: center;
+ }
+
+ .meetteam p {
+        font-size: 20px;
+        margin: 30px 0 60px 60px;
+        
+ }
+
+  figure {
+        text-align: center;
+ }
+
+ figcaption {
+        color: darkgrey;
+        font-size: 13.5px;
+        text-align: center;
+        width: 47%;
+        padding-top: 30px;
+        margin: auto;
+        border-radius: 5px;
+ }
+
+ figure:hover img {
+    opacity: 0.85;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+figure:hover figcaption {
+    color: #fff;
+    background-color: rgba(169, 169, 169, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+    margin-top: 25px;
+}
+
+ .team {
+       display: inline-block;
+       position: relative;
+       width: 60%;
+       height: 60%;
+       border-radius: 50%;
+       overflow: hidden;
+ }
+
+ .team img {
+       width: 100%;
+       height: auto;
+       margin: 0 0 0 9px;
+ }
+
+ .contacts {
+        height: 100%;
+        width: 100%;
+        background-image: url(../../../assets/images/texturdbg4.jpg);
+        background-repeat: repeat;
+        border: 1px solid #cdcdcd;
+        border-top: none;
+        border-bottom: none;
+        padding: 10px 0 0 45px;
+        margin: 0;
+ }
+
+ .contacts p { 
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 20px;        
+        margin: 15px 0;
+        margin-left: 25px;
+ }
+
+ .socioicon {
+        height: 25px;
+        width: 25px;
+        display: block;
+        margin-top: 45px;
+ }
+
+ .jiungebutton {
+        height: 20px;
+        width: auto;
+        margin-right: 0px; 
+        float: right;
+        background: none;
+        border: none;
+ }
+
+ #kid {
+       float: left;
+       height: 70px;
+       width: 70px;
+       margin: 20px 0 40px 220px;
+ }
+
+ .fruits {
+       height: 110px;
+       width: 90px;
+       float: right;
+       margin-top: 60px;
+       margin-right: 9%;
+ }
+
+ .clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}
+ 
+
+ @media all and (max-width: 800px){
+   .container {
+        width: 100%;
+        padding: 4% 0 12% 0;
+        margin: 0 0 0 0;
+ } 
+    .box {
+        width: 100%;
+        float: none;
+        margin: 0px;
+        padding: 0 0 2% 0;
+}
+
+    .selfdescription {
+        margin: 0;
+        height: auto !important;
+}
+
+      .logo { 
+        padding: 0 20px
+      }
+
+
+      .logo img { 
+        height:70%;
+        width: 50%;
+        margin-top: 5%;
+        border-radius: 50%;
+ }
+      p{
+        font-size: 90%;
+      }
+       .logo p {
+        font-size: 120%;
+ }
+
+      .description  {
+      color: #fff;
+      font-size: 15px;
+      text-align: justify;
+      padding: 0 30px 20px 30px;
+      margin: 0 0;
+}
+
+      .description p {
+      padding: 0 0;
+      }
+      
+     
+       .team {
+       display: inline-block;
+       position: relative;
+       width: 80%;
+       height: 80%;
+       border-radius: 50%;
+       overflow: hidden;
+ }
+
+ .team img {
+       width: 45%;
+       height: auto;
+       margin: 0 0 0 9px;
+       border-radius: 50%;
+ }
+
+       .meetteam figure {
+       margin: 0 0 15px 0;
+       }
+
+
+       .meetteam p {
+        font-size: 100%;
+        margin: 6% 0% 0% 0%;
+        
+ }
+      figcaption {
+            font-size: 75%;
+      }
+       .fruits {
+       height: 40%;
+       width: 20%;
+       float: right;
+       margin-top:0%;
+       position: relative;
+       margin-right: 0%;
+ }
+      
+ #kid {
+       float:center;
+       height:3%;
+       width:2%;
+       margin-right:3%;
+       opacity: 0;
+ }
+       .socioicon {
+        height: 7%;
+        width: 7%;
+        display: block;
+        margin-top: 7%;
+ }
+
+       .contacts p { 
+       
+        font-size: 100%;        
+       
+ }
+
+ .selfdescription {
+      height: 450px;
+      width: 100%;
+}
+ /*
+
+    
+        .oneimage {
+        height: auto;
+        width: 100%; 
+       margin:0px;
+}  
+.twoimage {
+        height: auto;
+        width: 100%; 
+        margin:0px;
+}
+.quote {
+        font-size: 14px;
+       
+}
+.box > h3 {
+     
+       font-size: 17px;
+}
+p{
+        font-size:12px;
+}
+.somazaidi{
+        font-size:12px;
+}
+.ccontainer {
+    
+       
+        padding:40px;
+
+ }*/
+
+
+ }

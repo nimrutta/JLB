@@ -1,0 +1,110 @@
+.clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}
+ 
+ .Makala-items-bed {
+        font-family: Montserrat-Regular;
+        height:auto;
+        width: 290px;
+        padding: 10px 10px 0 10px;
+        margin-top: 0px;
+        margin-right:20%;
+        word-wrap: break-word;
+        background-color: #FFF;
+        border-top: 7px solid #ffb6c1;
+        border-bottom: 7px solid #652f85;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        box-shadow: 0px 1.5px 3px 0px #000;
+        position: absolute;
+        top: 25px;
+        left:0px;
+        z-index: 2000;
+        float: right;
+ }
+
+.close {
+        color: rgba(0,0,0,0.8);
+        margin: 0 10px 0 0;
+        float: left;
+        position: absolute;
+} 
+
+.Makala-items-bed a {
+        margin: 0 0 0 50px;
+        color: #000;
+}
+
+.Makala-items-bed a:hover {
+        text-decoration-line: none;
+        color: blue;
+}
+
+hr {
+        width: 250px;
+        margin: 15px auto;
+}
+
+.articletitles {
+        margin: 0 0 15px 0;
+}
+
+button {
+        background: none;
+        border: none;
+}
+
+.articletittle a {
+        margin: 0 0 0 20px;
+        color: #000;
+}
+
+.glyphicon-triangle-right {
+       
+        color:  #FBC02D;
+}
+
+.articletittle {
+        margin: 0 0 0 65px;
+        text-align: left;
+}
+
+@media all and (max-width: 767px){
+.Makala-items-bed {
+        border-top: none;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;   
+        right: 0;
+        margin-right: 0;  
+        margin-left: 103%;
+         }
+
+.close {
+        
+        position: relative;
+} 
+
+hr {
+        width: 250px;
+        margin: 0 auto;
+}
+
+.Makala-items-bed a {
+        margin: 0 0 0 10px;
+}
+
+button {
+        font-size: 13px;
+}
+
+a button {
+        color: #FBC02D;
+}
+
+.articletittle {
+        margin-bottom: 15px;
+}
+
+}

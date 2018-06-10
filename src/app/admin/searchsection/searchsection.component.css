@@ -1,0 +1,41 @@
+.searchsection {
+        width: 70%;
+        background-color:none;
+        float: right;
+        margin-right: 70px;
+ }
+
+.makala li {
+        margin: 0 20px;
+        display: inline-block;
+}
+
+.Makalabutton {
+        font-size: 15px;
+        height: 20px;
+        width: auto;
+        background: none;
+        border-top:none;
+        border-bottom: solid 2px #e46c2b;
+        border-left: solid 2px #e46c2b;
+        border-right: solid 2px #e46c2b;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 4px; 
+        border-bottom-right-radius: 4px; 
+}
+
+.searchbox { 
+       border: none;
+       border-radius: 4px;
+       background-color: #DCDCDC;
+}
+
+::-webkit-input-placeholder {
+        color: #000;
+        text-align: center;
+}
+
+.clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}

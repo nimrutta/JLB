@@ -2,7 +2,10 @@
 
 # compiled output
 /dist
+<<<<<<< HEAD
 /dist-server
+=======
+>>>>>>> 73d11a48b6f177982fbd860d303c07041bf545a4
 /tmp
 /out-tsc
 
@@ -31,7 +34,10 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
+<<<<<<< HEAD
 yarn-error.log
+=======
+>>>>>>> 73d11a48b6f177982fbd860d303c07041bf545a4
 testem.log
 /typings
 

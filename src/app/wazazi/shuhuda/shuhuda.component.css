@@ -1,0 +1,226 @@
+
+ .container {
+    font-family: montserrat-regular;
+    background-color: #f4f3ef;
+    
+    width: 1100px;
+    padding:25px 65px 0px 65px;
+    margin: 0 0 50px 0
+}
+
+ .box {
+        width: 100%;
+        padding:50px;
+        margin-left: 8%;
+        background-color: #fff;
+        
+        border-bottom: none;
+        
+}
+
+ .box > p {
+        margin: 0 0 0 38px;
+        font-size: 1.4em;
+ }
+ 
+ .box > hr {
+        margin: 10px 0 45px 0;
+ }
+
+ .box .row div {
+        padding: 10px 17px;
+ }
+ 
+ .col-sm-3 {
+        margin: 10px 35px;
+ }
+
+ .greyf2gbg {
+        color: #cdcdcd;
+        background-color: #fff;
+ }
+
+ .greyb2n {
+        color: #fff;
+        background-color: rgba(169, 169, 169, 0.8);;
+ }
+
+ .whiteb2gf {
+        background-color: #fff;
+ }
+
+ .n2n {
+       color: inherit;
+       background-color: #fff;
+ }
+
+ .n2n1 {
+       color: inherit;
+       background-color: #fff;
+ }
+
+ .n2gf {
+       color: inherit;
+       background-color: #fff;
+ }
+
+ .purpleb2pif {
+        color: #fff;
+        background-color:rgba(101, 47, 133, 0.5) 
+ }
+
+ .pinkf2pub {
+        color: #ffb6c1;
+        background-color:#fff; 
+ }
+
+ .pinkf2puf {
+        color: #ffb6c1;
+        background-color:#fff; 
+ }
+
+ .pinkf2pib {
+        color: #ffb6c1;
+        background-color:#fff; 
+ }
+
+ .greyf2gbg:hover {
+    color: #fff;
+    background-color: rgba(169, 169, 169, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+ .greyb2n:hover {
+    color: inherit;
+    background-color: #fff;
+    border-bottom: 3px solid rgba(169, 169, 169, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+ .whiteb2gf:hover {
+    color: #cdcdcd;
+    background-color: #fff;
+     border-bottom: 3px solid rgba(169, 169, 169, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+  .n2n:hover {
+    color: inherit;
+    background-color: #fff;
+     border-bottom: 3px solid rgba(169, 169, 169, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+ .n2n1:hover {
+    color: inherit;
+    background-color: #fff;
+    border-bottom: 3px solid rgba(199, 50, 137, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+ .n2gf:hover {
+    color: rgba(169, 169, 169, 0.8);;
+    background-color: #fff;
+     border-bottom: 3px solid rgba(169, 169, 169, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+ .purpleb2pif:hover {
+    color: #ffb6c1;
+    background-color: #fff;
+    border-bottom: 3px solid rgba(199, 50, 137, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+ .pinkf2pub:hover {
+    color: #fff;
+    background-color: rgba(101, 47, 133, 0.5);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.pinkf2puf:hover {
+    color: rgba(101, 47, 133, 1);
+    background-color:#fff ;
+     border-bottom: 3px solid rgba(101, 47, 133, 1);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.pinkf2pib:hover {
+    color: #fff;
+    background-color: rgba(199, 50, 137, 0.8);
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+ p {
+     text-align: justify;
+ }
+
+  span:first-child {
+    color: #cdcdcd;
+    font-size: 42px;
+    display: block;
+}
+
+.highlight {
+    font-style: bold;
+    font-size: 1.2em;
+}
+
+.speaker {
+    font-style: italic;
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+ @media all and (max-width: 800px){
+
+ .container {
+        width: 100%;
+        padding:5% 2% 6% 2%;
+ } 
+    .box {
+        width: 100%;
+        float: none;
+        margin: 0px;
+        padding:5% 4% 4% 4%;
+}
+
+/*.box {
+    width: 100%;
+    padding:50px;
+    margin-left: 8%;
+    background-color: #fff;
+    
+    border-bottom: none;
+    
+} */
+
+    .box > p{
+        font-size: 110%;
+    }
+    .col-sm-3{
+        margin:2%;
+    }
+}

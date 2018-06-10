@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row Bidhaabed">
+    <div class="col-sm-3 ">
+     <div class="makundiyabidhaa For_LS">
+       <h3>Aina ya bidhaa</h3>
+        <ul>
+          <li>Vyombo vya kulishia watoto</li>
+          <li>Nafaka zilizo andaliwa</li>
+          <li>Unga wa lishe</li>
+          <li>Bidhaa 4</li>
+          <li>Bidhaa 5</li>
+          <div *ngIf="showMoreBidhaa">
+            <li>Bidhaa 6</li>
+          </div>
+           <i class="glyphicon glyphicon-chevron-down" *ngIf="!showMoreBidhaa" (click)="showMoreBidhaafn()"></i>
+           <i class="glyphicon glyphicon-chevron-up" *ngIf="showMoreBidhaa" (click)="showMoreBidhaafn()"></i>
+        </ul>
+     </div>
+
+
+     <div class="makundiyabidhaa For_SS">
+      <h3>Aina ya bidhaa</h3>
+       <ul>
+         <li>Vyombo vya kulishia watoto</li>
+         <li>Nafaka zilizo andaliwa</li>
+         <li>Unga wa lishe</li>
+         <div *ngIf="showMoreBidhaa">
+           <li>Bidhaa 4</li>
+           <li>Bidhaa 5</li>
+           <li>Bidhaa 6</li>
+         </div>
+           <i class="glyphicon glyphicon-chevron-down" *ngIf="!showMoreBidhaa" (click)="showMoreBidhaafn()"></i>
+           <i class="glyphicon glyphicon-chevron-up" *ngIf="showMoreBidhaa" (click)="showMoreBidhaafn()"></i>
+       </ul>
+    </div>
+
+    </div>
+    <div class="col-sm-9">
+      <app-bidhaa-category></app-bidhaa-category>
+    </div>
+
+  </div>
+</div>

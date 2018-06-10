@@ -1,0 +1,101 @@
+.container {
+    width: 1261px;
+}
+
+.Bidhaabed {
+    margin: 25px 0 0 0;
+}
+
+.Bidhaabed > div {
+    padding-left: 0;
+}
+
+.makundiyabidhaa {
+    background-color: #ffffff;
+    height: 400px;
+    margin: 0 20px 0 0; 
+    padding: 0 0 0 25px;
+    border-radius: 4%;
+}
+
+.For_LS {
+    display: inherit;
+}
+
+.For_SS {
+    display: none;
+}
+
+.makundiyabidhaa h3 {
+    margin: 0 0 20px 0;
+    padding: 20px 0 10px 0;
+    font-family: montserrat-bold;
+}
+
+.makundiyabidhaa .glyphicon {
+    margin: 15px 0 0 44%;
+}
+
+.makundiyabidhaa ul {
+    list-style-type: none;
+    padding: 0 0 0 0;
+  }
+
+.makundiyabidhaa li {
+    color: #888888;
+    font-size: 15px;
+    line-height: 1.8;
+    font-family: montserrat-regular;
+    font-weight:80;
+    margin: 0 0 13px 0;
+}
+
+.makundiyabidhaa li:hover {
+    color: #66a8a6;
+}
+
+.test{
+    width: 100%;
+    height: 90px;
+    background-color: ghostwhite;
+}
+
+@media all and (max-width: 767px){
+.container {
+    width: 100%;
+    padding: 0 0;
+    }   
+    
+.Bidhaabed {
+    margin: 0 0 0 0;
+}
+
+.Bidhaabed > div {
+    padding-right: 0;
+    }
+
+.makundiyabidhaa {
+    height: fit-content;
+    margin: 0 0 15px 0;
+}  
+
+.For_LS {
+    display: none;
+}
+
+.For_SS {
+    display: inherit;
+}
+
+.makundiyabidhaa h3 {
+    font-size: 1.5em;
+    margin: 0 0 0 0;
+    padding: 10px 0 10px 0;
+}  
+
+.makundiyabidhaa .glyphicon {
+    width: 14px;
+    margin: 0 0 0 44%;
+}
+
+}

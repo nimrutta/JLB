@@ -1,0 +1,32 @@
+    <app-taharifa-subscription *ngIf="thanksforsubscribing" (closeModal)="closeModal($event)"></app-taharifa-subscription>
+    <app-taharifa-kujiunga *ngIf="thanksforjoiningprogram" (closeModal)="closeModal($event)"></app-taharifa-kujiunga>
+    <app-subscribe *ngIf="showmyId" (myevent)="myevent($event)" (myEvent)="myEvent($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-subscribe>
+    <app-kujiunga *ngIf="showmyod" (myevenT)="myevenT($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-kujiunga> 
+
+    <footer>
+    <div class="row footercontainer">
+        
+     <div class="col-sm-4 col-xs-6">
+        <div class="addressline">
+            <p>Phone 0688192446,<br>Box 22059 <br>
+            Email nimrutta@gmail.com<br>xxx Street, Dar es Salaam</p>
+        </div> 
+     </div>
+     
+     <div class="col-sm-4 hidden-xs">
+         <div class="addressline">
+          <p>Some Address line,<br>Created by Codenet</p>
+         </div>
+     </div>
+
+     <div class="col-sm-4 col-xs-6">
+         <button class="subcsribe_button" (click)= "togglemyId()">
+          <p id="subscribe_text">Subscribe</p>
+         </button> 
+     </div>
+     
+    </div>
+    
+    
+   
+</footer>

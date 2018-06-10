@@ -1,0 +1,329 @@
+.area{
+  padding: 10px;
+   background-color: #fff;
+        box-shadow: 2.5px 2.5px 1.25px 5px #ddd inset;
+
+      }
+   
+.btn{
+  padding:1.3px;
+}
+  
+.Mwanzo .Mwanzo {
+        color: #ffffff !important;
+        background-color:none !important;
+        /*border-bottom: 2px solid #fff;
+        border-radius: 3px;*/
+        height: 40px;
+ }
+
+.clear {
+       clear: both;            /* to solve float overlapping issues */ 
+}
+
+ .ccontainer {
+       
+        padding:25px 0 0 5px;
+
+ }
+
+.box {
+        width: 100%;
+        padding:0 0 40px 0px;
+        background-color: #fff;
+        margin-bottom: 50px;
+        border-radius: 4px;
+        box-shadow: 1px 0.5px 24px -9px #000; 
+}
+
+.noresultsview {
+        
+        font-size: 32px;
+        padding: 20px 0 0 20px;
+        height: 500px;
+}
+
+.box > .title {
+       color: #000;
+       font-size: 19px;
+       padding: 0 0 0 25px;
+       margin-bottom: 25px;
+}
+
+.iquote {
+       margin: 0;
+       
+}
+
+ibox {
+       width: 100%;
+       height: 520px;
+}
+
+.oneimage {
+        height: 520px;
+        float: left; 
+        width: 100%; 
+        margin-left: 0;
+        margin-bottom: 17px;
+        position: relative;
+        top: 0 !important;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+}
+
+.quote {
+        font-size: 19px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgba(255, 255, 255, 1);
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 520px;
+        width: 30%;
+        padding:0;
+        position: relative;
+        left: 70%;
+        z-index:1;
+}
+
+/*position: absolute;
+        right: 15px;
+        z-index: 1000;*/
+
+.quote p {
+        position: absolute;
+        top: 20%;
+        padding: 0 15px;
+}        
+
+.quote strong {
+        color: rgba(255, 255, 255, 0.6);
+        font-family: montserrat-regular;
+}
+
+.quote p span {
+        font-size: 30px;
+}
+
+.quote:hover {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-top-right-radius: 4px;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
+}
+
+.quote strong:hover {
+        color: rgba(255, 255, 255, 1);
+        border-top-right-radius: 4px;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        transition: all 1s ease;
+}
+
+.blogtext {
+        font-family: Montserrat-Regular;
+        padding: 0 10px 0 20px;
+        width: 100%;
+        overflow-wrap: break-word;
+}
+
+.somazaidi {
+        font-family: Montserrat-Regular;
+        color : #000;
+        height: 20px;
+        width: auto;
+        margin: 0 0 5px 0; 
+        float: right;
+        padding: 0 20px 0 0;
+        background: none;
+        border: none;
+ }
+ 
+ .postedattime {
+        font-family: Montserrat-Regular;
+        color: rgba(90,76,60,0.8);
+        float: left;
+        margin: 0 0 0 20px;
+ }
+
+
+ .likes {
+        color: #000;
+        font-size: 13px;
+        padding: 5px 0 0 0;
+        margin-bottom: 0;
+        float: right;
+ }
+
+ button:focus {outline:0;}
+
+ .likesbutton {
+        height: 18px;
+        width: 18px;
+        padding: 0 0 0 5px;
+        margin-right: 20px;
+        border: none;
+        background: none;
+        float: right;     
+ }
+
+ .likesbutton img {
+        height: 18px;
+        width: 18px;
+ }
+
+ .shareicon {
+       height: 18px;
+       width: 18px;
+       margin: 0 20px;
+       float: right;
+ }
+
+ @media all and (max-width: 800px){
+iqoute {
+        height: 300px;
+}
+
+.ibox {
+        height: 300px;
+}
+
+.oneimage {
+        height: 300px;
+        width: 100%; 
+        margin:0px;
+}  
+
+.twoimage {
+        height: 300px;
+        width: 100%; 
+        margin:0px;
+}
+
+.quote {
+        font-size: 14px;
+        width: 30%; 
+        margin:0px;
+        height: 100%;
+}
+
+.box > h3 {
+     
+       font-size: 17px;
+}
+
+p{
+        font-size:12px;
+}
+
+.somazaidi{
+        font-size:12px;
+}
+
+.ccontainer {
+    
+       
+        padding-top:20%;
+
+ }
+
+.postedattime_SS {
+        color: rgba(90,76,60,0.8);
+        margin: 0 0 0 10px;
+        display: inline-block !important;
+ }
+
+ }
+
+@media all and (min-width: 767px){
+.postedattime_ss {
+        display: none;
+ }
+
+}
+
+@media all and (max-width: 767px){
+.ccontainer {
+        padding-top:15px;
+ }
+
+.box {
+        padding-bottom: 15px;
+}
+
+.ibox {
+        height: 200px;
+}
+
+.oneimage {
+        height: 100%;
+        width: 100%; 
+        margin:0px;
+} 
+
+.quote {
+        height: 100%;
+        width: 40%;
+        left: 60%;
+}
+
+.quote p {
+        position: absolute;
+        top: 0;
+        padding: 25px 7px 0 7px;
+        font-size: 10px;
+        height: 100%;
+}        
+
+.quote p strong {
+        height: 70%;
+        overflow: hidden;
+}        
+
+
+.quote p span {
+        font-size: 17px;
+}
+
+.blogtext {
+        margin-top: 7px;
+        overflow-wrap: break-word;
+}
+
+.postedattime {
+        display: none;
+ }
+
+.postedattime_ss {
+        font-size: 12px;
+        color: #66a8a6;
+        margin: 0 0 0 10px;
+        display: inline-block !important;
+        width: 80px;
+ }
+
+.shareicon {
+        margin: 4px 20px 0 20px;
+}
+
+.socialmedia {
+        width: 14px;
+        height: 14px;   
+}
+
+.likesbutton {
+       
+ }
+
+.likesbutton img {
+        width: 14px;
+        height: 14px;
+ }
+
+.likes {
+        font-size: 11px;
+}
+
+}
+ 

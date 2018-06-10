@@ -1,0 +1,80 @@
+
+  footer {   
+      width: 100% ;
+      height: fit-content;
+      vertical-align: middle;
+      background-color: #1e1324; 
+      border-top: solid 6px #652f85
+     
+        }  
+
+  .footercontainer {
+      width: 100%;
+      margin: 0 0;
+     
+  }
+
+  .subcsribe_button {
+      height: 35px;
+      width: 150px;
+      margin-top: 33px;
+      margin-right: 4%;
+      color: #e4acb4;
+      font-size: 17px;
+      background-color: #fff;
+      border: 1px solid #ffb6c1;
+      border-radius: 20px;
+      float: right;
+ }  
+
+ .addressline {
+      font-size: 11px;
+      color: #ffb6c1;
+       width: 40%;
+      margin-left: 9%; 
+     
+      margin-top: 17px !important;
+ }
+
+ #subscribe_text {
+     line-height: 2em;
+ }
+
+ .clear {
+     clear: both;
+ }
+ /*#493829*/
+
+ @media all and (max-width: 767px){
+     .subcsribe_button {
+      height: 27px;
+      width: 110px;
+      margin-top: 11px;
+      margin-right: 4%;
+      padding: 0 0 10px 0;
+      color: #652f85;
+      font-size: 13px;
+      background-color: #fff;
+      border: 1px solid #ffb6c1;
+      border-radius: 20px;
+      float: right;
+ } 
+    
+ .addressline {
+      font-size: 7px;
+      color: #ffb6c1;
+      width: 60%;
+      margin-left: 10px; 
+      margin-right: auto !important;
+      margin-top: 9px !important;
+ }
+
+ .addressline p {
+     font-size: 11px;
+ }
+
+ #subscribe_text {
+     height: 100%;
+     line-height: 1.5em;
+ }
+ }

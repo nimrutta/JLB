@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+button:focus {outline: none}
+input:focus {outline: none}
+@import "~wfk-montserrat/montserrat.css";
+@font-face {
+    font-family: 'kgshakeitoff';
+    src: url('assets/kimberly-geswein/KGShakeitOff.ttf');
+}
+
+::-webkit-scrollbar {
+    display: none;
+    }
