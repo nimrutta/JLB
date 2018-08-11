@@ -11,12 +11,14 @@ import 'rxjs/add/operator/map'
 
 import { Makalatitles } from './../makalatitles';
 import { Makalacategory } from './../makalacategory';
+import { Food } from './../food';
 
 @Injectable()
 export class MakalatitlesService {
   makala: Makalatitles[];
   article: Makalatitles[];
   category: Makalacategory[];
+  foods: Food[];
   makalatitle: string 
   
 
@@ -26,6 +28,7 @@ export class MakalatitlesService {
   private makalacategoriesUrl = 'http://api.jualishebora.ga/api/v1/topicsByCategory'  //http://api.tuseme.co.tz/api/v1/streets
   private makalaCategoryNameUrl = 'http://api.jualishebora.ga/api/v1/topicCategories'
   private updateUrl   = 'http://api.jualishebora.ga/api/v1/topicCategories'
+  private foodsUrl = 'http://api.jualishebora.ga/api/v1/foods'
 
   constructor(private http: Http) { }
   
@@ -134,6 +137,20 @@ export class MakalatitlesService {
                
   }
 
+
+  updateFoods(food:Food, id): Promise<Food> {
+    console.log('food updated in service')
+    const url = `${this.foodsUrl}/${id}`;
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http
+           .put(url, food, options)
+           .toPromise()
+           .then(res => res.json().data as Food)
+           .catch(this.handleError);
+           
+}
+
   deleteCategory(id) {
        console.log('delete category in service called');
        let headers = new Headers({ 'Content-Type': 'application/json' });
@@ -142,6 +159,14 @@ export class MakalatitlesService {
        return this.http.delete(url, options)//.pipe().catch(this.handleError);
   }
 
+  deleteFood(id) {
+    console.log('delete food in service called');
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    const url = `${this.foodsUrl}/${id}`;
+    return this.http.delete(url, options)
+}
+
   getMakalaCategories(): Promise<Makalacategory[]> {
         return this.http
                .get(this.makalaCategoryNameUrl)
@@ -149,6 +174,42 @@ export class MakalatitlesService {
                .then(res => res.json().data as Makalacategory[])
                .catch(this.handleError);
   }
+
+  getFoods(): Promise<Food[]> {
+    return this.http
+           .get(this.foodsUrl)
+           .toPromise()
+           .then(res => res.json().data as Food[])
+           .catch(this.handleError);
+}
+
+
+  createMakalaCategory(category:Makalacategory): Promise<Makalacategory> {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    
+    return this.http
+      .post(this.makalaCategoryNameUrl, category, options)
+      .toPromise()
+      .then(res => res.json().data as Makalacategory)
+      .catch(this.handleError);
+      //JSON.stringify({makala})
+    }
+
+
+ createFood(food:Food): Promise<Food> {
+      console.log('food created in service');
+
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
+      
+      return this.http
+        .post(this.foodsUrl, food, options)
+        .toPromise()
+        .then(res => res.json().data as Food)
+        .catch(this.handleError);
+        
+      }
 
   //http://api.jualishebora.ga/api/v1/topicCategories/1
 

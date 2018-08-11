@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppRoutingModule } from './app-routing.module';
+import { SelectDropDownModule } from 'ngx-select-dropdown';
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ import {AdminModule } from './admin/admin.module';
     AdminModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SelectDropDownModule,
     //ImageUploadModule.forRoot(),
   ],
   providers: [],

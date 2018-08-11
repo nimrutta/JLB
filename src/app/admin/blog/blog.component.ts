@@ -17,7 +17,7 @@ export class BlogComponent implements OnInit {
 
   post: any = { }
 
-  blogpost:any = {title: "title", topic_id: 4}
+  blogpost:any = {topic_id: 4}
 
 
   constructor(private blogpostService: BlogpostService) { }
@@ -39,11 +39,9 @@ export class BlogComponent implements OnInit {
   }
 
   add():void {
-
+    console.log(this.blogpost.title)
     if (!this.blogpost.title) { return; }
     this.blogpostService.create(this.blogpost)
-
-
             }
 
 }

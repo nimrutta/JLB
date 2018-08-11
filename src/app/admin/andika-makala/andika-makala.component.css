@@ -1,3 +1,8 @@
+
+*:focus {
+  outline: 0;
+}
+
 #outer
 {
     width:100%;
@@ -15,7 +20,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  
+  margin-top: 40px;
+  margin-bottom: 15px;
 
 
       }
@@ -37,3 +43,65 @@
         width: 100%;
         padding:20px;
  }
+
+ .selectbox {
+        color: #000;
+        width: 70%;
+        margin: 0 61px 0 0;
+        min-height: 30px;
+        padding: 5px 10px 5px 10px;
+        background-color: white;
+        font-weight: 400;
+        line-height: 1.42857143;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #333;
+        background-color: #fff;
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        float: right;
+}
+
+ .entertitle {
+    margin: 0 0 20px 61px;
+  }
+  
+  .entertitle input {
+    color: #000;
+    width: 70%;
+    margin: 0 61px 0 0;
+    min-height: 30px;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    font-weight: 400;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    background-color: #fff;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    float: right;
+  }
+
+ /* select:focus > option:focus { 
+    background: #333 !important;
+}*/
+
+  
+  .uploadimage {
+    width: 50%;
+    display: inline-block;
+    margin: 0 20% 0 0;
+  }
+  

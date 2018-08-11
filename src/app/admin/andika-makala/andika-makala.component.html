@@ -3,18 +3,42 @@
 
      <form action="/action_page.php" >
 <br><br>
-<textarea class="area"  rows="15px" cols="100px" name="usrtxt"   placeholder="Your contents here...">
+
+<!--<ngx-select-dropdown [config]="config" [options]="makalaTitles" 
+[(value)]="dataModel" [multiple]="false" ></ngx-select-dropdown>-->
+
+<div class="entertitle">
+  <label>Tiltle</label><input [(ngModel)]="makala.title" name="title">
+</div>
+
+<div class="entertitle">
+  <label>Topic category</label>
+  <select  class="selectbox" (input)="onInput($event)" [(ngModel)]="makalacategory" name="categoryname">   
+    <option *ngFor="let makalacategory of makalaCategories" value= {{makalacategory.id}} [ngValue]="makalacategory">{{makalacategory.category_name}}</option>
+  </select>
+</div>
+
+<div class="entertitle">
+  <label>Food name</label>
+  <select  class="selectbox" (input)="onFoodInput($event)" [(ngModel)]="food" name="foodname">   
+    <option *ngFor="let food of foods" value= {{food.id}} [ngValue]="food">{{food.name}}</option>
+  </select>
+</div>
+
+<textarea class="area"  rows="15px" cols="100px" name="usrtxt"   placeholder="Your contents here..." [(ngModel)]="makala.body" >
 
 </textarea><br>
 
-
-<div id="outer">
-  <div class="inner"><button type="submit" class="msgBtn" onClick="return false;" >Post New Article</button></div>
- <div class="inner"></div><div class="inner"></div>
-<div class="inner"></div><div class="inner"></div>
-  <div class="inner"><button type="submit" class="msgBtn2" onClick="return false;"
-   routerLink="/admin/makala-subtopics" routerLinkActive="active" >Cancel</button></div>
- 
+<div style="display: block;
+  margin-left: 10%;
+  ">
+<!-- onServerRespose listener gets image details from upload image component-->
+  <app-uploadimage
+    (onServerResponse) = "initializeImageId($event)"
+    class="uploadimage"
+  ></app-uploadimage>
+<!---(click)="save()"-->
+  <button  (click)="add(); clear()"> Post New Article </button>
 </div>
 
 </form>

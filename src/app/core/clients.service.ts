@@ -4,18 +4,19 @@ import {Headers, Http, RequestOptions} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Clients } from './../clients';
+import { Wazazi } from './../wazazi';
 
 @Injectable()
 export class ClientsService {
   
-  private clientsUrl = 'http://api.jualishebora.ga/api/v1/users'
+  private clientsUrl = 'http://api.jualishebora.ga/api/v1/wazazis'
   //http://api.tuseme.co.tz/api/v1/users
   constructor(private http: Http) { }
   
-  getClients(): Promise<Clients[]> {
+  getClients(): Promise<Wazazi[]> {
    return this.http.get(this.clientsUrl)
                    .toPromise()
-                   .then(response => response.json().data as Clients[])
+                   .then(response => response.json().data as Wazazi[])
                    .catch(this.handleError);
   }
 

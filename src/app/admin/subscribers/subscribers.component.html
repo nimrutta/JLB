@@ -2,46 +2,48 @@
     <div class="container">
       
 
-     <div class="row" style="width: 80%;" align="center">
-          <div class="col-sm-6"><h4 style="color:black;">Jina</h4></div>
-          
-          <div class="col-sm-6"><h4 style="color:black;">Mawasiliano</h4></div>
-         
-     </div>
-
-      <table class="mtable-checked" align="center">
-         <tr><th width="50%"></th><th width="50%"></tr>
-         <tr *ngFor="let   subscriber of newsubscribers; let i = index"><td>{{subscriber.name}}</td><td class="rightcell">{{subscriber.phone_number}}</td><td><button (click) = "registerSubcriber(i)">Checked</button></td></tr>                                
-      </table>
-
-
-
-     <div class="row" style="width: 80%;" align="center">
-          <div class="col-sm-6"><h4 style="color:black;">Jina</h4></div>
-          
-          <div class="col-sm-6"><h4 style="color:black;">Mawasiliano</h4></div>
-         
-      </div>
-      <table class="mtable" align="center">
-         <tr><th width="50%"></th><th width="50%"></tr>
-         <tr><td>Careen</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Johnson</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Conso</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Monica</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Travece</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Derick</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Hubert</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Nelly</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Juma</td><td class="rightcell">0657242356</td></tr>
-         <tr><td>Amina</td><td class="rightcell">0657242356</td></tr>
-         <tr *ngFor="let   subscriber of subscribers"><td>{{subscriber.name}}</td><td class="rightcell">{{subscriber.phone_number}}</td></tr>
-                                        
-      </table>
-
-
-      
-
       <br><br><br><br>
+      
+ 
+      <div class="subscriberslist">
+        <h3>Subscribers</h3>
+     </div>
+   
+
+
+    <div class="block">
+        <div class="navbar navbar-inner block-header">
+            <div class="pull-right"><span class="badge badge-info">4</span>
+
+            </div>
+        
+        <div class="block-content collapse in">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="number">#</th>
+                        <th class="name">Name</th>
+                        <th class="phonenumber">Phone Number</th>
+                        <th class="status">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let subscriber of newsubscribers; let i = index">
+                        <td>{{i + 1}}</td>
+                        <td><span *ngIf="!showEraser[i]">{{subscriber.name}}</span> <input *ngIf="showEraser[i]"  placeholder="{{subscriber.name}}"><button class="ti-close" *ngIf="showEraser[i]" (click)="alterEditMode(i)"></button></td>
+                        <td>{{subscriber.phone_number}}</td>
+                        <td><button (click)="registerSubcriber(i)"><p *ngIf="!registered[i]">New</p><p *ngIf="registered[i]">Checked</p></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <br>
+
+ </div>
+ <br><br> 
       
  
     </div>

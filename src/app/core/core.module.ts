@@ -6,6 +6,7 @@ import { CoreComponent } from './core.component';
 
 import { ClientsService } from './clients.service';
 import { BlogpostService } from './blogpost.service';
+import { MakalaService } from './makala.service';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { BlogpostService } from './blogpost.service';
   declarations: [CoreComponent],
 
   providers: [ClientsService,
-              BlogpostService]
+              BlogpostService,
+              MakalaService    ]
 })
 export class CoreModule { }

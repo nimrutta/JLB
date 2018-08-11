@@ -80,6 +80,10 @@
       margin: 0 30px 0 30px;
       display: inline;
   }
+
+  .active {
+      color: #652f85 !important;
+  }
   
   .nav li {
         margin-left: 30px;
@@ -97,7 +101,7 @@
       }  
   
     nav ul li a {
-          color: #acacac !important;
+          color: #acacac;
           padding-top: 4px;
           height: 20px;
     }
@@ -227,7 +231,7 @@ a > .Makalabutton  :hover {
 }
 
 .search hr {
-        width: 80%;
+       width: 80%;
        margin:80px 0 0px 10%;
 }
 

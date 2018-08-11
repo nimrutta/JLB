@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Clients } from '../../clients';
+import { Wazazi } from '../../wazazi';
 import { ClientsService } from '../../core/clients.service';
 
 @Component({
@@ -14,9 +15,10 @@ import { ClientsService } from '../../core/clients.service';
 
 export class ClientsComponent implements OnInit {
                               
-  clients:Clients[];
-  newclients:Clients[];
-  
+  clients:Wazazi[];
+  newclients:Wazazi[];
+  registered = {};
+
   constructor(private clientsService: ClientsService) {
     this.clients = [];
     this.newclients = [];
@@ -28,10 +30,11 @@ export class ClientsComponent implements OnInit {
   }
 
   registerClient(i) {
-    var client:Clients = this.newclients[i];
-    this.newclients.splice(i, 1);
-    console.log(this.clients[0]);
-    this.clients.push(client);
+    // var client:Clients = this.newclients[i];
+    // this.newclients.splice(i, 1);
+    // console.log(this.clients[0]);
+    // this.clients.push(client);
+    this.registered[i] = true;
   }
 
 

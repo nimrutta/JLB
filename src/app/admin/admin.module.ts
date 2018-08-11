@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SelectDropDownModule } from 'ngx-select-dropdown';
 
 import { AdminRoutingModule } from './admin-routing.module';
 
@@ -34,6 +35,7 @@ import { ShuhudaComponent } from './shuhuda/shuhuda.component';
     SidebarModule,
     FooterModule,
     NavbarModule,
+    SelectDropDownModule,
     ImageUploadModule.forRoot(),
   ],
   declarations: [AdminComponent, AndikaMakalaComponent, BlogComponent, ClientsComponent, SubscribersComponent, FooterComponent, HeaderComponent, MakalaComponent, MakalaEditComponent, MakalaSubtopicsComponent, MakalaSubtopicsEditComponent, SearchsectionComponent, UploadimageComponent, ShuhudaComponent,]

@@ -84,6 +84,10 @@ export class MakalaContentsComponent implements OnInit {
 
   }
 
+  closeThisItem(i) {
+    this.toggle[i] = false;
+  }
+
   closeAllAgeCategories() {
     this.toggle = [];
   }

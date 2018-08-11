@@ -28,7 +28,7 @@ export class UploadimageComponent implements OnInit {
     /*
     sends image details captured from server response to the blog component
     * */
-    this.onServerResponse.emit($event.serverResponse.json().data);
+    this.onServerResponse.emit($event.serverResponse.response.json().data);
   }
 
   imageRemoved(file: FileHolder) {

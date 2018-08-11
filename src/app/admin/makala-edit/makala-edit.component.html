@@ -1,46 +1,93 @@
 <main>
     <div class="container">
 
-      <div class="row" style="width: 80%;" align="center">
-          <div class="col-sm-11">Topics</div>
-          <div class="col-sm-1" style="color:#e46c2b;" routerLink="/admin/makala" routerLinkActive="active">Done</div>
-      </div>
-      <hr style="width: 80%; height: 2px; background-color:#e46c2b; 
-                 margin:3px auto;">
-      <table class="mtable" align="center">
-         <tr>
+    <br><br><br><br>
+    
+    <!--Edit Food Categories-->
+    <div class="addcategory">
+        <h3>Add new category</h3>
+        <input [(ngModel)]="newCategory.category_name" placeholder="Category name">
+        <button class="btn-success" (click)="createMakalaCategory()">+</button>
+     </div>
+    <br><br>
 
-         <th width="40%" >
-         <div *ngIf="showInputfield" >
-         
-         <input  class="addtitle"  placeholder="Enter new article's title id" [(ngModel)]="makala.id" >
-         <input  class="addtitle"  placeholder="Enter new article's title" [(ngModel)]="makala.title" >
-         <input  class="addtitle"  placeholder="Enter new article's title body" [(ngModel)]="makala.body" >
-         <input  class="addtitle"  placeholder="Enter new article's title teachid" [(ngModel)]="makala.teacher_id" >
-         <input  class="addtitle"  placeholder="Enter new article's title foodid" [(ngModel)]="makala.food_id" >
-         <button 
-         (click)= "toggleId()" 
-         (click)="add()"
-         > 
-         + 
-         </button>
-         
-         </div>
-         </th>
 
-         <th width="60%" class="rightcell" id="rightcell">
-         <button (click)= "toggleId()" class="addtopicbutton">+ Add new topic</button></th>
+    <div class="block">
+        <div class="navbar navbar-inner block-header">
+            <div class="pull-right"><span class="badge badge-info">8</span>
+
+            </div>
         
-         </tr>
+        <div class="block-content collapse in">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="number">#</th>
+                        <th class="name">Category Name</th>
+                        <th class="edit">Edit</th>
+                        <th class="remove">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ctgry of makalacategories; let i = index">
+                        <td class="number">{{i + 1}}</td>
+                        <td><span *ngIf="!showEraser[i]">{{ctgry.category_name}}</span> <input *ngIf="showEraser[i]" [(ngModel)]="category.category_name" placeholder="{{ctgry.category_name}}"><button class="ti-close" *ngIf="showEraser[i]" (click)="alterEditMode(i)"></button></td>
+                        <td class="edit"><button (click) = "sendUpdate(ctgry.id, i)"><span class="ti-eraser" *ngIf="!showEraser[i]"></span><p *ngIf="showEraser[i]">Confirm</p></button></td>
+                        <td class="remove"><button (click)="deleteMakalaCategory(ctgry.id, i)"><span class="ti-trash"></span></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-         <!-- <tr><td>Lorem Ipsum 1</td><td class="rightcell"> <button>x Remove</button> <input placeholder="New topic category" *ngIf = 'toRename' [(ngModel)]="category.category_name"> <button (click) = "callToRename()">{{renameData}}</button> <button (click) = "sendUpdate()" *ngIf = 'toRename'>Update</button> </td></tr>     toRename &&  (click) = "callToRename()"-->
-         
-         <tr *ngFor="let ctgry of makalacategories; let i = index"><td>{{ctgry.category_name}}</td><td class="rightcell"><button (click) = "deleteCategory(ctgry.id)">x Remove</button> <input placeholder="New topic category" *ngIf = "dsply[i]" [(ngModel)]="category.category_name"> <button (click) = "displayThisItem(i)">{{renameData[i]}}</button> <button (click) = "sendUpdate(ctgry.id, i)" *ngIf = 'dsply[i]'>Update</button></td></tr>   
-                                     
-      </table>
-
-      <br><br><br><br>
-      
     </div>
+
+    <br>
+
+ </div>
+ <br><br><br><br><br><br>
+
+ <!--Edit Food names-->
+ <div class="addcategory">
+    <h3>Add new Food</h3>
+    <input [(ngModel)]="newFood.name" placeholder="Food Name">
+    <button class="btn-success" (click)="createFood()">+</button>
+ </div>
+<br><br>
+
+
+<div class="block">
+    <div class="navbar navbar-inner block-header">
+        <div class="pull-right"><span class="badge badge-info">9</span>
+
+        </div>
+    
+    <div class="block-content collapse in">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="number">#</th>
+                    <th class="name">Food Name</th>
+                    <th class="edit">Edit</th>
+                    <th class="remove">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let afood of foods; let i = index">
+                    <td class="number">{{i + 1}}</td>
+                    <td><span *ngIf="!showFoodEraser[i]">{{afood.name}}</span><input [(ngModel)]="food.name" *ngIf="showFoodEraser[i]" placeholder="{{afood.name}}"><button class="ti-close" *ngIf="showFoodEraser[i]" (click)="alterFoodEditMode(i)"></button></td>
+                    <td class="edit"><button (click) = "sendFoodUpdate(afood.id, i)"><span class="ti-eraser" *ngIf="!showFoodEraser[i]"></span><p *ngIf="showFoodEraser[i]">Confirm</p></button></td>
+                    <td class="remove"><button (click)="deleteFood(afood.id, i)"><span class="ti-trash"></span></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+<br>
+
+</div>
+
+</div>
  </main>
 

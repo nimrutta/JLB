@@ -14,6 +14,10 @@ export class SubscribersComponent implements OnInit {
 
   subscribers:Subscribers[];
   newsubscribers:Subscribers[];
+  showEraser = {};
+  registered = {};
+
+  status = {'New': String};
   
   constructor(private subscribersService: SubscribersService) { 
     this.subscribers = [];
@@ -26,10 +30,11 @@ export class SubscribersComponent implements OnInit {
   }
 
   registerSubcriber(i) {
-    var subscriber:Subscribers = this.newsubscribers[i];
-    this.newsubscribers.splice(i, 1);
-    console.log(this.subscribers[0]);
-    this.subscribers.push(subscriber);
+    // var subscriber:Subscribers = this.newsubscribers[i];
+    // this.newsubscribers.splice(i, 1);
+    // console.log(this.subscribers[0]);
+    // this.subscribers.push(subscriber);
+    this.registered [i] = true;
   }
 
   ngOnInit() {

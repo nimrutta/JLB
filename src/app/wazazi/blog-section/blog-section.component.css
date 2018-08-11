@@ -92,7 +92,8 @@ ibox {
 .quote p {
         position: absolute;
         top: 20%;
-        padding: 0 15px;
+        padding: 0 15px 0 20px;
+        line-height: 1.7em;
 }        
 
 .quote strong {

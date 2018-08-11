@@ -19,7 +19,7 @@ export class BlogpostService {
   //http://api.tuseme.co.tz/api/v1/reports
   
   constructor(private http: Http) { }
-
+  
   fetchedBlogpost: Subject<Blogpost[]> = new Subject<Blogpost[]>();   
 
   private headers = new Headers({'Content-Type':'application/json'});

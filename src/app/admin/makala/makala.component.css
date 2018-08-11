@@ -3,6 +3,7 @@
         background-color: #fff;
         box-shadow: 1px 6.5px 12px 1px #000;
         padding-top: 7%;
+        width: 100% !important;
  }
 
  .mtable {
