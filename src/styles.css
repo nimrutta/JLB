@@ -7,6 +7,3 @@ input:focus {outline: none}
     src: url('assets/kimberly-geswein/KGShakeitOff.ttf');
 }
 
-::-webkit-scrollbar {
-    display: none;
-    }
