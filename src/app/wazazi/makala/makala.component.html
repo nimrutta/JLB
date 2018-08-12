@@ -16,7 +16,7 @@
       <h3> {{a.title}}</h3>
           
           <p> {{a.body}} </p>
-      </div>
+      
 
       <div><p style="margin: 10px 0 23px 0;">Nunc viverra magna quis nisi blandit euismod. Praesent id lorem molestie, dictum
          orci non, porttitor ex. Cras sagittis urna eget hendrerit tristique. Donec dui 
@@ -40,7 +40,7 @@
          vestibulum est, a dignissim felis.Vestibulum ultrices varius eros, finibus cursus
           lacus blandit sed. Cras volutpat ut risus non bibendum. Sed ut bibendum sem.</p>
       </div>
-       <div><img src="../../../../assets/images/happy mom.jpg" alt="Fruit View"
+       <div><img src="{{a.image_url}}" alt="Fruit View"
            class="oneimage"> 
        </div>
       <div class="clear"></div>
@@ -61,9 +61,10 @@
        <!--<app-taharifa-kujiunga *ngIf="thanksforjoiningprogram" (closeModal)="closeModal($event)"></app-taharifa-kujiunga>
        <app-kujiunga *ngIf="showmyId" (myevenT)="myevenT($event)" (closeButtonClicked)="closeButtonClicked($event)"></app-kujiunga>
        -->
+       </div>
       </div>
     </div>
-       <!-- comments section begins -->
+      
 
    
         <!-- <button (click)="toggleId()">Toggle</button> --> 

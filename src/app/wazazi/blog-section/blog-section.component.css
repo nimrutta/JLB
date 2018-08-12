@@ -79,6 +79,7 @@ ibox {
         background-color: rgba(0, 0, 0, 0.5);
         height: 520px;
         width: 30%;
+        border-top-right-radius: 4px;
         padding:0;
         position: relative;
         left: 70%;
