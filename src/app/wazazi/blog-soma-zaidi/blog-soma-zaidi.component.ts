@@ -32,12 +32,16 @@ export class BlogSomaZaidiComponent implements OnInit {
                private route: ActivatedRoute,
                private location: Location
                   ) {
+
+     this.comments = [];
+
      this.blogpost = blogpostService.blogpost;
      this.subscription = this.blogpostService.fetchedBlogpost.subscribe((value) => {
      this.blogpost = value;
    });
     
-    this.comments = commentService.comment;
+    
+     this.comments = commentService.comment;
      this._subscription = this. commentService.fetchedComments.subscribe((value) => {
      this.comments = value;
    })

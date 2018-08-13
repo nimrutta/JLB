@@ -29,6 +29,7 @@ export class CommentService {
   }
 
  create(comment:Comment): Promise<Comment> {
+  console.log('comment created in service')
   let headers = new Headers({ 'Content-Type': 'application/json' });
   let options = new RequestOptions({ headers: headers });
   
