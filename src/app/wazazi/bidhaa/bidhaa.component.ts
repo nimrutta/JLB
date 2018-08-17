@@ -17,7 +17,6 @@ export class BidhaaComponent implements OnInit {
     this.removeSearchInput()
   }
 
-  
   showMoreBidhaafn() {
     this.showMoreBidhaa = !this.showMoreBidhaa;
   }

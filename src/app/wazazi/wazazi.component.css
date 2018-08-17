@@ -148,7 +148,7 @@
   .showposts {
         background-color: #f4f3ef;
         margin: 0 0 0 0;
-        padding: 20px 0 0 0;
+        padding: 10px 0 0 0;
   }
 
   .drocol {
@@ -375,16 +375,25 @@ nav {   width: 100%;
 }
 
 .menurow {
-        height: auto;
+        height: fit-content;
 }
+
 .logorow {
-        height: auto;
-        min-height: fit-content;
+        height: 60px;
+        
         margin: 0 0 5px 0;
 }
 
 .brand {
-        height: 65px;
+        height: 55px;
+        margin-top: 13px;
+}
+
+.navbar img {
+
+        height: 55px;
+        width: 55px;
+        margin-top: 0;  
 }
 
 .menuitems {
@@ -429,7 +438,7 @@ nav {   width: 100%;
 
 .ss-searchbox {
         height: 27px;
-        width: 80%;
+        width: 87%;
         border: 1px solid  rgba(0,0,0, 0.1); 
         border-radius: 17px;
         background-color: none;

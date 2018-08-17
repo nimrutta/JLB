@@ -5,7 +5,7 @@
       <div class="row menurow">
           <div class="col-sm-2 logorow">
          
-              <div class="brand"><img src="../../../assets/images/pp.jpg" height="500" width="400" class="icon"></div>
+              <div class="brand"><img src="../../../assets/images/pp.jpg" class="icon"></div>
           </div>
          
           <div class="ssnavbar ">   <!-- for small screen menu -->
@@ -92,7 +92,7 @@
  
  
  <div class="row showposts">
-  <div class="row ss_search_row"><div class="col-xs-4"><button (click)= "showSearchbox()" class="ss"><i class="glyphicon glyphicon-search ss-search" *ngIf="showsearch"  ></i></button></div> <div class="col-xs-8 column2"><input type="search" class="ss-searchbox" name="tittle" #searchTerm  placeholder="Tafuta" *ngIf="showsearch && searchboxSS" (keyup)="keypressed($event)"></div></div>
+  <div class="row ss_search_row"><div class="col-xs-4"><button (click)= "showSearchbox()" class="ss"><i class="glyphicon glyphicon-search ss-search" *ngIf="showsearch"  ></i></button></div> <div class="col-xs-8 column2"><input type="search" class="ss-searchbox" name="tittle" #searchTerm  placeholder="Tafuta"  (keyup)="keypressed($event)"></div></div> <!--*ngIf="showsearch && searchboxSS"-->
   
      <div class="col-sm-9 drocol">
        <div *ngIf="displayRouterOutlet">
