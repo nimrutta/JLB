@@ -165,7 +165,7 @@ input::placeholder {
         border: 1px solid #888;
         width: 70%;
         position: absolute;
-        bottom:180px;
+        bottom:10px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
         -webkit-animation-name: animatetop;
         -webkit-animation-duration: 0.4s;
@@ -214,3 +214,22 @@ input::placeholder {
         }
 
 }
+
+
+@media all and (max-width: 500px){
+ .modal-content {
+        
+        background-color: rgba(0,0,0,0.8);
+        margin: 0 0 0 15%;
+        padding: 0;
+        border: 1px solid #888;
+        width: 70%;
+        position: absolute;
+        bottom:50px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+ }  
+        }

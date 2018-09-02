@@ -104,3 +104,13 @@
     margin: 0 0 13px 0;
      }
  }
+
+
+ @media all and (max-width: 500px){
+
+.itemcover {  
+    width: 215.6px;
+    height: 76%; 
+    }  
+      
+}

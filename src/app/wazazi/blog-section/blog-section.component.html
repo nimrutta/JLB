@@ -139,7 +139,7 @@
 
 
     <!--posts fetched from database-->
-    <div *ngFor= "let b of blogpost">
+    <div *ngFor= "let b of blogpost | paginate: { itemsPerPage: 7, currentPage: p}">
      <div class="box" id="{{b.id}}">
      
     <div class="row iquote" style="width:100%;">
@@ -175,6 +175,12 @@
     <p class="likes">{{postlikes}}</p>
     </div>
     </div>
+    <pagination-controls class="my-pagination" (pageChange)="p = $event"                
+                                                previousLabel="Kurasa iliyopita"
+                                                nextLabel="Nyingine"
+    >
+
+    </pagination-controls>
     <!--end of posts fetched from database-->   
 
 

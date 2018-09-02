@@ -1,5 +1,5 @@
 <div class="Makala-items-bed" [@flyInOut]="'in'" *ngIf='display'>
-     <div class="closebox"><button class="close" (click)="ifdisplay(); closeAllAgeCategories()">&times;</button></div>
+     <div class="closebox"><button class="close" (click)="ifdisplay(); closeAllAgeCategories()"><img src="../../../assets/images/close.png"></button></div>
       <div *ngFor= "let c of category; let i = index">      <!--for each age category -->
         <div  class="category" (mouseenter)="getMakala(c.id)" (mouseenter)="displayThisItem(i)" (mouseleave)="closeThisItem(i)">
             

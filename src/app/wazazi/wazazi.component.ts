@@ -87,7 +87,8 @@ export class WazaziComponent implements OnInit {
   showmakalaTitles = false;
   toggle = {};
   currentUrl : string;
-  
+  showmyod = false;
+  thanksforjoiningprogram = false;
 
   ngOnInit() {
         console.log('wazazi component created') 
@@ -139,6 +140,31 @@ export class WazaziComponent implements OnInit {
   }
   
   isIn = false;   // store state
+
+  myevenT($event){
+    this.showmyod = !this.showmyod;
+    this.thanksforjoiningprogram = !this.thanksforjoiningprogram;
+  }
+
+  closeButtonClicked($event){
+    if(this.showmyod) {
+       this.showmyod = !this.showmyod;
+    }
+  }
+
+  closeModal($event){
+   
+    if(this.thanksforjoiningprogram) {
+      this.thanksforjoiningprogram = !this.thanksforjoiningprogram;
+    }
+    
+  }
+
+  togglemyOd() {
+    this.showmyod = !this.showmyod;
+   }
+
+  //#region 
 
   keypressed ($event) {
     

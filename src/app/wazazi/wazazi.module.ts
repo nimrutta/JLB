@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WazaziRoutingModule } from './wazazi-routing.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms'; 
 import { CeiboShare } from 'ng2-social-share';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { SearchService } from '../core/search.service';
 import { SubscribersService } from '../core/subscribers.service';
@@ -34,7 +34,8 @@ import { BidhaaCategoryComponent } from './bidhaa-category/bidhaa-category.compo
   imports: [
     CommonModule,
     WazaziRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
   ],
  
   declarations: [WazaziComponent, 

@@ -182,6 +182,17 @@ ibox {
        float: right;
  }
 
+ .my-pagination /deep/ .ngx-pagination {
+       padding: 0 0 0 44%;
+       margin: 0 0 25px 0;
+ }
+
+ .my-pagination /deep/ .ngx-pagination .current {
+       background-color:#652f85; 
+       width: 20px;
+       height: 20px;
+       border-radius: 50%;
+ }
  @media all and (max-width: 800px){
 iqoute {
         height: 300px;

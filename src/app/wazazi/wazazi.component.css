@@ -110,8 +110,35 @@
         color:  #4d2068 !important;
         text-decoration-line: none;
     }  
+
   
-  
+    .calltoactionli {
+       float: right;
+    }
+
+    .calltoaction {
+        /*border-left: 1px solid #acacac;*/
+        height: 48px;
+        margin: -5px 0 -3px 60px;
+        padding: 6px 0 6px 40px;
+        display: inline-block;
+    }
+
+
+    .calltoaction button {
+        color: #fff;
+        font-size: 14px;
+        background-color: #66a8a6;
+        padding: 7px 9px;
+        margin: 0 0 0 0;
+        border: none;
+        border-radius: 4px;
+    }
+
+  .kujiunga {
+       position: absolute;
+  }
+
   .menuitems {
       
       background-color: #652f85;
@@ -352,6 +379,10 @@ input::placeholder {
  .ss {
         display: none;
  }
+
+ .ss-searchicon {
+         display: none;
+ }
 /**/
 @media all and (max-width: 768px){
 .navdiv {
@@ -402,7 +433,17 @@ nav {   width: 100%;
 
 .ssnavbar {
         display: inherit;
+        margin: 15px 0 0 0;
 }
+
+.calltoaction {
+        font-size: 12px;
+        height: 40px;
+        margin: -5px 15px -3px 0;
+        padding: 4px 0 4px 40px;
+        display: inline-block;
+        float: right;
+    }
 
 .ss_search_row {
          width: 100%;
@@ -436,16 +477,33 @@ nav {   width: 100%;
         padding-left: 0;
 }
 
+.form-control {
+        padding-right: 30px;
+      }
+      
+.form-control + .ss-searchicon {
+        position: absolute;
+        right: 13px;
+        padding: 8px 27px;
+      }
+
 .ss-searchbox {
         height: 27px;
-        width: 87%;
+        width: 88%;
         border: 1px solid  rgba(0,0,0, 0.1); 
         border-radius: 17px;
         background-color: none;
         border-right: none;
         margin-top: 15px;
         margin-left: 0;
-        padding: 0 0 0 15px;
+        padding: 0 30px 0 15px;
+        display: inline-block;
+}
+
+.ss-searchicon {
+        color: rgba(0,0,0, 0.3);
+        font-size: 12px;
+        margin-top: 15px;
         display: inline-block;
 }
 
@@ -497,11 +555,12 @@ input::placeholder {
         background-color: rgba(0, 0, 0, 0.2);
         border: none;
         padding: 8px 6px;
-        margin: 3px 15px 4px 0;
+        margin: 3px 15px 4px 22px;
+        float: left;
 }
 
 .HM:focus {
-        background-color: rgba(0, 0, 0, 0.7) !important;      
+        background-color: rgba(0, 0, 0, 0.5) !important;      
 }
 
 .HM span {
@@ -627,3 +686,5 @@ nav ul li a {
   }
 
 }
+
+

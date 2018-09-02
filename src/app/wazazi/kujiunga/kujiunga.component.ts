@@ -25,6 +25,7 @@ export class KujiungaComponent implements OnInit {
 
   exitModal(button){
        this.closeButtonClicked.emit(button);
+       debugger;
   }
 
    add():void {
