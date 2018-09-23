@@ -70,6 +70,7 @@ export class BlogSomaZaidiComponent implements OnInit {
    comments : Comment[]
    coments : Comment[]
 
+   videourl= "Promote a Page- A Facebook Pages Tutorial - Facebook for Business.mp4"
   
   ngOnInit() {
         
@@ -78,8 +79,9 @@ export class BlogSomaZaidiComponent implements OnInit {
         this.sortComments();
         this.comment.post_id = this.post_id;
         this.comment.id = 1;
-
-        this.removeSearchInput()
+        this.comment.parent_id = 1;
+        this.removeSearchInput();
+        console.log(this.Post)
 
         // this.blogId = this.datacarrierService.getData();
         // console.log(this.blogId);
@@ -132,7 +134,7 @@ export class BlogSomaZaidiComponent implements OnInit {
 
    clearCommentData() {
    // this.comment.title = null;
-    this.comment.parent_id = null;
+    this.comment.phone_number = null;
     this.comment.body = null;
     console.log('comment cleared')
   }

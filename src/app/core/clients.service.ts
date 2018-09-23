@@ -25,19 +25,31 @@ export class ClientsService {
   //}
 
 
+  updateClient(client:Wazazi, id): Promise<Wazazi> {
+    const url = `${this.clientsUrl}/${id}`;
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http
+           .put(url, client, options)
+           .toPromise()
+           .then(res => res.json().data as Wazazi)
+           .catch(this.handleError);         
+}
+
+
   private handleError (error: any): Promise<any> {
      console.error('An error occurred', error);
      return Promise.reject(error.message || error);
   }
 
-   create(client:Clients): Promise<Clients> {
+   create(mzazi:Wazazi): Promise<Wazazi> {
   let headers = new Headers({ 'Content-Type': 'application/json' });
   let options = new RequestOptions({ headers: headers });
   
   return this.http
-    .post(this.clientsUrl, client, options)
+    .post(this.clientsUrl, mzazi, options)
     .toPromise()
-    .then(res => res.json().data as Clients)
+    .then(res => res.json().data as Wazazi)
     .catch(this.handleError);
     //JSON.stringify({makala})
   }

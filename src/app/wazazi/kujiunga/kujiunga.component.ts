@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
-import { Clients } from '../../clients';
+import { Wazazi } from '../../wazazi';
 import { ClientsService } from '../../core/clients.service';
 
 @Component({
@@ -12,8 +12,8 @@ export class KujiungaComponent implements OnInit {
   isInputdataMissing = false;
 
   constructor( private clientsService: ClientsService ) { }
- client = new Clients();
- clients = [];
+ wazazi = new Wazazi();
+ wazazis = [];
 
 
   @Output() myevenT = new EventEmitter();
@@ -25,15 +25,15 @@ export class KujiungaComponent implements OnInit {
 
   exitModal(button){
        this.closeButtonClicked.emit(button);
-       debugger;
+       console.log('exit modal clicked');
   }
 
    add():void {
     
-    if (!this.client.name) { return; }
-    this.clientsService.create(this.client) 
-    .then(client => {
-    this.clients.push(client);
+    if (!this.wazazi.first_name) { return; }
+    this.clientsService.create(this.wazazi) 
+    .then(mzazi => {
+    this.wazazis.push(mzazi);
                 });
   
             }
@@ -45,8 +45,8 @@ export class KujiungaComponent implements OnInit {
   }   
 
   ngOnInit() {
-    this.client.password = 'password';
-    this.client.remember_token = 'token';
+    // this.client.password = 'password';
+    // this.client.remember_token = 'token';
   }
 
 }

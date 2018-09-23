@@ -32,7 +32,7 @@
                         <td>{{i + 1}}</td>
                         <td><span *ngIf="!showEraser[i]">{{subscriber.name}}</span> <input *ngIf="showEraser[i]"  placeholder="{{subscriber.name}}"><button class="ti-close" *ngIf="showEraser[i]" (click)="alterEditMode(i)"></button></td>
                         <td>{{subscriber.phone_number}}</td>
-                        <td><button (click)="registerSubcriber(i)"><p *ngIf="!registered[i]">New</p><p *ngIf="registered[i]">Checked</p></button></td>
+                        <td><button (click)="registerSubcriber(i)"><p *ngIf="!newsubscribers [i].status">New</p><p *ngIf="newsubscribers [i].status">Checked</p></button></td>
                     </tr>
                 </tbody>
             </table>

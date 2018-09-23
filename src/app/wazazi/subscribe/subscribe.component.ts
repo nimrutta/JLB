@@ -57,7 +57,6 @@ export class SubscribeComponent implements OnInit {
   }         
 
   ngOnInit() { 
-    this.subscriber.teacher_id = 1;
 
    this.location.subscribe((ev:PopStateEvent) => {
           this.lastPoppedUrl = ev.url;

@@ -1,8 +1,9 @@
 export class Comment {
   id: number;
   body: string;
-  parent_id: number;
+  phone_number: string;
   post_id: number;
+  parent_id: number;
  
 }
 

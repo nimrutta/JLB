@@ -143,7 +143,7 @@ export class BlogSectionComponent implements OnInit {
   }
 
   getBlogposts(): void {
-    this.blogpostService.getBlogposts().then(blogpost => this.blogpost = blogpost);
+    this.blogpostService.getBlogposts().then(blogpost => {this.blogpost = blogpost; blogpost.reverse()});
   }
 
   onClick(button) { 

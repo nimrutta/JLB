@@ -1,5 +1,6 @@
 import 'rxjs/add/operator/switchMap';
 import { Component, OnInit } from '@angular/core';
+import { FileUploader,FileItem,ParsedResponseHeaders } from 'ng2-file-upload';
 
 import { Location } from '@angular/common';
 
@@ -20,7 +21,16 @@ export class BlogComponent implements OnInit {
   blogpost:any = {topic_id: 4}
 
 
-  constructor(private blogpostService: BlogpostService) { }
+  constructor(private blogpostService: BlogpostService,
+             ) {
+                this.uploader.onSuccessItem = (item:FileItem, response:string, status:number, headers:ParsedResponseHeaders) => {
+                console.log("onSuccessItem " + status, item);
+              }
+              }
+
+  public uploader:FileUploader = new FileUploader({url:'http://api.jualishebora.ga/api/v1/images' /*http://localhost:3001/upload*/});   
+  
+  
 
   /*
   * receives data via event emmiter from upload image component and initializes image_id property

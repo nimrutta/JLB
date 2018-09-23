@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { SelectDropDownModule } from 'ngx-select-dropdown';
 
 import { AdminRoutingModule } from './admin-routing.module';
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
 
 import { AdminComponent } from './admin.component';
 import { AndikaMakalaComponent } from './andika-makala/andika-makala.component';
@@ -25,6 +26,8 @@ import { NavbarModule } from './shared/navbar/navbar.module'
 
 import { ImageUploadModule } from 'angular2-image-upload';
 import { ShuhudaComponent } from './shuhuda/shuhuda.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 @NgModule({
@@ -38,6 +41,24 @@ import { ShuhudaComponent } from './shuhuda/shuhuda.component';
     SelectDropDownModule,
     ImageUploadModule.forRoot(),
   ],
-  declarations: [AdminComponent, AndikaMakalaComponent, BlogComponent, ClientsComponent, SubscribersComponent, FooterComponent, HeaderComponent, MakalaComponent, MakalaEditComponent, MakalaSubtopicsComponent, MakalaSubtopicsEditComponent, SearchsectionComponent, UploadimageComponent, ShuhudaComponent,]
+
+  declarations: [AdminComponent,
+                 AndikaMakalaComponent, 
+                 BlogComponent, 
+                 ClientsComponent, 
+                 SubscribersComponent, 
+                 FooterComponent, 
+                 HeaderComponent, 
+                 MakalaComponent, 
+                 MakalaEditComponent, 
+                 MakalaSubtopicsComponent, 
+                 MakalaSubtopicsEditComponent, 
+                 SearchsectionComponent, 
+                 UploadimageComponent, 
+                 ShuhudaComponent,
+                 FileSelectDirective, 
+                 FileDropDirective, LoginComponent, SignupComponent],
+
+  providers: [ ],
 })
 export class AdminModule { }

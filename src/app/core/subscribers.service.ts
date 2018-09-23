@@ -21,6 +21,19 @@ export class SubscribersService {
                  .catch(this.handleError);
   }
 
+
+  updateSubscriber(subscriber:Subscribers, id): Promise<Subscribers> {
+    const url = `${this.subscribersUrl}/${id}`;
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http
+           .put(url, subscriber, options)
+           .toPromise()
+           .then(res => res.json().data as Subscribers)
+           .catch(this.handleError);         
+}
+
+
   private handleError (error: any): Promise<any> {
      console.error('An error occurred', error);
      return Promise.reject(error.message || error);

@@ -10,12 +10,16 @@ import {MakalaEditComponent} from './makala-edit/makala-edit.component';
 import {MakalaSubtopicsComponent} from './makala-subtopics/makala-subtopics.component';
 import {MakalaSubtopicsEditComponent} from './makala-subtopics-edit/makala-subtopics-edit.component';
 import {SubscribersComponent} from './subscribers/subscribers.component';
-import {ShuhudaComponent} from './shuhuda/shuhuda.component'
+import {ShuhudaComponent} from './shuhuda/shuhuda.component';
+import {LoginComponent} from './login/login.component';
+import {SignupComponent} from './signup/signup.component';
 
 const routes: Routes = [
   {path:'admin',component:AdminComponent,
   children:[
-    {path:'', redirectTo:'andika-makala',pathMatch:'full'},
+    {path:'', redirectTo:'signup',pathMatch:'full'},
+    {path:'login', component:LoginComponent},
+    {path:'signup',component:SignupComponent},
     {path:'andika-makala', component:AndikaMakalaComponent},
     {path:'andika-blog', component:BlogComponent},
     {path:'clients', component:ClientsComponent},

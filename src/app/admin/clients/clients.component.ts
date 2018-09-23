@@ -34,7 +34,8 @@ export class ClientsComponent implements OnInit {
     // this.newclients.splice(i, 1);
     // console.log(this.clients[0]);
     // this.clients.push(client);
-    this.registered[i] = true;
+    this.clients[i].status = !this.clients[i].status;
+    this.clientsService.updateClient(this.clients[i], this.clients[i].id);
   }
 
 

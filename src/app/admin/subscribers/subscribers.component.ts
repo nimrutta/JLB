@@ -34,7 +34,8 @@ export class SubscribersComponent implements OnInit {
     // this.newsubscribers.splice(i, 1);
     // console.log(this.subscribers[0]);
     // this.subscribers.push(subscriber);
-    this.registered [i] = true;
+    this.newsubscribers [i].status = !this.newsubscribers [i].status;
+    this.subscribersService.updateSubscriber(this.newsubscribers[i], this.newsubscribers[i].id);
   }
 
   ngOnInit() {

@@ -2,10 +2,13 @@
     <div class="container" >
 
      <form action="/action_page.php" >
-<br><br>
-
+<br><br>  -->
 <!--<ngx-select-dropdown [config]="config" [options]="makalaTitles" 
 [(value)]="dataModel" [multiple]="false" ></ngx-select-dropdown>-->
+
+
+
+
 
 <div class="entertitle">
   <label>Tiltle</label><input [(ngModel)]="makala.title" name="title">
@@ -31,13 +34,23 @@
 
 <div style="display: block;
   margin-left: 10%;
-  ">
+  ">  -->
+
+
+
+
+  
 <!-- onServerRespose listener gets image details from upload image component-->
   <app-uploadimage
     (onServerResponse) = "initializeImageId($event)"
     class="uploadimage"
   ></app-uploadimage>
 <!---(click)="save()"-->
+
+
+
+
+
   <button  (click)="add(); clear()"> Post New Article </button>
 </div>
 
@@ -46,3 +59,5 @@
     </div>
  </main>
  
+-->
+

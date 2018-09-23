@@ -28,6 +28,17 @@
              </div>   
 
 
+             <input type="text" name="comment_author" id="jina" 
+             class="contactfield" value=""  placeholder="Jina la Mzazi" 
+             required [(ngModel)]="subscriber.surname" name="jina"
+             #jina="ngModel">
+             <div *ngIf="(jina.errors && (jina.dirty || jina.touched)) || (isInputdataMissing && jina.errors)" class="alert alert-danger" class="inputErrormessage">
+               <div [hidden]="!jina.errors.required" >
+                   Tafadhari jaza Jina la Mzazi
+               </div>
+             </div>  
+
+
              <input type="text" name="comment_author" id="phone" 
              class="contactfield" value=""  placeholder="Namba ya Whatsapp" 
              required [(ngModel)]="subscriber.phone_number" #phone="ngModel">

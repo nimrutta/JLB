@@ -5,5 +5,7 @@ export class Blogpost {
   topic_id:number;
   image_id: number;
   image_url: string;
+  video_url: string;
+  audio_url: string;
 }
 

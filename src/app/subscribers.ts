@@ -1,5 +1,7 @@
 export class Subscribers {
   id:number;
+  name: string;
+  surname: string;
   phone_number: string;
-  teacher_id: number;
+  status: boolean;
  }

@@ -19,8 +19,13 @@
         width: 100%;
         padding:10px 40px 90px 40px;
         background-color: #fff;
-        border: 1px solid #d4d4d4;
+        border: none;
+        border-radius: 4px;
         margin-bottom: 20px;
+}
+
+.box p {
+        line-height: 3rem;
 }
 
 .box > h3 {

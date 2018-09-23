@@ -58,9 +58,9 @@ export class WazaziComponent implements OnInit {
                private router: Router,
                private location: Location,
                private makalatitlesService: MakalatitlesService ) {
-    passeventsService.navigateout$.subscribe(
-      searchInputStatus => { this.showSearchInput = searchInputStatus}
-    );
+    // passeventsService.navigateout$.subscribe(
+    //   searchInputStatus => { this.showSearchInput = searchInputStatus}
+    // );  // causes ExpressionChangedAfterItHasBeenCheckedError error
           
     this.searchService.callSearch(this.searchTerm$);
 
@@ -150,6 +150,7 @@ export class WazaziComponent implements OnInit {
     if(this.showmyod) {
        this.showmyod = !this.showmyod;
     }
+    console.log('showmyod state changed');
   }
 
   closeModal($event){

@@ -10,7 +10,7 @@
           <div class="ssnavbar ">   <!-- for small screen menu -->
            
             <!--<button class="Rudimwanzobutton_ss" *ngIf="!showSearchInput"  (click) = "rudiMwanzo()"><i class="glyphicon glyphicon-arrow-left"></i></button> -->
-            <img src="../../../assets/images/back-arrow.png"  class="back-arrow" *ngIf="!showSearchInput"  (click) = "rudiMwanzo()" (click)="closeDrawer()">
+            <img src="../../../assets/images/back-arrow.png"  class="back-arrow" *ngIf="!showSearchInput"  (click) = "rudiMwanzo()" (click)="closeDrawer()"> 
             <!-- <input class="search_input" placeholder="Tafuta" *ngIf="showSearchInput" (keyup)="keypressed($event)"> -->
             <button type="button" class="navbar-toggle collapsed HM" (click)="toggleState()">
                    <span class="sr-only">Toggle navigation</span>
@@ -25,10 +25,10 @@
           <div class="col-sm-10 menuitems2">
                 <ul>
                     <div class="collapse navbar-collapse"> 
-                        <li><a routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput()" class="Mwanzo" >Mwanzo</a></li>
-                        <li><a routerLink="bidhaa" routerLinkActive="active" (click) = "omitsearch()">Bidhaa</a></li>
-                        <li><a routerLink="kuhusu-jlb" routerLinkActive="active" (click) = "omitsearch()">Kuhusu JLB</a></li>
-                        <li><a routerLink="shuhuda" routerLinkActive="active" (click) = "omitsearch()">Shuhuda</a></li>  
+                        <li><a routerLink="blog-section" routerLinkActive="active" (click) = "returnsearch(); returnSearchInput(); showarticle.endDisplay()" class="Mwanzo" >Mwanzo</a></li>
+                        <li><a routerLink="bidhaa" routerLinkActive="active" (click) = "omitsearch(); showarticle.endDisplay()">Bidhaa</a></li>
+                        <li><a routerLink="kuhusu-jlb" routerLinkActive="active" (click) = "omitsearch(); showarticle.endDisplay()">Kuhusu JLB</a></li>
+                        <li><a routerLink="shuhuda" routerLinkActive="active" (click) = "omitsearch(); showarticle.endDisplay()">Shuhuda</a></li>  
                         <li class="calltoactionli"><div class="calltoaction"><button (click)= "togglemyOd()">Jiunge na Program JLB</button></div></li>
                       
                        

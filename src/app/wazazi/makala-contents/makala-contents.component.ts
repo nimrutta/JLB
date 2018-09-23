@@ -106,6 +106,10 @@ export class MakalaContentsComponent implements OnInit {
     this.display = !this.display;
   }
 
+  endDisplay (){
+    this.display = false;
+  }
+
   getMakala(id: number): void { 
       this.makala = null;
       this.makalatitlesService.getMakala(id);   //if data wasnt loaded on component's initialisation

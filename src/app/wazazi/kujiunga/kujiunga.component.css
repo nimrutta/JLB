@@ -13,7 +13,7 @@
  .modal {
         display: block;
         position: fixed;
-        z-index: 1000;
+        z-index: 10000;
         left: 0;
         top: 0;
         width: 100%;
@@ -135,6 +135,9 @@ input::placeholder {
         float: right;
         font-size: 28px;
         font-weight: bold;
+        position: absolute;
+        z-index: 10000;
+        right: 10px;
 }
 
 .close:hover,

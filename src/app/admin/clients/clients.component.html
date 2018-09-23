@@ -50,6 +50,7 @@
                     <tr>
                         <th class="number">#</th>
                         <th class="name">Name</th>
+                        <th class="name">Surname</th>
                         <th class="childsage">Childs age</th>
                         <th class="phonenumber">Phone Number</th>
                         <th class="status">Status</th>
@@ -59,9 +60,10 @@
                     <tr *ngFor="let client of newclients; let i = index">
                         <td>{{i + 1}}</td>
                         <td>{{client.first_name}}</td>
-                        <td>{{client.childs_id}}</td>
+                        <td>{{client.surname}}</td>
+                        <td>{{client.childs_age}}</td>
                         <td>{{client.phone_number}}</td>
-                        <td><button (click)="registerClient(i)"><p *ngIf="!registered[i]">New</p><p *ngIf="registered[i]">Registered</p></button></td>
+                        <td><button (click)="registerClient(i)"><p *ngIf="clients[i].status">New</p><p *ngIf="!clients[i].status">Registered</p></button></td>
                     </tr>
                 </tbody>
             </table>

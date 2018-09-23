@@ -145,7 +145,7 @@
     <div class="row iquote" style="width:100%;">
        <div class="ibox">
           
-           <img src="{{b.image_url}}" alt="Fruit View"
+           <img src="{{b.image.url}}" alt="Fruit View"
            class="oneimage">
 
        <div class="quote">
@@ -163,7 +163,7 @@
     <button class="somazaidi" routerLink="/wazazi/soma-zaidi/{{b.id}}" routerLinkActive="active">Soma Zaidi </button> <!-- (click)="removeSearchInput()" (click)="onClick($event)"(click)="passPostId(b.id)" (click)="getPost(b.id)" -->
     <div class="clear"></div>
     <hr style="margin-top: 10px; ">
-    <p class="postedattime">6 oktoba 2017 2315</p>
+    <p class="postedattime">{{b.created_at}}</p>
     <div class="postedattime_ss">6 oktoba '17</div>    
     <img src="../../../../assets/images/twitter1.png" alt="Fruit View"
            class="shareicon socialmedia" ceiboShare [twitter] ="{u: repoUrl}">
