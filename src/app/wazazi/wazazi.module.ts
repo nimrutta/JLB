@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WazaziRoutingModule } from './wazazi-routing.module';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { CeiboShare } from 'ng2-social-share';
 import {NgxPaginationModule} from 'ngx-pagination';
 
@@ -29,6 +29,7 @@ import { Makala1Component } from './makala1/makala1.component';
 import { BlogSomaZaidi1Component } from './blog-soma-zaidi1/blog-soma-zaidi1.component';
 import { BidhaaComponent } from './bidhaa/bidhaa.component';
 import { BidhaaCategoryComponent } from './bidhaa-category/bidhaa-category.component';
+import { UploadVideoComponent } from './upload-video/upload-video.component';
 
 @NgModule({
   imports: [
@@ -37,29 +38,30 @@ import { BidhaaCategoryComponent } from './bidhaa-category/bidhaa-category.compo
     FormsModule,
     NgxPaginationModule,
   ],
- 
-  declarations: [WazaziComponent, 
-                 BlogSectionComponent, 
-                 BlogSomaZaidiComponent, 
-                 KuhusuJlbComponent, 
-                 KujiungaComponent, 
-                 MakalaContentsComponent, 
-                 MakalaNavigationComponent, 
-                 SubscribeComponent, 
-                 FooterComponent, 
-                 HeaderComponent, 
-                 MakalaComponent, 
-                 KutuhusuComponent, 
-                 ShuhudaComponent, 
-                 TaharifaSubscriptionComponent, 
+
+  declarations: [WazaziComponent,
+                 BlogSectionComponent,
+                 BlogSomaZaidiComponent,
+                 KuhusuJlbComponent,
+                 KujiungaComponent,
+                 MakalaContentsComponent,
+                 MakalaNavigationComponent,
+                 SubscribeComponent,
+                 FooterComponent,
+                 HeaderComponent,
+                 MakalaComponent,
+                 KutuhusuComponent,
+                 ShuhudaComponent,
+                 TaharifaSubscriptionComponent,
                  TaharifaKujiungaComponent,
                  CeiboShare,
                  Makala1Component,
                  BlogSomaZaidi1Component,
                  CeiboShare,
                  BidhaaComponent,
-                 BidhaaCategoryComponent],
-                 
+                 BidhaaCategoryComponent,
+                 UploadVideoComponent],
+
   providers: [ SearchService,
                SubscribersService,
                MakalatitlesService,
