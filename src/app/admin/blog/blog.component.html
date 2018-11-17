@@ -5,17 +5,18 @@
  <br>
 
   <div class="entertitle">
-    <label>Tiltle</label><input [(ngModel)]="blogpost.title" name="title">
+   <input [(ngModel)]="blogpost.title" name="title" placeholder="Post's title">
   </div>
 
 
   <textarea class="area" [(ngModel)]="blogpost.body"
   rows="15px" cols="100px"
-  name="description"   placeholder="Your contents here...">
+  name="description"   placeholder="Post's contents ...">
 
   </textarea><br>
+
   <div style="display: block;
-    margin-left: 10%;
+    
     ">
 
   <!-- onServerRespose listener gets image details from upload image component-->
@@ -31,19 +32,47 @@
 </form>
 
 
-
   <div class="row filesupload">
       <div class="col-xl-4">
-         <h3>Audio and video upload</h3>
+         <h3>Audio upload</h3>
+          <!--<input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf, .doc, .docx, .png, .jpeg">
+          <p>sfgaszbaxcg</p> -->
+
+
+     <!--      <div class="form-group">
+            <label for="file">Choose File</label>
+            <input type="file"
+                   id="file"
+                   (change)="handleFileInput($event.target.files)">
+        </div>
+
+       <button (click) = "uploadFileToActivity()"> upload </button>
+Adf
+
+        <br><br><br> 
+          <p-fileUpload name="myfile[]" url="http://api.jualishebora.gq/api/v1/images" multiple="multiple"
+        accept="audio/*,image/*" auto="auto"></p-fileUpload>
+sff -->
+       <br>
           <form>
               <div class="form-group">
-                  <label for="single">single File</label>
-                  <input type="file" class="form-control" name="single" ng2FileSelect [uploader]="uploader" />                                  
+
+
+            <div ng2FileDrop
+            [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+            (fileOver)="fileOverBase($event)"
+            [uploader]="uploader"
+            (onFileDrop)="fileselect($event)"
+            class="well my-drop-zone">
+           Base drop zone
+           </div>
+                 <!-- <label for="single">single File</label> -->
+                  <input type="file" (change)="fileselect($event)" class="form-control" name="single" ng2FileSelect [uploader]="uploader" />                                  
               </div> 
-              <div class="form-group">
+             <!-- <div class="form-group">
                   <label for="multiple">Multiple Files</label>
                   <input type="file" class="form-control" name="multiple" ng2FileSelect [uploader]="uploader" multiple  />
-              </div>
+              </div> -->
                         
           </form>
       </div>
@@ -114,6 +143,14 @@
           </div>
       </div>
   </div>
+
+
+  <app-upload-video></app-upload-video>
+  <div id="videourl-input">
+  <h5>4.</h5>
+  <input [(ngModel)]="blogpost.video_url" placeholder="Paste video URL here ">   
+  </div>
+  
 
   <button class="btn-success post-to-page" (click)="add()"> Post to page </button>
 

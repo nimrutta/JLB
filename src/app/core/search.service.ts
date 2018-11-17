@@ -31,7 +31,7 @@ export class SearchService {
   
   nameChange: Subject<string> = new Subject<string>();
 
-  baseUrl: string = 'http://api.jualishebora.ga/api/v1/search/' //http://api.jualishebora.ga/api/v1/posts
+  baseUrl: string = 'http://api.jualishebora.gq/api/v1/search/' //http://api.jualishebora.gq/api/v1/posts
   queryUrl: string = '?search=';
 
   searchResultsView(status) {
@@ -69,7 +69,7 @@ export class SearchService {
   }
 
   performSearch(searchTerm: HTMLInputElement): void {   
-    var apiLink = 'http://api.jualishebora.ga/api/v1/search'                     // http://api.tuseme.co.tz/api/v1/search/
+    var apiLink = 'http://api.jualishebora.gq/api/v1/search'                     // http://api.tuseme.co.tz/api/v1/search/
     + searchTerm.value + '?api_key=bc' ;
     
     this.http.request(apiLink).subscribe((res: Response) => {

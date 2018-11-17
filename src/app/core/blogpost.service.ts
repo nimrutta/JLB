@@ -13,9 +13,9 @@ import { Blogpost } from './../blogpost';
 export class BlogpostService {
   
   blogpost: Blogpost[];
-  private blogpostUrl = 'http://api.jualishebora.ga/api/v1/posts'
+  private blogpostUrl = 'http://api.jualishebora.gq/api/v1/posts'
   
-  //http://api.jualishebora.ga/api/v1/topics  
+  //http://api.jualishebora.gq/api/v1/topics  
   //http://api.tuseme.co.tz/api/v1/reports
   
   constructor(private http: Http) { }
@@ -23,6 +23,19 @@ export class BlogpostService {
   fetchedBlogpost: Subject<Blogpost[]> = new Subject<Blogpost[]>();   
 
   private headers = new Headers({'Content-Type':'application/json'});
+
+
+
+  postFile(fileToUpload: File): Observable<boolean> {
+    const endpoint = 'http://api.jualishebora.gq/api/v1/images';
+    const formData: FormData = new FormData();
+    formData.append('fileKey', fileToUpload, fileToUpload.name);
+    return this.http
+      .post(endpoint, formData, { headers: this.headers })
+      .map(() => { return true; })
+      .catch((e) => this.handleError(e));
+}
+
     
   // getBlogpost(id: number): Promise<Blogpost> {
   //     const url = `${this.blogpostUrl}/${id}`;
@@ -31,6 +44,10 @@ export class BlogpostService {
   //                .then(response => response.json().data as Blogpost)
   //                .catch(this.handleError);
   // }
+
+
+
+
 
   getBlogpost(id: number): void {                               //huyu anaitwa uki click post yeyote
     const url = `${this.blogpostUrl}/${id}`;

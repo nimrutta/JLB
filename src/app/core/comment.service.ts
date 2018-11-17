@@ -14,9 +14,9 @@ export class CommentService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
   
-  private commentsUrl = 'http://api.jualishebora.ga/api/v1/comments'
-  private commentcategoriesUrl = 'http://api.jualishebora.ga/api/v1/topicsByCategory'
-  private commentCategoryNameUrl = 'http://api.jualishebora.ga/api/v1/topicCategories'
+  private commentsUrl = 'http://api.jualishebora.gq/api/v1/comments'
+  private commentcategoriesUrl = 'http://api.jualishebora.gq/api/v1/topicsByCategory'
+  private commentCategoryNameUrl = 'http://api.jualishebora.gq/api/v1/topicCategories'
 
   constructor(private http: Http) { }
   

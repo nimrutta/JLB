@@ -9,12 +9,13 @@ export interface RouteInfo {
     class: string;
 }
 
-export const ROUTES: RouteInfo[] = [
+export const ROUTES: RouteInfo[] = [     
     { path: 'andika-blog', title: 'Andika blog',  icon:'ti-text', class: '' },
     { path: 'andika-makala', title: 'Andika makala',  icon:'ti-text', class: '' },
     { path: 'makala-edit', title: 'Makala Edit', icon:'ti-pencil-alt2', class: '' },
     { path: 'clients', title: 'Clients', icon:'ti-user' , class: '' },
     { path: 'subscribers', title: 'Subscribers',  icon:'ti-view-list-alt' , class: '' },
+    { path: 'bidhaa', title: 'Products',  icon:'ti-shopping-cart' , class: '' },
    // { path: 'maps', title: 'Maps',  icon:'ti-map', class: '' },
    // { path: 'notifications', title: 'Notifications',  icon:'ti-bell', class: '' },
   

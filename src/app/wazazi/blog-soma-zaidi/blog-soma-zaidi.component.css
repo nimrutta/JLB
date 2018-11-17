@@ -1,11 +1,12 @@
-
- .clear {
+.clear {
        clear: both;            /* to solve float overlapping issues */ 
 }
+
  .ccontainer {
-        padding:25px 0 80px 5px;
+        padding:25px 0 80px 0;
         font-family: Montserrat-Regular;
  }
+
 
 .ccontainer a {
         
@@ -15,33 +16,72 @@
         
 }
 
+
 .box {
         width: 100%;
-        padding:10px 40px 90px 40px;
+        padding:10px 0 0 0;
         background-color: #fff;
         border: none;
         border-radius: 4px;
         margin-bottom: 20px;
 }
 
+
 .box p {
-        line-height: 3rem;
+        color: #333;
+        line-height: 185%;
+        font-size: 18px;
 }
+
 
 .box > h3 {
        color: rgba(0, 0, 0, 0.8);
        font-size: 20px;
-       margin: 30px 0 17px 0;
+       margin: 30px 0 0 40px;
 }
 
+
+.imagecontainer {
+        width: 100%;
+        height: 460px;
+        display: block;
+}
+
+
 .oneimage {
-        height: 420px;
-        margin-top: 15px;
+        height: 460px;
+        margin-top: 8px;
         float: left; 
         clear: both;
-        width: 781px; 
+        width: 100%; 
         margin-left: 0;
         margin-bottom: 15px;
+}
+
+.textcontainer {
+        width: 87%;
+        margin: 15px 0 0 40px;
+        display: block;
+}
+
+iframe {
+        border: none;
+        margin: 10px 0 20px 15%;
+        width: 67%;
+        height: 420px;
+}
+
+.audiocontainer {
+        width: 100%;
+        background-color: #232323;
+        padding: 40px 0 40px 40px;
+        margin: 25px 0 0 0;
+}
+
+.audiocontainer p {
+        color: #ffffff;
+        font-size: 15px;
+        padding-left: 10px;
 }
 
 .jiungebutton {
@@ -62,6 +102,7 @@
 .cbox { 
         color: #232323;
         padding: 20px 20px 15px 20px;
+        margin-top: 60px;
         width: 80%;
         border: 1px solid #d4d4d4;
         border-radius: 5px;
@@ -182,20 +223,32 @@ form  {
     
 
 @media all and (max-width: 767px){
-.box {
-        padding:10px 20px 90px 20px;
-        border: none;
+
+main { 
+       margin: 0 -15px 0 -15px;
 }
 
+.box {
+        padding:10px 0 0 0;
+        border: none;
+}
 
 .box p {
         font-size: 13px;
         text-align: justify;
         }
 
+.box > h3 {
+       margin: 5px 0 0 10px;
+}
+
+.imagecontainer {
+        height: fit-content;
+}        
+
 .oneimage {
-        height: 250px;
-        margin-top: 15px;
+        height: 280px;
+        margin-top: 5px;
         float: left; 
         clear: both;
         width: 100%; 
@@ -203,9 +256,26 @@ form  {
         margin-bottom: 15px;
 }
 
+.textcontainer {
+        margin: 15px 0 0 20px;
+}
+
 .ccontainer a {
         float: left;
         margin: 0 5px;
+}
+
+iframe {
+        width: 90%;
+        margin-left: 15px;
+}
+
+.audiocontainer {
+        padding: 40px 0 40px 30px;
+}
+
+.audiocontainer p {
+        margin: 0 0 17px 0;
 }
 
 .shareicon {

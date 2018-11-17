@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SelectDropDownModule } from 'ngx-select-dropdown';
+//import {FileUploadModule} from 'primeng/fileupload';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
@@ -28,6 +29,8 @@ import { ImageUploadModule } from 'angular2-image-upload';
 import { ShuhudaComponent } from './shuhuda/shuhuda.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { UploadVideoComponent } from './upload-video/upload-video.component';
+import { BidhaaComponent } from './bidhaa/bidhaa.component';
 
 
 @NgModule({
@@ -39,6 +42,7 @@ import { SignupComponent } from './signup/signup.component';
     FooterModule,
     NavbarModule,
     SelectDropDownModule,
+  //  FileUploadModule,
     ImageUploadModule.forRoot(),
   ],
 
@@ -57,7 +61,7 @@ import { SignupComponent } from './signup/signup.component';
                  UploadimageComponent, 
                  ShuhudaComponent,
                  FileSelectDirective, 
-                 FileDropDirective, LoginComponent, SignupComponent],
+                 FileDropDirective, LoginComponent, SignupComponent, UploadVideoComponent, BidhaaComponent],
 
   providers: [ ],
 })

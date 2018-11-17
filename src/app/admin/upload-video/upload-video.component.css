@@ -1,0 +1,19 @@
+button {
+    font-size: 17px;
+    width: 200px;
+    height: 70px;
+    background-color:rgba(92, 184, 92, .1);
+    border: 2px solid rgba(92, 184, 92, 1);
+    border-radius: 4px;
+}
+
+
+.main {
+   margin: 40px 0 40px 6%;
+  
+}
+
+
+.step-number {
+   margin-top: 35px;
+}

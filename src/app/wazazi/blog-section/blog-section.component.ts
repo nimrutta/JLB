@@ -62,7 +62,7 @@ export class BlogSectionComponent implements OnInit {
    searchInputStatus = true;
    name = 'Andela';
    
-   public repoUrl = "http://jualishebora.ga/wazazi/blog-section" ;
+   public repoUrl = "http://jualishebora.gq/wazazi/blog-section" ;
    
 
    constructor(
@@ -101,6 +101,7 @@ export class BlogSectionComponent implements OnInit {
      this.blogpost = blogpostService.blogpost;
      this.subscription = this.blogpostService.fetchedBlogpost.subscribe((value) => {
      this.blogpost = value;
+    
    });
      
      this.message = searchService.message; 

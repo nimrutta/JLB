@@ -10,6 +10,8 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="ccontainer">
+      <!-- <app-upload-video></app-upload-video>-->
+      
     <!--<div *ngFor= "let g of giphies" class="box">
      
     <div class="row iquote" style="width:100%;">
@@ -105,9 +107,9 @@
 
        <div class="quote">
             <p>
-               <strong><span>"</span> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+               <strong> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nulla pariatur  
-               <span>"</span></strong>
+               </strong>
 
             </p>
        </div>
@@ -118,7 +120,7 @@
          consectetur adipiscing elit, sed do eiusmod tempor incididunt </p><br>
     <button class="somazaidi" routerLink="/wazazi/soma-zaidi" routerLinkActive="active" (click)= "passPostId(2335)">Soma Zaidi </button>
     <div class="clear"></div>
-    <hr style="margin-top: 10px; ">
+   <!-- <hr style="margin-top: 10px; "> -->
     <p class="postedattime">6 oktoba 2017 2315</p>
     <div class="postedattime_ss">6 oktoba '17</div>   
     <img src="../../../../assets/images/twitter1.png" alt="Fruit View"
@@ -150,8 +152,8 @@
 
        <div class="quote">
             <p>
-               <span>"</span><strong>{{b.title}} 
-               </strong><span>"</span>
+              <strong>{{b.title}} 
+               </strong>
 
             </p>
        </div>
@@ -159,11 +161,11 @@
        </div>
     </div>
 
-    <p class="blogtext">{{b.body}}</p><br>
+    <p class="blogtext">{{(b.body.length > 150 )? (b.body | slice :0:90)+'...':(b.body)}}</p><br>
     <button class="somazaidi" routerLink="/wazazi/soma-zaidi/{{b.id}}" routerLinkActive="active">Soma Zaidi </button> <!-- (click)="removeSearchInput()" (click)="onClick($event)"(click)="passPostId(b.id)" (click)="getPost(b.id)" -->
     <div class="clear"></div>
-    <hr style="margin-top: 10px; ">
-    <p class="postedattime">{{b.created_at}}</p>
+   <!-- <hr style="margin-top: 10px; "> -->
+    <p class="postedattime">{{b.created_at | date:'mediumDate'}}</p>
     <div class="postedattime_ss">6 oktoba '17</div>    
     <img src="../../../../assets/images/twitter1.png" alt="Fruit View"
            class="shareicon socialmedia" ceiboShare [twitter] ="{u: repoUrl}">

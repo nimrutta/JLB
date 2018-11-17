@@ -8,7 +8,7 @@ import { Subscribers } from './../subscribers';
 @Injectable()
 export class SubscribersService {
   
-  private subscribersUrl = 'http://api.jualishebora.ga/api/v1/subscribers'
+  private subscribersUrl = 'http://api.jualishebora.gq/api/v1/subscribers'
   
   constructor(private http: Http) { }
   

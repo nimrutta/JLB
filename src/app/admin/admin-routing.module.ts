@@ -13,11 +13,12 @@ import {SubscribersComponent} from './subscribers/subscribers.component';
 import {ShuhudaComponent} from './shuhuda/shuhuda.component';
 import {LoginComponent} from './login/login.component';
 import {SignupComponent} from './signup/signup.component';
+import { BidhaaComponent } from './bidhaa/bidhaa.component';
 
 const routes: Routes = [
   {path:'admin',component:AdminComponent,
   children:[
-    {path:'', redirectTo:'signup',pathMatch:'full'},
+    {path:'', redirectTo:'andika-blog',pathMatch:'full'},
     {path:'login', component:LoginComponent},
     {path:'signup',component:SignupComponent},
     {path:'andika-makala', component:AndikaMakalaComponent},
@@ -29,6 +30,8 @@ const routes: Routes = [
     {path:'makala-subtopics-edit', component:MakalaSubtopicsEditComponent},
     {path:'subscribers', component:SubscribersComponent},
     {path:'shuhuda', component:ShuhudaComponent},
+    {path:'bidhaa', component:BidhaaComponent},
+  
   
   ]
 }

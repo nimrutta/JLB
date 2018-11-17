@@ -19,6 +19,8 @@ import { MakalatitlesService } from '../core/makalatitles.service';
 import { Makalatitles } from '../makalatitles';
 import { SearchService } from '../core/search.service';
 import { PasseventsService } from '../core/passevents.service';
+import { BidhaaService } from './../core/bidhaa.service';
+import { Bidhaa } from './../bidhaa'
 
 import { Subject } from 'rxjs/Subject';
 @Component({
@@ -46,6 +48,7 @@ export class WazaziComponent implements OnInit {
 
   category: Makalacategory[];
   makala: Makalatitles[];
+  bidhaa: Bidhaa[];
   subscription: any;
   _subscription: any;
   private lastPoppedUrl: string;
@@ -55,9 +58,10 @@ export class WazaziComponent implements OnInit {
   
   constructor( private searchService: SearchService, 
                passeventsService: PasseventsService,
+               private bidhaaService: BidhaaService,
                private router: Router,
                private location: Location,
-               private makalatitlesService: MakalatitlesService ) {
+               private makalatitlesService: MakalatitlesService, ) {
     // passeventsService.navigateout$.subscribe(
     //   searchInputStatus => { this.showSearchInput = searchInputStatus}
     // );  // causes ExpressionChangedAfterItHasBeenCheckedError error
@@ -94,7 +98,13 @@ export class WazaziComponent implements OnInit {
         console.log('wazazi component created') 
         this.location.subscribe((ev:PopStateEvent) => {
           this.lastPoppedUrl = ev.url;
-          console.log('wazazi component location tracked')
+           console.log(this.lastPoppedUrl + 'xds');
+          if (this.lastPoppedUrl === ('/wazazi/blog-section' )) {
+            this.showsearch = true;
+            this.showSearchInput = true;
+          }
+
+          console.log('wazazi component location tracked *')
         });
         this.router.events.subscribe((ev:any) => {
             console.log('router event fired')
@@ -121,13 +131,16 @@ export class WazaziComponent implements OnInit {
             }
         });
         this.currentUrl = this.router.url;
-        console.log(this.currentUrl);
+        console.log(this.currentUrl + 'xks');
        
 
-        if (this.currentUrl === ('/wazazi/blog-section' || '/wazazi/soma-zaidi/')) {
+        if (this.currentUrl === ('/wazazi/blog-section' )) {
           this.showsearch = true;
           console.log('1. if');
           console.log(this.showsearch);
+        }
+        else if (this.currentUrl.substring(0,19) ===  '/wazazi/soma-zaidi/') {
+          this.showsearch = true;
         }
 
         else {
@@ -273,6 +286,11 @@ export class WazaziComponent implements OnInit {
 
   closeAllAgeCategories() {
     this.toggle = [];
+  }
+
+
+  getBidhaa() {
+    this.bidhaaService.getProducts().then(bidhaa => this.bidhaa = bidhaa);
   }
 
 

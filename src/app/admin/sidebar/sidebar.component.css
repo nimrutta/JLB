@@ -1,3 +1,7 @@
 .logo-img img {
     width: 100px;
 }
+
+.sidebar .nav li.active > a {
+    color: #652f85 !important; 
+}

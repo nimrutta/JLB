@@ -135,7 +135,7 @@ ibox {
         color : #000;
         height: 20px;
         width: auto;
-        margin: 0 0 5px 0; 
+        margin: 0 0 20px 0; 
         float: right;
         padding: 0 20px 0 0;
         background: none;
@@ -193,6 +193,7 @@ ibox {
        height: 20px;
        border-radius: 50%;
  }
+ 
  @media all and (max-width: 800px){
 iqoute {
         height: 300px;

@@ -29,6 +29,7 @@ import { Makala1Component } from './makala1/makala1.component';
 import { BlogSomaZaidi1Component } from './blog-soma-zaidi1/blog-soma-zaidi1.component';
 import { BidhaaComponent } from './bidhaa/bidhaa.component';
 import { BidhaaCategoryComponent } from './bidhaa-category/bidhaa-category.component';
+import { UploadVideoComponent } from './upload-video/upload-video.component';
 
 @NgModule({
   imports: [
@@ -58,7 +59,8 @@ import { BidhaaCategoryComponent } from './bidhaa-category/bidhaa-category.compo
                  BlogSomaZaidi1Component,
                  CeiboShare,
                  BidhaaComponent,
-                 BidhaaCategoryComponent],
+                 BidhaaCategoryComponent,
+                 UploadVideoComponent],
                  
   providers: [ SearchService,
                SubscribersService,

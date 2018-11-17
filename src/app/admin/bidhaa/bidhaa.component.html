@@ -1,0 +1,69 @@
+<main>
+  <div class="container" >
+  
+    <div class="entertitle">
+      <label>Product category</label>
+      <select  class="selectbox" (input)="onInput($event)" [(ngModel)]="makalacategory" name="categoryname">   
+        <option *ngFor="let makalacategory of makalaCategories" value= {{makalacategory.id}} [ngValue]="makalacategory">{{makalacategory.category_name}}</option>
+      </select>
+    </div>
+  
+  
+    <div class="entertitle">
+      <label>Product Name</label><input name="title">
+    </div>
+ 
+    <div class="addimage">
+    <app-uploadimage
+      (onServerResponse) = "initializeImageId($event)"
+      class="uploadimage"
+    ></app-uploadimage>
+    <button  class="btn-success post-to-page" (click)="add(); clear()"> Post New Product </button>
+    </div>
+
+
+    <br><br><br><br>
+
+    <div class="addcategory">
+      <h3>Add new Product category</h3>
+      <input placeholder="Category name">
+      <button class="btn-success" (click)="createMakalaCategory()">+</button>
+   </div>
+
+
+   <div class="block">
+    <div class="navbar navbar-inner block-header">
+        <div class="pull-right"><span class="badge badge-info">8</span>
+
+        </div>
+    
+    <div class="block-content collapse in">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="number">#</th>
+                    <th class="name">Category Name</th>
+                    <th class="edit">Edit</th>
+                    <th class="remove">Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ctgry of makalacategories; let i = index">
+                    <td class="number">{{i + 1}}</td>
+                    <td><span *ngIf="!showEraser[i]">{{ctgry.category_name}}</span> <input *ngIf="showEraser[i]" [(ngModel)]="category.category_name" placeholder="{{ctgry.category_name}}"><button class="ti-close" *ngIf="showEraser[i]" (click)="alterEditMode(i)"></button></td>
+                    <td class="edit"><button (click) = "sendUpdate(ctgry.id, i)"><span class="ti-eraser" *ngIf="!showEraser[i]"></span><p *ngIf="showEraser[i]">Confirm</p></button></td>
+                    <td class="remove"><button (click)="deleteMakalaCategory(ctgry.id, i)"><span class="ti-trash"></span></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<br>
+
+</div>
+
+
+  </div>
+</main>

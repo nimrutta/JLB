@@ -10,6 +10,10 @@ import { Comment } from '../../comment';
 import { DatacarrierService } from '../../core/datacarrier.service';
 import { PasseventsService } from '../../core/passevents.service';
 
+//import { DashboardServiceProxy, UserVideoDto } from '@shared/service-proxies/service-proxies';
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
+
+
 @Component({
   selector: 'app-blog-soma-zaidi',
   templateUrl: './blog-soma-zaidi.component.html',
@@ -30,7 +34,8 @@ export class BlogSomaZaidiComponent implements OnInit {
                public datacarrierService: DatacarrierService,
                private passeventsService: PasseventsService,
                private route: ActivatedRoute,
-               private location: Location
+               private location: Location,
+               private domSanitizer : DomSanitizer
                   ) {
 
      this.comments = [];
@@ -70,10 +75,12 @@ export class BlogSomaZaidiComponent implements OnInit {
    comments : Comment[]
    coments : Comment[]
 
-   videourl= "Promote a Page- A Facebook Pages Tutorial - Facebook for Business.mp4"
-  
+   videourl = this.domSanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9tRepZdoRmY');  //Promote a Page- A Facebook Pages Tutorial - Facebook for Business.mp4
+  // iframeURL = this.domSanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9tRepZdoRmY');  
+
   ngOnInit() {
         
+   // this.videourl = this.domSanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/9tRepZdoRmY');
         this.getaPostviaRouter();
         this.getComments();
         this.sortComments();
@@ -151,6 +158,13 @@ export class BlogSomaZaidiComponent implements OnInit {
     this.blogpostService.getaPost(id).then(aPost => this.Post = aPost);
     console.log(id);
   }
+
+
+//   sendUrl(playerUrl) {
+//     this.iframeURL = playerUrl // try it first, if it doesn't work use the sanitized URL
+//     this.trustedDashboardUrl = this.sanitizer.bypassSecurityTrustResourceUrl(playerUrl);
+//     this.iframeURL = this.trustedDashboardUrl;
+// }
 
   //  getaPost(id: number): void {
   //   this.blogpostService.getaPost(id).then(aPost => this.Post = aPost);

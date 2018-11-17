@@ -24,11 +24,11 @@ export class MakalatitlesService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
   
-  private makalatitlesUrl = 'http://api.jualishebora.ga/api/v1/topics'
-  private makalacategoriesUrl = 'http://api.jualishebora.ga/api/v1/topicsByCategory'  //http://api.tuseme.co.tz/api/v1/streets
-  private makalaCategoryNameUrl = 'http://api.jualishebora.ga/api/v1/topicCategories'
-  private updateUrl   = 'http://api.jualishebora.ga/api/v1/topicCategories'
-  private foodsUrl = 'http://api.jualishebora.ga/api/v1/foods'
+  private makalatitlesUrl = 'http://api.jualishebora.gq/api/v1/topics'
+  private makalacategoriesUrl = 'http://api.jualishebora.gq/api/v1/topicsByCategory'  //http://api.tuseme.co.tz/api/v1/streets
+  private makalaCategoryNameUrl = 'http://api.jualishebora.gq/api/v1/topicCategories'
+  private updateUrl   = 'http://api.jualishebora.gq/api/v1/topicCategories'
+  private foodsUrl = 'http://api.jualishebora.gq/api/v1/foods'
 
   constructor(private http: Http) { }
   
@@ -211,7 +211,7 @@ export class MakalatitlesService {
         
       }
 
-  //http://api.jualishebora.ga/api/v1/topicCategories/1
+  //http://api.jualishebora.gq/api/v1/topicCategories/1
 
   //gectMakala(id: number): Promise<Makalatitles[]> {
   //const url = `${this.makalacategoriesUrl}/${id}`;

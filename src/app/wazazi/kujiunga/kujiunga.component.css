@@ -64,7 +64,7 @@
 }
 
 input::placeholder {
-  color:  #cdcdcd;
+  color:   #666565;
   }
 
 .inputErrormessage {
@@ -161,7 +161,7 @@ input::placeholder {
         
  }
 
-        .modal-content {
+         .modal-content {
         position: absolute;
         background-color: rgba(0,0,0,0.8);
         margin: 0 0 0 15%;
